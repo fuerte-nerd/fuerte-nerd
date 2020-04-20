@@ -12,6 +12,8 @@ import {
   List,
   ListItem,
   ListItemText,
+  Link,
+  Button,
 } from "@material-ui/core"
 
 import Navbar from "../components/Navbar"
@@ -24,7 +26,9 @@ const IndexPage = () => (
       <Box>
         <List>
           <ListItem>
-            <ListItemText>Home</ListItemText>
+            <Button color="inherit" fullWidth>
+              Home
+            </Button>
           </ListItem>
         </List>
       </Box>
