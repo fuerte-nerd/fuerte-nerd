@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -25,6 +26,16 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <Helmet>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>{" "}
       <div
         style={{
           margin: `0 auto`,
