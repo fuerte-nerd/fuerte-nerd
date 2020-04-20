@@ -1,10 +1,20 @@
 import React from "react"
-
+import { connect } from "react-redux"
+import { toggleMenu } from "actions"
 import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core"
 
 import { Menu, GitHub, Phone, Email, WhatsApp } from "@material-ui/icons"
 
-const Navbar = () => {
+const Navbar = props => {
+  const handleClick = e => {
+    const f = e.currentTarget
+    switch (f.id) {
+      case "menu":
+        return props.dispatch(toggleMenu())
+      default:
+        return
+    }
+  }
   return (
     <AppBar>
       <Toolbar>
@@ -12,6 +22,8 @@ const Navbar = () => {
           edge="start"
           color="inherit"
           style={{ marginRight: ".25rem" }}
+          onClick={handleClick}
+          id="menu"
         >
           <Menu />
         </IconButton>
@@ -39,4 +51,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default connect()(Navbar)

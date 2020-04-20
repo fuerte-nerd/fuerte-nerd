@@ -4,9 +4,13 @@ import { Dialog, Box, List, ListItem, Typography, Fab } from "@material-ui/core"
 
 import { Close } from "@material-ui/icons"
 
-const NavMenu = () => {
+const NavMenu = props => {
+  const handleClick = e => {
+    console.log(e.currentTarget.id)
+  }
+
   return (
-    <Dialog fullScreen open={true}>
+    <Dialog fullScreen open={props.isOpen}>
       <Box
         display="flex"
         justifyContent="center"
@@ -62,4 +66,8 @@ const NavMenu = () => {
   )
 }
 
-export default NavMenu
+const mapStateToProps = state => ({
+  isOpen: state.navOpen,
+})
+
+export default connect(mapStateToProps)(NavMenu)
