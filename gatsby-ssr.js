@@ -1,2 +1,5 @@
-import wrapWithProvider from "./wrap-with-provider"
-export const wrapRootElement = wrapWithProvider
+import store from "./src/redux/store"
+
+export const wrapRootElement = ({ element }) => (
+  <Provider store={store}>{element}</Provider>
+)
