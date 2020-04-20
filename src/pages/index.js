@@ -63,13 +63,6 @@ const IndexPage = () => (
               </Typography>
             </Box>
           </ListItem>
-          <ListItem button alignItems="center" id="home" onClick={handleClick}>
-            <Box width="100%" py={1}>
-              <Typography variant="button" align="center" display="block">
-                Home
-              </Typography>
-            </Box>
-          </ListItem>
         </List>
       </Box>
     </Dialog>
