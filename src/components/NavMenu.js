@@ -1,12 +1,20 @@
 import React from "react"
 import { connect } from "react-redux"
+import { toggleMenu } from "../redux/actions"
+
 import { Dialog, Box, List, ListItem, Typography, Fab } from "@material-ui/core"
 
 import { Close } from "@material-ui/icons"
 
 const NavMenu = props => {
   const handleClick = e => {
-    console.log(e.currentTarget.id)
+    const f = e.currentTarget
+    switch (f.id) {
+      case "close":
+        return props.dispatch(toggleMenu(!props.isOpen))
+      default:
+        return
+    }
   }
 
   return (
@@ -59,7 +67,11 @@ const NavMenu = props => {
           </ListItem>
         </List>
       </Box>
-      <Fab style={{ position: "fixed", top: "2.5rem", right: "2.5rem" }}>
+      <Fab
+        onClick={handleClick}
+        id="close"
+        style={{ position: "fixed", top: "2.5rem", right: "2.5rem" }}
+      >
         <Close />
       </Fab>
     </Dialog>
