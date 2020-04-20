@@ -30,10 +30,15 @@ const IndexPage = () => (
         height="100vh"
         width="100vw"
       >
-        <List>
-          <ListItem>
+        <List style={{ flex: 1 }}>
+          <ListItem disableGutters>
             <Button color="inherit" fullWidth>
               Home
+            </Button>
+          </ListItem>
+          <ListItem disableGutters>
+            <Button color="inherit" fullWidth>
+              About
             </Button>
           </ListItem>
         </List>
