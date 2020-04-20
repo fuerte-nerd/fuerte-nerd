@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import { AppBar, Toolbar, Typography, IconButton, Box } from "@material-ui/core"
+import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core"
 
 import { Menu, Phone, Email, WhatsApp } from "@material-ui/icons"
 
@@ -20,13 +20,13 @@ const IndexPage = () => (
         >
           <Menu />
         </IconButton>
-        <Box display="inline">
-          <Typography>David Andrews</Typography>
-          {` `}
-          <Typography style={{ flex: 1 }} variant="subtitle1">
-            (Web Developer)
-          </Typography>
-        </Box>
+        <Typography variant="subtitle1" style={{ marginRight: ".25rem" }}>
+          David Andrews
+        </Typography>
+
+        <Typography style={{ flex: 1 }} variant="subtitle2">
+          (Web Developer)
+        </Typography>
         <IconButton color="inherit">
           <Phone />
         </IconButton>
