@@ -31,7 +31,13 @@ const IndexPage = () => (
         width="100vw"
       >
         <List dense style={{ flex: 1 }}>
-          <ListItem button>Home</ListItem>
+          <ListItem button alignItems="center">
+            <Box display="block">
+              <Typography variant="button" align="center" display="block">
+                Home
+              </Typography>
+            </Box>
+          </ListItem>
           <ListItem dense disableGutters>
             <Button color="inherit" fullWidth>
               About
