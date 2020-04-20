@@ -18,6 +18,10 @@ import {
 
 import Navbar from "../components/Navbar"
 
+const handleClick = e => {
+  console.log(e.currentTarget.id)
+}
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -31,27 +35,40 @@ const IndexPage = () => (
         width="100vw"
       >
         <List dense style={{ flex: 1 }}>
-          <ListItem button alignItems="center">
-            <Box display="block">
+          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+            <Box width="100%" py={1}>
               <Typography variant="button" align="center" display="block">
                 Home
               </Typography>
             </Box>
           </ListItem>
-          <ListItem dense disableGutters>
-            <Button color="inherit" fullWidth>
-              About
-            </Button>
+          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+            <Box width="100%" py={1}>
+              <Typography variant="button" align="center" display="block">
+                About
+              </Typography>
+            </Box>
           </ListItem>
-          <ListItem dense disableGutters>
-            <Button color="inherit" fullWidth>
-              Projects
-            </Button>
+          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+            <Box width="100%" py={1}>
+              <Typography variant="button" align="center" display="block">
+                Projects
+              </Typography>
+            </Box>
           </ListItem>
-          <ListItem dense disableGutters>
-            <Button color="inherit" fullWidth>
-              Contact
-            </Button>
+          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+            <Box width="100%" py={1}>
+              <Typography variant="button" align="center" display="block">
+                Contact
+              </Typography>
+            </Box>
+          </ListItem>
+          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+            <Box width="100%" py={1}>
+              <Typography variant="button" align="center" display="block">
+                Home
+              </Typography>
+            </Box>
           </ListItem>
         </List>
       </Box>
