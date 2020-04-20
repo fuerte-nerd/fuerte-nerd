@@ -11,6 +11,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { CssBaseline } from "@material-ui/core"
+import { ThemeProvider } from "@material-ui/core/styles"
+
+import theme from "./theme"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -35,7 +38,9 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         />
       </Helmet>
-      <CssBaseline>{children}</CssBaseline>
+      <ThemeProvider theme={theme}>
+        <CssBaseline>{children}</CssBaseline>
+      </ThemeProvider>
     </>
   )
 }
