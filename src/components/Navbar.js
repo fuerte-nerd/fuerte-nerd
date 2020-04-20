@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { toggleMenu } from "actions"
+import { toggleMenu } from "../redux/actions"
 import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core"
 
 import { Menu, GitHub, Phone, Email, WhatsApp } from "@material-ui/icons"
@@ -10,7 +10,7 @@ const Navbar = props => {
     const f = e.currentTarget
     switch (f.id) {
       case "menu":
-        return props.dispatch(toggleMenu())
+        return props.dispatch(toggleMenu(!props.isOpen))
       default:
         return
     }
@@ -51,4 +51,8 @@ const Navbar = props => {
   )
 }
 
-export default connect()(Navbar)
+const mapStateToProps = state => ({
+  isOpen: state.navOpen,
+})
+
+export default connect(mapStateToProps)(Navbar)

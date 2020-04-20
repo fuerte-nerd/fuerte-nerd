@@ -1,4 +1,4 @@
-import { TOGGLE_MENU } from "./types"
+import { SET_MENU } from "./types"
 
 const initialState = {
   navOpen: false,
@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case TOGGLE_MENU:
+    case SET_MENU:
       return {
         ...state,
         navOpen: action.payload,
