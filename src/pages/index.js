@@ -5,6 +5,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 import {
+  Fab,
   Box,
   Toolbar,
   Typography,
@@ -15,6 +16,8 @@ import {
   Link,
   Button,
 } from "@material-ui/core"
+
+import { Close } from "@material-ui/icons"
 
 import Navbar from "../components/Navbar"
 
@@ -65,7 +68,9 @@ const IndexPage = () => (
           </ListItem>
         </List>
       </Box>
+      <Fab />
     </Dialog>
+
     <Box>
       <Toolbar />
       <Typography variant="h1">My site</Typography>
