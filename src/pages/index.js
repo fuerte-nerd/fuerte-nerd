@@ -23,7 +23,13 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Navbar />
     <Dialog fullScreen open={true}>
-      <Box>
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        height="100vh"
+        width="100vw"
+      >
         <List>
           <ListItem>
             <Button color="inherit" fullWidth>
