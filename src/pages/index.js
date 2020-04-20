@@ -45,21 +45,31 @@ const IndexPage = () => (
               </Typography>
             </Box>
           </ListItem>
-          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+          <ListItem button alignItems="center" id="about" onClick={handleClick}>
             <Box width="100%" py={1}>
               <Typography variant="button" align="center" display="block">
                 About
               </Typography>
             </Box>
           </ListItem>
-          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+          <ListItem
+            button
+            alignItems="center"
+            id="projects"
+            onClick={handleClick}
+          >
             <Box width="100%" py={1}>
               <Typography variant="button" align="center" display="block">
                 Projects
               </Typography>
             </Box>
           </ListItem>
-          <ListItem button alignItems="center" id="home" onClick={handleClick}>
+          <ListItem
+            button
+            alignItems="center"
+            id="contact"
+            onClick={handleClick}
+          >
             <Box width="100%" py={1}>
               <Typography variant="button" align="center" display="block">
                 Contact
@@ -68,7 +78,9 @@ const IndexPage = () => (
           </ListItem>
         </List>
       </Box>
-      <Fab />
+      <Fab style={{ position: "fixed", top: "2.5rem", right: "2.5rem" }}>
+        <Close />
+      </Fab>
     </Dialog>
 
     <Box>
