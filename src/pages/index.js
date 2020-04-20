@@ -4,9 +4,9 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import { AppBar, Toolbar, Typography, IconButton } from "@material-ui/core"
+import { Box, AppBar, Toolbar, Typography, IconButton } from "@material-ui/core"
 
-import { Menu, Phone, Email, WhatsApp } from "@material-ui/icons"
+import { Menu, Phone, Email, WhatsApp, GitHub } from "@material-ui/icons"
 
 const IndexPage = () => (
   <Layout>
@@ -28,6 +28,9 @@ const IndexPage = () => (
           (Web Developer)
         </Typography>
         <IconButton color="inherit">
+          <GitHub />
+        </IconButton>
+        <IconButton color="inherit">
           <Phone />
         </IconButton>
         <IconButton color="inherit">
@@ -38,6 +41,10 @@ const IndexPage = () => (
         </IconButton>
       </Toolbar>
     </AppBar>
+    <Box>
+      <Toolbar />
+      <Typography variant="h1">My site</Typography>
+    </Box>
   </Layout>
 )
 

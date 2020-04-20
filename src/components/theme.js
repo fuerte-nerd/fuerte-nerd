@@ -12,5 +12,8 @@ export default createMuiTheme({
     background: {
       default: teal[50],
     },
+    text: {
+      primary: teal[900],
+    },
   },
 })
