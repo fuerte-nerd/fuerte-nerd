@@ -35,7 +35,7 @@ const Navbar = props => {
         >
           <Menu />
         </IconButton>
-        <Typography variant="subtitle1" style={{ flex: 1, minWidth: "3rem" }}>
+        <Typography variant="subtitle1" style={{ flex: 1, minWidth: "8rem" }}>
           fuerte nerd
         </Typography>
         {/* menu for larger screens */}
