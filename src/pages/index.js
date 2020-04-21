@@ -27,12 +27,9 @@ const IndexPage = () => (
       justifyContent="center"
       alignItems="center"
     >
-      <Hidden mdUp>
-        <Toolbar />
-      </Hidden>
       <Container>
-        <Grid container alignItems="center" justifyContent="center">
-          <Grid item xs={12} md={4}>
+        <Grid container alignItems="center" justify="center">
+          <Grid item xs={12} md={4} alignContent="center">
             <HeroImage />
           </Grid>
           <Grid item xs={12} md={8}>
