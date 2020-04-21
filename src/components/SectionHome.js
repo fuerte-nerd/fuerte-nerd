@@ -22,6 +22,7 @@ const SectionHome = () => {
         justifyContent="center"
         alignItems="center"
         flexDirection="column"
+        py={2}
       >
         <Hidden smUp>
           <Toolbar />
@@ -29,7 +30,7 @@ const SectionHome = () => {
         <Container>
           <Grid container alignItems="center" justify="center">
             <Grid item xs={12} md={4}>
-              <Box width="100%" align="center" mt={1}>
+              <Box width="100%" align="center">
                 <HeroImage />
               </Box>
             </Grid>
