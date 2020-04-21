@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import { HeroImage } from "../components/image"
 import SEO from "../components/seo"
 
-import { Grid, Container, Box, Toolbar, Typography } from "@material-ui/core"
+import { Grid, Container, Box, Avatar, Typography } from "@material-ui/core"
 
 import Navbar from "../components/Navbar"
 import NavMenu from "../components/NavMenu"
@@ -23,7 +23,9 @@ const IndexPage = () => (
       <Container>
         <Grid container>
           <Grid item xs={12} md={4}>
-            <HeroImage />
+            <Avatar>
+              <HeroImage />
+            </Avatar>
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography
