@@ -17,35 +17,35 @@ const SectionAbout = props => {
     {
       dave1: file(name: { eq: "daveGrid1" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       dave2: file(name: { eq: "daveGrid2" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       dave3: file(name: { eq: "daveGrid3" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       dave4: file(name: { eq: "daveGrid4" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       dave5: file(name: { eq: "daveGrid5" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -65,22 +65,20 @@ const SectionAbout = props => {
         <Grid container>
           <Grid item style={{ overflow: "hidden" }}>
             <GridList
-              cellHeight={160}
+              cellHeight="40vh"
               cols={2}
               width="100%"
-              style={{ height: 450, width: 500, overflow: "hidden" }}
+              style={{ height: "80vh", width: 500, overflow: "hidden" }}
             >
-              <GridListTile cols={1}>
-                <Img fluid={query.dave1.childImageSharp.fluid} />
+              <GridListTile>
+                <Img fluid={query.dave2.childImageSharp.fluid} />
               </GridListTile>
               <GridListTile>
-                <Img fluid={query.dave1.childImageSharp.fluid} />
+                <Img fluid={query.dave4.childImageSharp.fluid} />
               </GridListTile>
-              <GridListTile>
-                <Img fluid={query.dave1.childImageSharp.fluid} />
+              <GridListTile cols={2}>
+                <Img fluid={query.dave5.childImageSharp.fluid} />
               </GridListTile>
-              <GridListTile></GridListTile>
-              <GridListTile></GridListTile>
             </GridList>
           </Grid>
           <Grid item>This is the writing part</Grid>
