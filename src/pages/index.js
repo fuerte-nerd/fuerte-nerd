@@ -5,7 +5,7 @@ import { HeroImage } from "../components/image"
 import SEO from "../components/seo"
 
 import { Grid, Container, Box, Typography, Button } from "@material-ui/core"
-
+import { DirectionsRun } from "@material-ui/icons"
 import Navbar from "../components/Navbar"
 import NavMenu from "../components/NavMenu"
 
@@ -40,7 +40,12 @@ const IndexPage = () => (
               with code.
             </Typography>
             <Box align="center">
-              <Button variant="contained" color="primary">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                startIcon={<DirectionsRun />}
+              >
                 Come and see more!
               </Button>
             </Box>
