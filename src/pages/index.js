@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import { HeroImage } from "../components/image"
 import SEO from "../components/seo"
 
 import { Grid, Container, Box, Toolbar, Typography } from "@material-ui/core"
@@ -23,7 +23,7 @@ const IndexPage = () => (
       <Container>
         <Grid container>
           <Grid item xs={12} md={4}>
-            Image
+            <HeroImage />
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography

@@ -18,7 +18,7 @@ export const HeroImage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "dave.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 300, maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
