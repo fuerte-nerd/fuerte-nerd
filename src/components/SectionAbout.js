@@ -9,7 +9,7 @@ import {
   Button,
 } from "@material-ui/core"
 import { DirectionsRun } from "@material-ui/icons"
-import { HeroImage } from "./image"
+import { GridImage1, GridImage2 } from "./image"
 
 const SectionAbout = () => {
   return (
@@ -25,8 +25,8 @@ const SectionAbout = () => {
         <Grid container>
           <Grid item>
             <GridList>
-              <GridListTile></GridListTile>
-              <GridListTile></GridListTile>
+              <GridListTile>{GridImage1}</GridListTile>
+              <GridListTile>{GridImage2}</GridListTile>
               <GridListTile></GridListTile>
               <GridListTile></GridListTile>
               <GridListTile></GridListTile>
