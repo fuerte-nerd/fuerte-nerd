@@ -1,4 +1,6 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import {
   Box,
   Container,
@@ -9,7 +11,6 @@ import {
   Button,
 } from "@material-ui/core"
 import { DirectionsRun } from "@material-ui/icons"
-import { GridImage1, GridImage2 } from "./image"
 
 const SectionAbout = () => {
   return (
