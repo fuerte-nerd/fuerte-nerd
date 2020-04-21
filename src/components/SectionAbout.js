@@ -63,13 +63,22 @@ const SectionAbout = props => {
     >
       <Container>
         <Grid container>
-          <Grid item>
-            <GridList cellHeight={160} cols={2} width="100%" height="100%">
+          <Grid item style={{ overflow: "hidden" }}>
+            <GridList
+              cellHeight={160}
+              cols={2}
+              width="100%"
+              style={{ height: 450, width: 500, overflow: "hidden" }}
+            >
+              <GridListTile cols={1}>
+                <Img fluid={query.dave1.childImageSharp.fluid} />
+              </GridListTile>
               <GridListTile>
                 <Img fluid={query.dave1.childImageSharp.fluid} />
               </GridListTile>
-              <GridListTile></GridListTile>
-              <GridListTile></GridListTile>
+              <GridListTile>
+                <Img fluid={query.dave1.childImageSharp.fluid} />
+              </GridListTile>
               <GridListTile></GridListTile>
               <GridListTile></GridListTile>
             </GridList>
