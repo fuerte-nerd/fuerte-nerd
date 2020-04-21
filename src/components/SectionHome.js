@@ -49,7 +49,7 @@ const SectionHome = () => {
                 with code.
               </Typography>
               <Box align="center">
-                <Link to="about" smooth={true}>
+                <Link to="about" smooth={true} offset={-56}>
                   <Button
                     variant="contained"
                     size="large"
