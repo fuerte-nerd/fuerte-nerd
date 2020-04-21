@@ -6,6 +6,7 @@ import { HeroImage } from "./image"
 const SectionProjects = () => {
   return (
     <Box
+      id="projects"
       minHeight="100vh"
       display="flex"
       justifyContent="center"

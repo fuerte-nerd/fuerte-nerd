@@ -43,7 +43,7 @@ const NavMenu = props => {
           <ListItem
             button
             alignItems="center"
-            id="contact"
+            id="homeLink"
             onClick={handleClick}
           >
             <ListItemText
@@ -55,7 +55,7 @@ const NavMenu = props => {
           <ListItem
             button
             alignItems="center"
-            id="contact"
+            id="aboutLink"
             onClick={handleClick}
           >
             <ListItemText
@@ -67,7 +67,7 @@ const NavMenu = props => {
           <ListItem
             button
             alignItems="center"
-            id="contact"
+            id="projectsLink"
             onClick={handleClick}
           >
             <ListItemText
@@ -79,7 +79,7 @@ const NavMenu = props => {
           <ListItem
             button
             alignItems="center"
-            id="contact"
+            id="contactLink"
             onClick={handleClick}
           >
             <ListItemText

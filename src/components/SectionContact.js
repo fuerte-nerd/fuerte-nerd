@@ -6,6 +6,7 @@ import { HeroImage } from "./image"
 const SectionContact = () => {
   return (
     <Box
+      id="contact"
       minHeight="100vh"
       display="flex"
       justifyContent="center"
