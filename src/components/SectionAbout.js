@@ -42,3 +42,43 @@ const SectionAbout = () => {
 }
 
 export default SectionAbout
+
+export const query = graphql`
+  {
+    dave1: file(name: { eq: "daveGrid1" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dave2: file(name: { eq: "daveGrid2" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dave3: file(name: { eq: "daveGrid3" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dave4: file(name: { eq: "daveGrid4" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dave5: file(name: { eq: "daveGrid5" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, maxHeight: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
