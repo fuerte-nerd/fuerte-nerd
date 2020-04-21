@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
 
 import {
+  ListItemText,
   Divider,
   Dialog,
   Box,
@@ -34,14 +35,49 @@ const NavMenu = props => {
         height="100vh"
         width="100vw"
       >
-        <List dense style={{ flex: 1 }}>
-          <ListItem button alignItems="center" id="home" onClick={handleClick}>
-            <Box width="100%" py={1}>
-              <Typography variant="button" align="center" display="block">
-                Home
-              </Typography>
-            </Box>
+        <List style={{ flex: 1 }}>
+          <ListItem
+            button
+            alignItems="center"
+            id="contact"
+            onClick={handleClick}
+          >
+            <ListItemText
+              primaryTypographyProps={{ variant: "button", align: "center" }}
+            >
+              Contact
+            </ListItemText>
           </ListItem>
+          <ListItem
+            button
+            alignItems="center"
+            id="contact"
+            onClick={handleClick}
+          >
+            <ListItemText
+              primaryTypographyProps={{ variant: "button", align: "center" }}
+            >
+              Contact
+            </ListItemText>
+          </ListItem>
+          <ListItem
+            button
+            alignItems="center"
+            id="contact"
+            onClick={handleClick}
+          >
+            <ListItemText
+              primaryTypographyProps={{ variant: "button", align: "center" }}
+            >
+              Contact
+            </ListItemText>
+          </ListItem>
+          <ListItem
+            button
+            alignItems="center"
+            id="home"
+            onClick={handleClick}
+          ></ListItem>
           <ListItem button alignItems="center" id="about" onClick={handleClick}>
             <Box width="100%" py={1}>
               <Typography variant="button" align="center" display="block">
@@ -68,7 +104,6 @@ const NavMenu = props => {
             onClick={handleClick}
           >
             <ListItemText
-              disableTypography
               primaryTypographyProps={{ variant: "button", align: "center" }}
             >
               Contact
