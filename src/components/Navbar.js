@@ -28,12 +28,9 @@ const Navbar = props => {
           <Menu />
         </IconButton>
         <Typography variant="subtitle1" style={{ marginRight: ".25rem" }}>
-          David Andrews
+          fuerte nerd
         </Typography>
 
-        <Typography style={{ flex: 1 }} variant="subtitle2">
-          (Web Developer)
-        </Typography>
         <IconButton color="inherit">
           <GitHub />
         </IconButton>
