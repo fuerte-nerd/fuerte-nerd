@@ -4,7 +4,14 @@ import Layout from "../components/layout"
 import { HeroImage } from "../components/image"
 import SEO from "../components/seo"
 
-import { Grid, Container, Box, Toolbar, Typography } from "@material-ui/core"
+import {
+  Grid,
+  Container,
+  Box,
+  Hidden,
+  Toolbar,
+  Typography,
+} from "@material-ui/core"
 
 import Navbar from "../components/Navbar"
 import NavMenu from "../components/NavMenu"
@@ -20,12 +27,15 @@ const IndexPage = () => (
       justifyContent="center"
       alignItems="center"
     >
+      <Hidden mdUp>
+        <Toolbar />
+      </Hidden>
       <Container>
-        <Grid container alignItems="center">
-          <Grid item xs={12} sm={4}>
+        <Grid container alignItems="center" justifyContent="center">
+          <Grid item xs={12} md={4}>
             <HeroImage />
           </Grid>
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={12} md={8}>
             <Typography
               variant="h2"
               variantMapping={{ h2: "h1" }}

@@ -18,7 +18,7 @@ export const HeroImage = () => {
     query {
       placeholderImage: file(relativePath: { eq: "dave.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300) {
+          fluid(maxWidth: 320, maxHeight: 320) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -28,7 +28,7 @@ export const HeroImage = () => {
 
   return (
     <Img
-      style={{ borderRadius: "50%" }}
+      style={{ maxWidth: 320, borderRadius: "50%" }}
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   )
