@@ -11,6 +11,7 @@ const SectionAbout = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      bgcolor="secondary.main"
     >
       <Container>About</Container>
     </Box>

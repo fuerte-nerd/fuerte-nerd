@@ -29,7 +29,7 @@ const SectionHome = () => {
         <Container>
           <Grid container alignItems="center" justify="center">
             <Grid item xs={12} md={4}>
-              <Box width="100%" align="center">
+              <Box width="100%" align="center" mt={1}>
                 <HeroImage />
               </Box>
             </Grid>
