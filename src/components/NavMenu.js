@@ -27,7 +27,11 @@ const NavMenu = props => {
   }
 
   return (
-    <Dialog fullScreen open={props.isOpen}>
+    <Dialog
+      fullScreen
+      open={props.isOpen}
+      onClose={() => props.dispatch(toggleMenu(!props.isOpen))}
+    >
       <Box
         display="flex"
         justifyContent="center"
@@ -45,7 +49,7 @@ const NavMenu = props => {
             <ListItemText
               primaryTypographyProps={{ variant: "button", align: "center" }}
             >
-              Contact
+              Home
             </ListItemText>
           </ListItem>
           <ListItem
@@ -57,7 +61,7 @@ const NavMenu = props => {
             <ListItemText
               primaryTypographyProps={{ variant: "button", align: "center" }}
             >
-              Contact
+              About
             </ListItemText>
           </ListItem>
           <ListItem
@@ -69,33 +73,8 @@ const NavMenu = props => {
             <ListItemText
               primaryTypographyProps={{ variant: "button", align: "center" }}
             >
-              Contact
+              Projects
             </ListItemText>
-          </ListItem>
-          <ListItem
-            button
-            alignItems="center"
-            id="home"
-            onClick={handleClick}
-          ></ListItem>
-          <ListItem button alignItems="center" id="about" onClick={handleClick}>
-            <Box width="100%" py={1}>
-              <Typography variant="button" align="center" display="block">
-                About
-              </Typography>
-            </Box>
-          </ListItem>
-          <ListItem
-            button
-            alignItems="center"
-            id="projects"
-            onClick={handleClick}
-          >
-            <Box width="100%" py={1}>
-              <Typography variant="button" align="center" display="block">
-                Projects
-              </Typography>
-            </Box>
           </ListItem>
           <ListItem
             button
