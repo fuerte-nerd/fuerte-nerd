@@ -2,7 +2,15 @@ import React from "react"
 import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
 
-import { Dialog, Box, List, ListItem, Typography, Fab } from "@material-ui/core"
+import {
+  Divider,
+  Dialog,
+  Box,
+  List,
+  ListItem,
+  Typography,
+  Fab,
+} from "@material-ui/core"
 
 import { Close } from "@material-ui/icons"
 
@@ -59,11 +67,12 @@ const NavMenu = props => {
             id="contact"
             onClick={handleClick}
           >
-            <Box width="100%" py={1}>
-              <Typography variant="button" align="center" display="block">
-                Contact
-              </Typography>
-            </Box>
+            <ListItemText
+              disableTypography
+              primaryTypographyProps={{ variant: "button", align: "center" }}
+            >
+              Contact
+            </ListItemText>
           </ListItem>
         </List>
       </Box>
