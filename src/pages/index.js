@@ -29,8 +29,10 @@ const IndexPage = () => (
     >
       <Container>
         <Grid container alignItems="center" justify="center">
-          <Grid item xs={12} md={4} alignContent="center">
-            <HeroImage />
+          <Grid item xs={12} md={4}>
+            <Box width="100%" align="center">
+              <HeroImage />
+            </Box>
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography
@@ -40,12 +42,7 @@ const IndexPage = () => (
             >
               Hello!
             </Typography>
-            <Typography
-              variant="h5"
-              variantMapping={{ h5: "p" }}
-              align="center"
-              paragraph
-            >
+            <Typography variant="subtitle1" align="center" paragraph>
               My name is David and I make apps, websites and cups of coffee*
               with code.
             </Typography>

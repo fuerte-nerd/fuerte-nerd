@@ -28,7 +28,11 @@ export const HeroImage = () => {
 
   return (
     <Img
-      style={{ maxWidth: 320, borderRadius: "50%" }}
+      style={{
+        maxWidth: 320,
+        borderRadius: "50%",
+        boxShadow: "0 .1rem .2rem rgba(0,0,0,.3)",
+      }}
       fluid={data.placeholderImage.childImageSharp.fluid}
     />
   )
