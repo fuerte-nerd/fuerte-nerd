@@ -1,7 +1,13 @@
 import React from "react"
 import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
-import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core"
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Hidden,
+} from "@material-ui/core"
 
 import { Menu, GitHub, Phone, Email, WhatsApp } from "@material-ui/icons"
 
@@ -27,13 +33,17 @@ const Navbar = props => {
         >
           <Menu />
         </IconButton>
-        <Typography variant="subtitle1" style={{ marginRight: ".25rem" }}>
+        <Typography
+          variant="subtitle1"
+          style={{ flex: 1, marginRight: ".25rem" }}
+        >
           fuerte nerd
         </Typography>
-
-        <IconButton color="inherit">
-          <GitHub />
-        </IconButton>
+        <Hidden xsUp>
+          <IconButton color="inherit">
+            <GitHub />
+          </IconButton>
+        </Hidden>
         <IconButton color="inherit">
           <Phone />
         </IconButton>
