@@ -24,7 +24,7 @@ const NavMenu = props => {
       case "close":
         return props.dispatch(toggleMenu(!props.isOpen))
       default:
-        return
+        return props.dispatch(toggleMenu(!props.isOpen))
     }
   }
 
@@ -42,58 +42,62 @@ const NavMenu = props => {
         width="100vw"
       >
         <List style={{ flex: 1 }}>
-          <ListItem
-            button
-            alignItems="center"
-            id="homeLink"
-            onClick={handleClick}
-          >
-            <ListItemText
-              primaryTypographyProps={{ variant: "button", align: "center" }}
+          <Link to="home" smooth={true} offset={0}>
+            <ListItem
+              button
+              alignItems="center"
+              id="homeLink"
+              onClick={handleClick}
             >
-              <Link to="home" smooth={true} offset={0}>
+              <ListItemText
+                primaryTypographyProps={{ variant: "button", align: "center" }}
+              >
                 Home
-              </Link>
-            </ListItemText>
-          </ListItem>
-          <ListItem
-            button
-            alignItems="center"
-            id="aboutLink"
-            onClick={handleClick}
-          >
-            <Link to="about" smooth={true} offset={0}>
+              </ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="about" smooth={true} offset={0}>
+            <ListItem
+              button
+              alignItems="center"
+              id="aboutLink"
+              onClick={handleClick}
+            >
               <ListItemText
                 primaryTypographyProps={{ variant: "button", align: "center" }}
               >
                 About
               </ListItemText>
-            </Link>
-          </ListItem>
-          <ListItem
-            button
-            alignItems="center"
-            id="projectsLink"
-            onClick={handleClick}
-          >
-            <ListItemText
-              primaryTypographyProps={{ variant: "button", align: "center" }}
+            </ListItem>
+          </Link>
+          <Link to="projects" smooth={true} offset={0}>
+            <ListItem
+              button
+              alignItems="center"
+              id="projectsLink"
+              onClick={handleClick}
             >
-              Projects
-            </ListItemText>
-          </ListItem>
-          <ListItem
-            button
-            alignItems="center"
-            id="contactLink"
-            onClick={handleClick}
-          >
-            <ListItemText
-              primaryTypographyProps={{ variant: "button", align: "center" }}
+              <ListItemText
+                primaryTypographyProps={{ variant: "button", align: "center" }}
+              >
+                Projects
+              </ListItemText>
+            </ListItem>
+          </Link>
+          <Link to="contact" smooth={true} offset={0}>
+            <ListItem
+              button
+              alignItems="center"
+              id="contactLink"
+              onClick={handleClick}
             >
-              Contact
-            </ListItemText>
-          </ListItem>
+              <ListItemText
+                primaryTypographyProps={{ variant: "button", align: "center" }}
+              >
+                Contact
+              </ListItemText>
+            </ListItem>
+          </Link>
         </List>
       </Box>
       <Fab
