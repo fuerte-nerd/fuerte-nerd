@@ -1,10 +1,12 @@
 import React from "react"
 import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
+import { ListItem, ListItemText } from "@material-ui/core"
+import { Link } from "react-scroll"
 
 const NavMenuItem = props => {
   return (
-    <Link to={props.link} smooth={true} offset={props.offset ? 56 : 0}>
+    <Link to={props.link} smooth={true} offset={props.offset ? -56 : 0}>
       <ListItem
         button
         alignItems="center"
@@ -21,7 +23,7 @@ const NavMenuItem = props => {
   )
 }
 
-mapStateToProps = state => ({
+const mapStateToProps = state => ({
   isOpen: state.navOpen,
 })
 export default connect(mapStateToProps)(NavMenuItem)

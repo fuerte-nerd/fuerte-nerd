@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
-
+import NavMenuItem from "./NavMenuItem"
 import { Link } from "react-scroll"
 
 import {
@@ -19,13 +19,7 @@ import { Close } from "@material-ui/icons"
 
 const NavMenu = props => {
   const handleClick = e => {
-    const f = e.currentTarget
-    switch (f.id) {
-      case "close":
-        return props.dispatch(toggleMenu(!props.isOpen))
-      default:
-        return props.dispatch(toggleMenu(!props.isOpen))
-    }
+    return props.dispatch(toggleMenu(!props.isOpen))
   }
 
   return (
@@ -42,62 +36,10 @@ const NavMenu = props => {
         width="100vw"
       >
         <List style={{ flex: 1 }}>
-          <Link to="home" smooth={true} offset={0}>
-            <ListItem
-              button
-              alignItems="center"
-              id="homeLink"
-              onClick={handleClick}
-            >
-              <ListItemText
-                primaryTypographyProps={{ variant: "button", align: "center" }}
-              >
-                Home
-              </ListItemText>
-            </ListItem>
-          </Link>
-          <Link to="about" smooth={true} offset={0}>
-            <ListItem
-              button
-              alignItems="center"
-              id="aboutLink"
-              onClick={handleClick}
-            >
-              <ListItemText
-                primaryTypographyProps={{ variant: "button", align: "center" }}
-              >
-                About
-              </ListItemText>
-            </ListItem>
-          </Link>
-          <Link to="projects" smooth={true} offset={0}>
-            <ListItem
-              button
-              alignItems="center"
-              id="projectsLink"
-              onClick={handleClick}
-            >
-              <ListItemText
-                primaryTypographyProps={{ variant: "button", align: "center" }}
-              >
-                Projects
-              </ListItemText>
-            </ListItem>
-          </Link>
-          <Link to="contact" smooth={true} offset={0}>
-            <ListItem
-              button
-              alignItems="center"
-              id="contactLink"
-              onClick={handleClick}
-            >
-              <ListItemText
-                primaryTypographyProps={{ variant: "button", align: "center" }}
-              >
-                Contact
-              </ListItemText>
-            </ListItem>
-          </Link>
+          <NavMenuItem link="home" label="Home" />
+          <NavMenuItem link="about" label="About" offset />
+          <NavMenuItem link="projects" label="Projects" offset />
+          <NavMenuItem link="contact" label="Contact" />
         </List>
       </Box>
       <Fab
