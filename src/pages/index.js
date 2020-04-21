@@ -26,13 +26,22 @@ const IndexPage = () => (
             Image
           </Grid>
           <Grid item xs={12} md={8}>
-            <Typography variant="h4" variantMapping={{ h4: "h1" }}>
+            <Typography
+              variant="h4"
+              variantMapping={{ h4: "h1" }}
+              align="center"
+            >
               Hi!
             </Typography>
-            <Typography>
-              My name is David and I make apps, websites and cups of tea* with
-              code.
+            <Typography align="center" paragraph>
+              My name is David and I make apps, websites and cups of coffee*
+              with code.
             </Typography>
+            <Box width="100%" display="block">
+              <Typography variant="caption" align="center">
+                *work in progress
+              </Typography>
+            </Box>
           </Grid>
         </Grid>
       </Container>
