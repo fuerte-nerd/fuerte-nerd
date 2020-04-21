@@ -29,7 +29,7 @@ const Navbar = props => {
   }
   return (
     <>
-      <AppBar>
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             edge="start"
@@ -40,7 +40,7 @@ const Navbar = props => {
           >
             <Menu />
           </IconButton>
-          <Typography variant="h4" style={{ flex: 1 }}>
+          <Typography variant="h6" style={{ flex: 1 }}>
             fuerte nerd
           </Typography>
           <Hidden smDown>
@@ -59,8 +59,22 @@ const Navbar = props => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer>
+      <Drawer variant="permanent">
         <Toolbar />
+        <List>
+          <ListItem>
+            <ListItemText>Home</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>About</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>Projects</ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>Contact</ListItemText>
+          </ListItem>
+        </List>
       </Drawer>
     </>
   )
