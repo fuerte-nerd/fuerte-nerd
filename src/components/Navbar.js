@@ -4,6 +4,10 @@ import { toggleMenu } from "../redux/actions"
 import {
   AppBar,
   Toolbar,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
   IconButton,
   Typography,
   Hidden,
@@ -24,49 +28,41 @@ const Navbar = props => {
     }
   }
   return (
-    <AppBar>
-      <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          style={{ marginRight: ".25rem" }}
-          onClick={handleClick}
-          id="menu"
-        >
-          <Menu />
-        </IconButton>
-        <Typography variant="subtitle1" style={{ flex: 1, minWidth: "8rem" }}>
-          fuerte nerd
-        </Typography>
-        {/* menu for larger screens */}
-        <Hidden smDown>
-          <Grid container>
-            <Grid item>
-              <Button color="inherit" fullWidth>
-                Home
-              </Button>
-            </Grid>
-            <Grid item></Grid>
-            <Grid item></Grid>
-            <Grid item></Grid>
-          </Grid>
-        </Hidden>
-        <Hidden smDown>
-          <IconButton color="inherit">
-            <GitHub />
+    <>
+      <AppBar>
+        <Toolbar>
+          <IconButton
+            edge="start"
+            color="inherit"
+            style={{ marginRight: ".25rem" }}
+            onClick={handleClick}
+            id="menu"
+          >
+            <Menu />
           </IconButton>
-        </Hidden>
-        <IconButton color="inherit">
-          <Phone />
-        </IconButton>
-        <IconButton color="inherit">
-          <Email />
-        </IconButton>
-        <IconButton edge="end" color="inherit">
-          <WhatsApp />
-        </IconButton>
-      </Toolbar>
-    </AppBar>
+          <Typography variant="h4" style={{ flex: 1 }}>
+            fuerte nerd
+          </Typography>
+          <Hidden smDown>
+            <IconButton color="inherit">
+              <GitHub />
+            </IconButton>
+          </Hidden>
+          <IconButton color="inherit">
+            <Phone />
+          </IconButton>
+          <IconButton color="inherit">
+            <Email />
+          </IconButton>
+          <IconButton edge="end" color="inherit">
+            <WhatsApp />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Drawer>
+        <Toolbar />
+      </Drawer>
+    </>
   )
 }
 
