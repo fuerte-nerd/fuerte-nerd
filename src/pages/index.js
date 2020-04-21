@@ -21,19 +21,24 @@ const IndexPage = () => (
       alignItems="center"
     >
       <Container>
-        <Grid container>
+        <Grid container alignItems="center">
           <Grid item xs={12} sm={4}>
             <HeroImage />
           </Grid>
-          <Grid item xs={12} sm={8} alignItems="center">
+          <Grid item xs={12} sm={8}>
             <Typography
-              variant="h4"
-              variantMapping={{ h4: "h1" }}
+              variant="h2"
+              variantMapping={{ h2: "h1" }}
               align="center"
             >
-              Hi!
+              Hello!
             </Typography>
-            <Typography align="center" paragraph>
+            <Typography
+              variant="h5"
+              variantMapping={{ h5: "p" }}
+              align="center"
+              paragraph
+            >
               My name is David and I make apps, websites and cups of coffee*
               with code.
             </Typography>
