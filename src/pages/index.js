@@ -9,6 +9,9 @@ import SEO from "../components/seo"
 import Navbar from "../components/Navbar"
 import NavMenu from "../components/NavMenu"
 import SectionHome from "../components/SectionHome"
+import SectionAbout from "../components/SectionAbout"
+import SectionProjects from "../components/SectionProjects"
+import SectionContact from "../components/SectionContact"
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +19,9 @@ const IndexPage = () => (
     <Navbar />
     <NavMenu />
     <SectionHome />
+    <SectionAbout />
+    <SectionProjects />
+    <SectionContact />
   </Layout>
 )
 
