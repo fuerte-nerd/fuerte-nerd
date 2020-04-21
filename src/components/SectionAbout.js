@@ -64,8 +64,10 @@ const SectionAbout = props => {
       <Container>
         <Grid container>
           <Grid item>
-            <GridList>
-              <GridListTile></GridListTile>
+            <GridList cellHeight={160} cols={2} width="100%" height="100%">
+              <GridListTile>
+                <Img fluid={query.dave1.childImageSharp.fluid} />
+              </GridListTile>
               <GridListTile></GridListTile>
               <GridListTile></GridListTile>
               <GridListTile></GridListTile>
