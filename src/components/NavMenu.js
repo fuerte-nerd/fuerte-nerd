@@ -2,6 +2,8 @@ import React from "react"
 import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
 
+import { Link } from "react-scroll"
+
 import {
   ListItemText,
   Divider,
@@ -49,7 +51,9 @@ const NavMenu = props => {
             <ListItemText
               primaryTypographyProps={{ variant: "button", align: "center" }}
             >
-              Home
+              <Link to="home" smooth={true} offset={50}>
+                Home
+              </Link>
             </ListItemText>
           </ListItem>
           <ListItem
