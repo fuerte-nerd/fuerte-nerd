@@ -39,7 +39,7 @@ const Navbar = props => {
         >
           fuerte nerd
         </Typography>
-        <Hidden xsUp>
+        <Hidden smDown>
           <IconButton color="inherit">
             <GitHub />
           </IconButton>
