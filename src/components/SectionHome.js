@@ -6,6 +6,7 @@ import { HeroImage } from "./image"
 const SectionHome = () => {
   return (
     <Box
+      id="home"
       minHeight="100vh"
       display="flex"
       justifyContent="center"
@@ -40,7 +41,7 @@ const SectionHome = () => {
                 Come and see more!
               </Button>
             </Box>
-            <Box mt={3} width="100%" display="block" textAlign="center">
+            <Box mt={1} width="100%" display="block" textAlign="center">
               <Typography variant="caption" align="center">
                 *work in progress
               </Typography>
