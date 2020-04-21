@@ -7,6 +7,8 @@ import {
   IconButton,
   Typography,
   Hidden,
+  Grid,
+  Button,
 } from "@material-ui/core"
 
 import { Menu, GitHub, Phone, Email, WhatsApp } from "@material-ui/icons"
@@ -33,12 +35,22 @@ const Navbar = props => {
         >
           <Menu />
         </IconButton>
-        <Typography
-          variant="subtitle1"
-          style={{ flex: 1, marginRight: ".25rem" }}
-        >
+        <Typography variant="subtitle1" style={{ flex: 1, minWidth: "3rem" }}>
           fuerte nerd
         </Typography>
+        {/* menu for larger screens */}
+        <Hidden smDown>
+          <Grid container>
+            <Grid item>
+              <Button color="inherit" fullWidth>
+                Home
+              </Button>
+            </Grid>
+            <Grid item></Grid>
+            <Grid item></Grid>
+            <Grid item></Grid>
+          </Grid>
+        </Hidden>
         <Hidden smDown>
           <IconButton color="inherit">
             <GitHub />
