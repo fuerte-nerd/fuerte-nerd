@@ -23,9 +23,7 @@ const IndexPage = () => (
       <Container>
         <Grid container>
           <Grid item xs={12} md={4}>
-            <Avatar>
-              <HeroImage />
-            </Avatar>
+            <Avatar component="<HeroImage />" />
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography
