@@ -15,16 +15,17 @@ import { Link } from "react-scroll"
 const SectionHome = () => {
   return (
     <>
-      <Hidden smUp>
-        <Toolbar />
-      </Hidden>
       <Box
         id="home"
         minHeight="100vh"
         display="flex"
         justifyContent="center"
         alignItems="center"
+        flexDirection="column"
       >
+        <Hidden smUp>
+          <Toolbar />
+        </Hidden>
         <Container>
           <Grid container alignItems="center" justify="center">
             <Grid item xs={12} md={4}>
