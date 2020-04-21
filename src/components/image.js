@@ -26,6 +26,11 @@ export const HeroImage = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <Img
+      style={{ borderRadius: "50%" }}
+      fluid={data.placeholderImage.childImageSharp.fluid}
+    />
+  )
 }
 

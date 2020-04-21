@@ -22,12 +22,10 @@ const IndexPage = () => (
     >
       <Container>
         <Grid container>
-          <Grid item xs={12} md={4}>
-            <Box>
-              <HeroImage style={{ borderRadius: "50%" }} />
-            </Box>
+          <Grid item xs={12} sm={4}>
+            <HeroImage />
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} sm={8} alignItems="center">
             <Typography
               variant="h4"
               variantMapping={{ h4: "h1" }}
