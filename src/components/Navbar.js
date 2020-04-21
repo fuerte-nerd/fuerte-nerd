@@ -28,55 +28,36 @@ const Navbar = props => {
     }
   }
   return (
-    <>
-      <AppBar position="fixed" style={{ zIndex: 5000 }}>
-        <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            style={{ marginRight: ".25rem" }}
-            onClick={handleClick}
-            id="menu"
-          >
-            <Menu />
-          </IconButton>
-          <Typography variant="h6" style={{ flex: 1 }}>
-            fuerte nerd
-          </Typography>
-          <Hidden smDown>
-            <IconButton color="inherit">
-              <GitHub />
-            </IconButton>
-          </Hidden>
+    <AppBar position="fixed">
+      <Toolbar>
+        <IconButton
+          edge="start"
+          color="inherit"
+          style={{ marginRight: ".25rem" }}
+          onClick={handleClick}
+          id="menu"
+        >
+          <Menu />
+        </IconButton>
+        <Typography variant="h6" style={{ flex: 1 }}>
+          fuerte nerd
+        </Typography>
+        <Hidden smDown>
           <IconButton color="inherit">
-            <Phone />
+            <GitHub />
           </IconButton>
-          <IconButton color="inherit">
-            <Email />
-          </IconButton>
-          <IconButton edge="end" color="inherit">
-            <WhatsApp />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <Drawer variant="permanent" style={{ width: "14rem" }}>
-        <Toolbar />
-        <List>
-          <ListItem>
-            <ListItemText>Home</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>About</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Projects</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Contact</ListItemText>
-          </ListItem>
-        </List>
-      </Drawer>
-    </>
+        </Hidden>
+        <IconButton color="inherit">
+          <Phone />
+        </IconButton>
+        <IconButton color="inherit">
+          <Email />
+        </IconButton>
+        <IconButton edge="end" color="inherit">
+          <WhatsApp />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   )
 }
 
