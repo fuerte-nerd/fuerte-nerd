@@ -4,7 +4,7 @@ import { toggleMenu } from "../redux/actions"
 
 const NavMenuItem = props => {
   return (
-    <Link to={props.link} smooth={true} offset={0}>
+    <Link to={props.link} smooth={true} offset={props.offset ? 56 : 0}>
       <ListItem
         button
         alignItems="center"
