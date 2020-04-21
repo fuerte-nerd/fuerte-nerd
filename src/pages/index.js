@@ -4,14 +4,7 @@ import Layout from "../components/layout"
 import { HeroImage } from "../components/image"
 import SEO from "../components/seo"
 
-import {
-  Grid,
-  Container,
-  Box,
-  Hidden,
-  Toolbar,
-  Typography,
-} from "@material-ui/core"
+import { Grid, Container, Box, Typography, Button } from "@material-ui/core"
 
 import Navbar from "../components/Navbar"
 import NavMenu from "../components/NavMenu"
@@ -46,7 +39,12 @@ const IndexPage = () => (
               My name is David and I make apps, websites and cups of coffee*
               with code.
             </Typography>
-            <Box width="100%" display="block" textAlign="center">
+            <Box align="center">
+              <Button variant="contained" color="primary">
+                Come and see more!
+              </Button>
+            </Box>
+            <Box mt={3} width="100%" display="block" textAlign="center">
               <Typography variant="caption" align="center">
                 *work in progress
               </Typography>
