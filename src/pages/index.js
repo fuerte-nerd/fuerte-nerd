@@ -37,7 +37,7 @@ const IndexPage = () => (
               My name is David and I make apps, websites and cups of coffee*
               with code.
             </Typography>
-            <Box width="100%" display="block">
+            <Box width="100%" display="block" textAlign="center">
               <Typography variant="caption" align="center">
                 *work in progress
               </Typography>
