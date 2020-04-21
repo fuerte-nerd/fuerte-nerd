@@ -40,7 +40,7 @@ const Navbar = props => {
           <Menu />
         </IconButton>
         <Typography variant="h6" style={{ flex: 1 }}>
-          fuerte nerd
+          d_andrews
         </Typography>
         <Hidden smDown>
           <IconButton color="inherit">
@@ -50,11 +50,8 @@ const Navbar = props => {
         <IconButton color="inherit">
           <Phone />
         </IconButton>
-        <IconButton color="inherit">
-          <Email />
-        </IconButton>
         <IconButton edge="end" color="inherit">
-          <WhatsApp />
+          <Email />
         </IconButton>
       </Toolbar>
     </AppBar>
