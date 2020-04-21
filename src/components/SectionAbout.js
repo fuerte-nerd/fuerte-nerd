@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
@@ -12,7 +12,10 @@ import {
 } from "@material-ui/core"
 import { DirectionsRun } from "@material-ui/icons"
 
-const SectionAbout = () => {
+const SectionAbout = props => {
+  console.log(props)
+
+  useEffect(() => console.log(props), [props])
   return (
     <Box
       id="about"
@@ -26,8 +29,8 @@ const SectionAbout = () => {
         <Grid container>
           <Grid item>
             <GridList>
-              <GridListTile>{GridImage1}</GridListTile>
-              <GridListTile>{GridImage2}</GridListTile>
+              <GridListTile></GridListTile>
+              <GridListTile></GridListTile>
               <GridListTile></GridListTile>
               <GridListTile></GridListTile>
               <GridListTile></GridListTile>
