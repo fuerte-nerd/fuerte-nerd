@@ -51,7 +51,7 @@ const NavMenu = props => {
             <ListItemText
               primaryTypographyProps={{ variant: "button", align: "center" }}
             >
-              <Link to="home" smooth={true} offset={50}>
+              <Link to="home" smooth={true} offset={0}>
                 Home
               </Link>
             </ListItemText>
@@ -62,11 +62,13 @@ const NavMenu = props => {
             id="aboutLink"
             onClick={handleClick}
           >
-            <ListItemText
-              primaryTypographyProps={{ variant: "button", align: "center" }}
-            >
-              About
-            </ListItemText>
+            <Link to="about" smooth={true} offset={0}>
+              <ListItemText
+                primaryTypographyProps={{ variant: "button", align: "center" }}
+              >
+                About
+              </ListItemText>
+            </Link>
           </ListItem>
           <ListItem
             button
