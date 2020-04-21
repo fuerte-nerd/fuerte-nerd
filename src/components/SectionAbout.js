@@ -64,22 +64,29 @@ const SectionAbout = props => {
       <Container>
         <Grid container>
           <Grid item style={{ overflow: "hidden" }}>
-            <GridList
-              cellHeight="40vh"
-              cols={2}
-              width="100%"
-              style={{ height: "80vh", width: 500, overflow: "hidden" }}
-            >
-              <GridListTile>
-                <Img fluid={query.dave2.childImageSharp.fluid} />
-              </GridListTile>
-              <GridListTile>
-                <Img fluid={query.dave4.childImageSharp.fluid} />
-              </GridListTile>
-              <GridListTile cols={2}>
-                <Img fluid={query.dave5.childImageSharp.fluid} />
-              </GridListTile>
-            </GridList>
+            <Box display="block" width="100%">
+              <GridList
+                cellHeight={246}
+                cols={2}
+                width="100%"
+                style={{
+                  height: "80vh",
+                  width: "100%",
+                  maxWidth: 500,
+                  overflow: "hidden",
+                }}
+              >
+                <GridListTile>
+                  <Img fluid={query.dave2.childImageSharp.fluid} />
+                </GridListTile>
+                <GridListTile>
+                  <Img fluid={query.dave5.childImageSharp.fluid} />
+                </GridListTile>
+                <GridListTile cols={2}>
+                  <Img fluid={query.dave4.childImageSharp.fluid} />
+                </GridListTile>
+              </GridList>
+            </Box>
           </Grid>
           <Grid item>This is the writing part</Grid>
         </Grid>
