@@ -29,7 +29,7 @@ const Navbar = props => {
   }
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="fixed" style={{ zIndex: 5000 }}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -59,7 +59,7 @@ const Navbar = props => {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent">
+      <Drawer variant="permanent" style={{ width: "14rem" }}>
         <Toolbar />
         <List>
           <ListItem>
