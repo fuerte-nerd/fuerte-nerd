@@ -24,7 +24,7 @@ const SectionAbout = props => {
       }
       dave2: file(name: { eq: "daveGrid2" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 300, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -38,7 +38,7 @@ const SectionAbout = props => {
       }
       dave4: file(name: { eq: "daveGrid4" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -63,11 +63,10 @@ const SectionAbout = props => {
     >
       <Container>
         <Grid container>
-          <Grid item style={{ width: "100%", overflow: "hidden" }}>
+          <Grid item xs={12} md={6} style={{ overflow: "hidden" }}>
             <GridList
               cellHeight={240}
               cols={2}
-              width="100%"
               style={{
                 width: "100%",
                 maxWidth: 500,
@@ -75,17 +74,19 @@ const SectionAbout = props => {
               }}
             >
               <GridListTile>
-                <Img fluid={query.dave2.childImageSharp.fluid} />
+                <Img fluid={query.dave5.childImageSharp.fluid} />
               </GridListTile>
               <GridListTile>
-                <Img fluid={query.dave5.childImageSharp.fluid} />
+                <Img fluid={query.dave2.childImageSharp.fluid} />
               </GridListTile>
               <GridListTile cols={2}>
                 <Img fluid={query.dave4.childImageSharp.fluid} />
               </GridListTile>
             </GridList>
           </Grid>
-          <Grid item>This is the writing part</Grid>
+          <Grid item xs={12} md={6}>
+            This is the writing part
+          </Grid>
         </Grid>
         About
       </Container>
