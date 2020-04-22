@@ -7,7 +7,7 @@ import {
   Typography,
   Button,
 } from "@material-ui/core"
-import { Send } from "@material-ui/icons"
+import { Send, Email, Phone, WhatsApp } from "@material-ui/icons"
 import { HeroImage } from "./image"
 
 const SectionContact = () => {
@@ -29,7 +29,38 @@ const SectionContact = () => {
         </Box>
 
         <Box>
-          <Button>Phone</Button>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={4}>
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<Phone />}
+                fullWidth
+              >
+                Phone
+              </Button>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<Email />}
+                fullWidth
+              >
+                Email
+              </Button>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Button
+                variant="contained"
+                size="large"
+                startIcon={<WhatsApp />}
+                fullWidth
+              >
+                WhatsApp
+              </Button>
+            </Grid>
+          </Grid>
           <Button>Email</Button>
           <Button>WhatsApp</Button>
         </Box>
