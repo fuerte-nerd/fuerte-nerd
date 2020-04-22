@@ -54,10 +54,8 @@ const SectionContact = () => {
                 required
               />
             </Grid>
-            <Grid item xs={12} alignItems="center">
-              <Button variant="contained" align="center">
-                Send
-              </Button>
+            <Grid item xs={12} style={{ textAlign: "center" }}>
+              <Button variant="contained">Send</Button>
             </Grid>
           </Grid>
         </form>
