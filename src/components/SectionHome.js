@@ -33,9 +33,15 @@ const SectionHome = () => {
           <Box width="100%" align="center">
             <HeroImage />
           </Box>
-          <Typography variant="h2" variantMapping={{ h2: "h1" }} align="center">
-            Hello!
-          </Typography>
+          <Box mt={2}>
+            <Typography
+              variant="h2"
+              variantMapping={{ h2: "h1" }}
+              align="center"
+            >
+              Hello!
+            </Typography>
+          </Box>
           <Typography variant="subtitle1" align="center" paragraph>
             My name is David and I make apps, websites and cups of coffee* with
             code.

@@ -61,7 +61,7 @@ const SectionAbout = props => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      bgcolor="secondary.main"
+      bgcolor="secondary.light"
       flexDirection="column"
     >
       <Container>
