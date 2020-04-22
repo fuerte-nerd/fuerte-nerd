@@ -20,9 +20,9 @@ import { HeroImage } from "./image"
 const SectionProjects = () => {
   const imgsQuery = useStaticQuery(graphql`
     {
-      todos: file(name: { eq: "apps_todos" }) {
+      todos: file(name: { eq: "app_todos" }) {
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
