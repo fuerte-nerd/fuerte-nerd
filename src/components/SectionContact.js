@@ -28,8 +28,8 @@ const SectionContact = () => {
           </Typography>
         </Box>
 
-        <Box>
-          <Grid container spacing={3}>
+        <Box py={3}>
+          <Grid container spacing={1}>
             <Grid item xs={12} sm={4}>
               <Button
                 variant="contained"
@@ -61,8 +61,12 @@ const SectionContact = () => {
               </Button>
             </Grid>
           </Grid>
-          <Button>Email</Button>
-          <Button>WhatsApp</Button>
+        </Box>
+        <Box>
+          <Typography>
+            If you would rather, you can send me a quick message directly from
+            this site using the form below...
+          </Typography>
         </Box>
         <form action="" method="post">
           <Grid container spacing={3}>
