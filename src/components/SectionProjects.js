@@ -53,7 +53,7 @@ const SectionProjects = () => {
       bgcolor="primary.dark"
     >
       <Container>
-        <Typography color="textPrimary" variant="h2">
+        <Typography color="initial" variant="h2">
           My Work
         </Typography>
         <Typography color="inherit" variant="subtitle1">
