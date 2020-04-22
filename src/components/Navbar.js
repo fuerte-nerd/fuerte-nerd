@@ -15,7 +15,14 @@ import {
   Button,
 } from "@material-ui/core"
 
-import { Menu, GitHub, Phone, Email, WhatsApp } from "@material-ui/icons"
+import {
+  Menu,
+  Instagram,
+  GitHub,
+  Phone,
+  Email,
+  WhatsApp,
+} from "@material-ui/icons"
 
 const Navbar = props => {
   const handleClick = e => {
@@ -42,6 +49,11 @@ const Navbar = props => {
         <Typography variant="h6" style={{ flex: 1 }}>
           d_andrews
         </Typography>
+        <Hidden smDown>
+          <IconButton color="inherit">
+            <Instagram />
+          </IconButton>
+        </Hidden>
         <Hidden smDown>
           <IconButton color="inherit">
             <GitHub />
