@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
+  Divider,
   Toolbar,
   Hidden,
   Box,
@@ -69,13 +70,14 @@ const SectionAbout = props => {
                 PHP, Python (too many to mention them all without sending you to
                 sleep!)
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body2" paragraph>
                 When I am not working, I enjoy volunteering at the local dog
                 rescue center, playing the piano and mountain-biking around this
                 beautiful island....although not necessarily at the same time!
                 :o)
               </Typography>
-              <Box pt={2}>
+              <Divider />{" "}
+              <Box mt={2}>
                 <Typography variant="subtitle2">
                   If you want to have a sniff of my code....
                 </Typography>
