@@ -64,8 +64,8 @@ const SectionContact = () => {
         </Box>
         <Box>
           <Typography>
-            If you would rather, you can send me a quick message directly from
-            this site using the form below...
+            If you would rather, you can send me a message directly using the
+            form below...
           </Typography>
         </Box>
         <form action="" method="post">
