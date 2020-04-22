@@ -51,7 +51,7 @@ const SectionAbout = props => {
       flexDirection="column"
     >
       <Container>
-        <Grid container justify="center" alignItems="center" spacing={2}>
+        <Grid container justify="center" alignItems="center" spacing={4}>
           <Grid item xs={12} md={6}>
             <Box>
               <Box mb={2}>
