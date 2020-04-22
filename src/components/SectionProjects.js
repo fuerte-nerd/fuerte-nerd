@@ -15,7 +15,7 @@ import {
   Typography,
   Button,
 } from "@material-ui/core"
-import { DirectionsRun } from "@material-ui/icons"
+import { Language, Code } from "@material-ui/icons"
 import { HeroImage } from "./image"
 
 const SectionProjects = () => {
@@ -80,8 +80,8 @@ const SectionProjects = () => {
                 </CardActionArea>
                 <Divider />
                 <CardActions>
-                  <Button>Visit</Button>
-                  <Button>Code</Button>
+                  <Button startIcon={<Language />}>Visit</Button>
+                  <Button startIcon={<Code />}>Code</Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -103,8 +103,8 @@ const SectionProjects = () => {
                 </CardActionArea>
                 <Divider />
                 <CardActions>
-                  <Button>Visit</Button>
-                  <Button>Code</Button>
+                  <Button startIcon={<Language />}>Visit</Button>
+                  <Button startIcon={<Code />}>Code</Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -126,8 +126,8 @@ const SectionProjects = () => {
                 </CardActionArea>
                 <Divider />
                 <CardActions>
-                  <Button>Visit</Button>
-                  <Button>Code</Button>
+                  <Button startIcon={<Language />}>Visit</Button>
+                  <Button startIcon={<Code />}>Code</Button>
                 </CardActions>
               </Card>
             </Grid>

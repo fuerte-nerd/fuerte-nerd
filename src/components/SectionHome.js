@@ -30,43 +30,33 @@ const SectionHome = () => {
           <Toolbar />
         </Hidden>
         <Container>
-          <Grid container alignItems="center" justify="center">
-            <Grid item xs={12} md={4}>
-              <Box width="100%" align="center">
-                <HeroImage />
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={8}>
-              <Typography
-                variant="h2"
-                variantMapping={{ h2: "h1" }}
-                align="center"
+          <Box width="100%" align="center">
+            <HeroImage />
+          </Box>
+          <Typography variant="h2" variantMapping={{ h2: "h1" }} align="center">
+            Hello!
+          </Typography>
+          <Typography variant="subtitle1" align="center" paragraph>
+            My name is David and I make apps, websites and cups of coffee* with
+            code.
+          </Typography>
+          <Box align="center">
+            <Link to="about" smooth={true} offset={-56}>
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                startIcon={<DirectionsRun />}
               >
-                Hello!
-              </Typography>
-              <Typography variant="subtitle1" align="center" paragraph>
-                My name is David and I make apps, websites and cups of coffee*
-                with code.
-              </Typography>
-              <Box align="center">
-                <Link to="about" smooth={true} offset={-56}>
-                  <Button
-                    variant="contained"
-                    size="large"
-                    color="primary"
-                    startIcon={<DirectionsRun />}
-                  >
-                    Come and see more!
-                  </Button>
-                </Link>
-              </Box>
-              <Box mt={1} width="100%" display="block" textAlign="center">
-                <Typography variant="caption" align="center">
-                  *work in progress
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid>
+                Come and see more!
+              </Button>
+            </Link>
+          </Box>
+          <Box mt={1} width="100%" display="block" textAlign="center">
+            <Typography variant="caption" align="center">
+              *work in progress
+            </Typography>
+          </Box>
         </Container>
       </Box>
     </>
