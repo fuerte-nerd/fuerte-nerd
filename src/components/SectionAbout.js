@@ -56,12 +56,12 @@ const SectionAbout = props => {
   return (
     <Box
       id="about"
-      py={3}
+      py={4}
       minHeight="100vh"
       display="flex"
       justifyContent="center"
       alignItems="center"
-      bgcolor="secondary.light"
+      bgcolor="primary.light"
       flexDirection="column"
     >
       <Container>
