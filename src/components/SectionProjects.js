@@ -27,6 +27,13 @@ const SectionProjects = () => {
           }
         }
       }
+      notes: file(name: { eq: "app_notes" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
@@ -56,8 +63,10 @@ const SectionProjects = () => {
                 <CardContent>
                   <Typography variant="h5">Todos</Typography>
                   <Typography variant="body2">
-                    A React application I built using Redux for state management
-                    and Material UI for styling
+                    A single page React application for keeping track of your
+                    tasks. I built it using Redux for state management,
+                    LocalStorage for data persistence and Material UI for
+                    styling
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -67,54 +76,25 @@ const SectionProjects = () => {
               </CardActions>
             </Card>
           </Grid>
-        </Grid>
-        <Grid>
-          <Grid>
+          <Grid item>
             <Card>
               <CardActionArea>
-                <CardMedia></CardMedia>
+                <CardMedia>
+                  <Img fluid={imgsQuery.notes.childImageSharp.fluid} />
+                </CardMedia>
                 <CardContent>
-                  <Typography></Typography>
-                  <Typography></Typography>
+                  <Typography variant="h5">Notes</Typography>
+                  <Typography variant="body2">
+                    A single page React application for writing notes to
+                    yourself! I built it using Redux for state management,
+                    LocalStorage for data persistence and Material UI for
+                    styling
+                  </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button></Button>
-                <Button></Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Grid>
-        <Grid>
-          <Grid>
-            <Card>
-              <CardActionArea>
-                <CardMedia></CardMedia>
-                <CardContent>
-                  <Typography></Typography>
-                  <Typography></Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button></Button>
-                <Button></Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        </Grid>
-        <Grid>
-          <Grid>
-            <Card>
-              <CardActionArea>
-                <CardMedia></CardMedia>
-                <CardContent>
-                  <Typography></Typography>
-                  <Typography></Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button></Button>
-                <Button></Button>
+                <Button>Visit</Button>
+                <Button>Code</Button>
               </CardActions>
             </Card>
           </Grid>
