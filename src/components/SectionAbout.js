@@ -69,24 +69,29 @@ const SectionAbout = props => {
                 PHP, Python (too many to mention them all without sending you to
                 sleep!)
               </Typography>
-              <Typography variant="body2" paragraph>
+              <Typography variant="body2">
                 When I am not working, I enjoy volunteering at the local dog
                 rescue center, playing the piano and mountain-biking around this
                 beautiful island....although not necessarily at the same time!
                 :o)
               </Typography>
-              <Typography variant="subtitle2">
-                If you want to have a sniff of my code....
-              </Typography>
-              <Button variant="outlined" startIcon={<GitHub />}>
-                Check out my GitHub
-              </Button>
-              <Typography variant="subtitle2">
-                If you like pics of dogs....
-              </Typography>
-              <Button variant="outlined" startIcon={<Instagram />}>
-                Check out my Instagram
-              </Button>
+              <Box pt={2}>
+                <Typography variant="subtitle2">
+                  If you want to have a sniff of my code....
+                </Typography>
+
+                <Button variant="outlined" startIcon={<GitHub />}>
+                  Check out my GitHub
+                </Button>
+              </Box>
+              <Box pt={2}>
+                <Typography variant="subtitle2">
+                  If you like pics of dogs....
+                </Typography>
+                <Button variant="outlined" startIcon={<Instagram />}>
+                  Check out my Instagram
+                </Button>
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={6} style={{ overflow: "hidden" }}>
