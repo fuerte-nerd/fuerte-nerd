@@ -11,9 +11,17 @@ import {
   Typography,
   Button,
 } from "@material-ui/core"
+import { makeStyles} from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
 
 const SectionAbout = props => {
+
+  const useStyles = makeStyles((theme)=>({
+    externalLinks: [theme.breakpoints.down('sm')]: {
+      textAlign: "center"
+    }
+  }))
+  const classes = useStyles()
   const query = useStaticQuery(graphql`
     {
       dave2: file(name: { eq: "daveGrid2" }) {
@@ -72,7 +80,7 @@ const SectionAbout = props => {
                 :o)
               </Typography>
               <Divider />{" "}
-              <Box mt={2}>
+              <Box mt={2} className={classes.externalLinks}>
                 <Typography variant="subtitle2">
                   If you want to have a sniff of my code....
                 </Typography>
