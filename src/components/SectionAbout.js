@@ -41,6 +41,7 @@ const SectionAbout = props => {
   return (
     <Box
       id="about"
+      py={2}
       minHeight="100vh"
       display="flex"
       justifyContent="center"
@@ -76,15 +77,15 @@ const SectionAbout = props => {
             </GridList>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Box>
-              <Typography paragraph>
+            <Box py={2}>
+              <Typography variant="body1" paragraph>
                 I am a developer originally from England, now residing in the
                 Canary Islands. I mainly work with React, Gatsby and Node, but I
                 have experience working with numerous tech such as Django,
                 Laravel, Material UI, Bootstrap, PHP, Python (too many to
                 mention them all!)
               </Typography>
-              <Typography>
+              <Typography variant="body2">
                 When I am not working, I enjoy volunteering at the local dog
                 rescue, playing the piano and mountain-biking around this
                 beautiful island....although not necessarily at the same time!
@@ -93,7 +94,6 @@ const SectionAbout = props => {
             </Box>
           </Grid>
         </Grid>
-        About
       </Container>
     </Box>
   )
