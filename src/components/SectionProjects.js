@@ -34,6 +34,13 @@ const SectionProjects = () => {
           }
         }
       }
+      scoreboard: file(name: { eq: "app_scoreboard" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   return (
@@ -58,6 +65,27 @@ const SectionProjects = () => {
             <Card>
               <CardActionArea>
                 <CardMedia>
+                  <Img fluid={imgsQuery.scoreboard.childImageSharp.fluid} />
+                </CardMedia>
+                <CardContent>
+                  <Typography variant="h5">Scoreboard</Typography>
+                  <Typography variant="body2">
+                    A single page React application to help you keep score! I
+                    built it using Redux for state management, LocalStorage for
+                    data persistence and Material UI for styling.
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Button>Visit</Button>
+                <Button>Code</Button>
+              </CardActions>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Card>
+              <CardActionArea>
+                <CardMedia>
                   <Img fluid={imgsQuery.todos.childImageSharp.fluid} />
                 </CardMedia>
                 <CardContent>
@@ -66,7 +94,7 @@ const SectionProjects = () => {
                     A single page React application for keeping track of your
                     tasks. I built it using Redux for state management,
                     LocalStorage for data persistence and Material UI for
-                    styling
+                    styling.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -88,7 +116,7 @@ const SectionProjects = () => {
                     A single page React application for writing notes to
                     yourself! I built it using Redux for state management,
                     LocalStorage for data persistence and Material UI for
-                    styling
+                    styling.
                   </Typography>
                 </CardContent>
               </CardActionArea>
