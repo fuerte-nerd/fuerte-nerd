@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
+  Toolbar,
+  Hidden,
   Box,
   Container,
   Grid,
@@ -47,12 +49,16 @@ const SectionAbout = props => {
       justifyContent="center"
       alignItems="center"
       bgcolor="secondary.main"
+      flexDirection="column"
     >
+      <Hidden smUp>
+        <Toolbar />
+      </Hidden>
       <Container>
         <Grid container justify="center" alignItems="center" spacing={2}>
           <Grid item xs={12} md={6}>
-            <Box py={2}>
-              <Box py={3}>
+            <Bo>
+              <Box pb={3}>
                 <Typography variant="h2" align="center">
                   Who am I?
                 </Typography>
