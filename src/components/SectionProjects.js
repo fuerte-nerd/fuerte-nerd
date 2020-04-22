@@ -51,9 +51,16 @@ const SectionProjects = () => {
       justifyContent="center"
       alignItems="center"
       bgcolor="primary.dark"
+      color="primary.light"
     >
       <Container>
         <Typography color="initial" variant="h2">
+          My Work
+        </Typography>
+        <Typography color="textPrimary" variant="h2">
+          My Work
+        </Typography>
+        <Typography color="primary" variant="h2">
           My Work
         </Typography>
         <Typography color="inherit" variant="subtitle1">
