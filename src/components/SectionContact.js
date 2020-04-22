@@ -12,7 +12,7 @@ const SectionContact = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <Container>Contact</Container>
+      <Container></Container>
     </Box>
   )
 }
