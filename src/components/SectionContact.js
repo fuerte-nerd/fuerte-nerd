@@ -23,10 +23,17 @@ const SectionContact = () => {
         <form action="" method="post">
           <Grid container>
             <Grid item xs={12} sm={6} md={4}>
-              <TextField name="name" id="name" label="Name" required />
+              <TextField
+                fullWidth
+                name="name"
+                id="name"
+                label="Name"
+                required
+              />
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
               <TextField
+                fullWidth
                 name="email"
                 id="email"
                 label="Email"
@@ -35,10 +42,11 @@ const SectionContact = () => {
               />
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <TextField name="phone" id="phone" label="Phone (Optional)" />
+              <TextField fullWidth name="phone" id="phone" label="Phone" />
             </Grid>
             <Grid item xs={12}>
               <TextField
+                fullWidth
                 name="message"
                 id="message"
                 label="Message"
@@ -46,8 +54,10 @@ const SectionContact = () => {
                 required
               />
             </Grid>
-            <Grid item>
-              <Button>Send</Button>
+            <Grid item xs={12}>
+              <Button variant="contained" fullWidth>
+                Send
+              </Button>
             </Grid>
           </Grid>
         </form>
