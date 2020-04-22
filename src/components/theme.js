@@ -5,6 +5,7 @@ export default createMuiTheme({
   palette: {
     primary: blueGrey,
     secondary: yellow,
-    tonalOffset: 0.4,
+    contrastThreshold: 2,
+    tonalOffset: 0.1,
   },
 })
