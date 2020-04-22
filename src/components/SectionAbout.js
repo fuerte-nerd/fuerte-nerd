@@ -12,7 +12,7 @@ import {
   Typography,
   Button,
 } from "@material-ui/core"
-import { Instagram } from "@material-ui/icons"
+import { GitHub, Instagram } from "@material-ui/icons"
 
 const SectionAbout = props => {
   const query = useStaticQuery(graphql`
@@ -59,9 +59,7 @@ const SectionAbout = props => {
           <Grid item xs={12} md={6}>
             <Box>
               <Box pb={3}>
-                <Typography variant="h2" align="center">
-                  Who am I?
-                </Typography>
+                <Typography variant="h2">Who am I?</Typography>
               </Box>
               <Typography variant="body1" paragraph>
                 I am an app developer originally from England, now residing in
@@ -71,16 +69,24 @@ const SectionAbout = props => {
                 PHP, Python (too many to mention them all without sending you to
                 sleep!)
               </Typography>
-              <Typography variant="body2">
+              <Typography variant="body2" paragraph>
                 When I am not working, I enjoy volunteering at the local dog
                 rescue center, playing the piano and mountain-biking around this
                 beautiful island....although not necessarily at the same time!
                 :o)
               </Typography>
+              <Typography variant="subtitle2">
+                If you want to have a sniff of my code....
+              </Typography>
+              <Button variant="outlined" startIcon={<GitHub />}>
+                Check out my GitHub
+              </Button>
+              <Typography variant="subtitle2">
+                If you like pics of dogs....
+              </Typography>
               <Button variant="outlined" startIcon={<Instagram />}>
                 Check out my Instagram
               </Button>
-              <Button></Button>
             </Box>
           </Grid>
           <Grid item xs={12} md={6} style={{ overflow: "hidden" }}>
