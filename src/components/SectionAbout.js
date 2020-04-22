@@ -14,6 +14,11 @@ import {
 import { makeStyles } from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
 const useStyles = makeStyles(theme => ({
+  aboutText: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "justify",
+    },
+  },
   externalLinks: {
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
@@ -66,15 +71,24 @@ const SectionAbout = props => {
               <Box mb={2}>
                 <Typography variant="h2">Who am I?</Typography>
               </Box>
-              <Typography variant="body1" paragraph>
+              <Typography
+                variant="body1"
+                className={classes.aboutText}
+                paragraph
+              >
                 I am an app developer originally from England, now residing in
-                the Canary Islands. I mainly work with React, Gatsby, vanilla
-                JavaScript and Node, but I have experience of working with
+                the Canary Islands. I mainly work with <strong>React</strong>,{" "}
+                <strong>Gatsby</strong>, vanilla <strong>JavaScript</strong> and{" "}
+                <strong>Node</strong>, but I have experience of working with
                 numerous tech such as Django, Laravel, Material UI, Bootstrap,
                 PHP, Python (too many to mention them all without sending you to
                 sleep!)
               </Typography>
-              <Typography variant="body2" paragraph>
+              <Typography
+                variant="body2"
+                className={classes.aboutText}
+                paragraph
+              >
                 When I am not working, I enjoy volunteering at the local dog
                 rescue center, playing the piano and mountain-biking around this
                 beautiful island....although not necessarily at the same time!
