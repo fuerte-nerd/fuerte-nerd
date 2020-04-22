@@ -97,7 +97,7 @@ const SectionAbout = props => {
               cols={2}
               style={{
                 width: "100%",
-                maxWidth: 500,
+                maxWidth: 650,
                 overflow: "hidden",
               }}
             >
