@@ -15,23 +15,9 @@ import { DirectionsRun } from "@material-ui/icons"
 const SectionAbout = props => {
   const query = useStaticQuery(graphql`
     {
-      dave1: file(name: { eq: "daveGrid1" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
       dave2: file(name: { eq: "daveGrid2" }) {
         childImageSharp {
           fluid(maxWidth: 300, maxHeight: 300, cropFocus: ATTENTION) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      dave3: file(name: { eq: "daveGrid3" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -62,6 +48,11 @@ const SectionAbout = props => {
       bgcolor="secondary.main"
     >
       <Container>
+        <Box>
+          <Typography variant="h2" align="center">
+            Who am I?
+          </Typography>
+        </Box>
         <Grid container>
           <Grid item xs={12} md={6} style={{ overflow: "hidden" }}>
             <GridList
@@ -95,4 +86,3 @@ const SectionAbout = props => {
 }
 
 export default SectionAbout
-
