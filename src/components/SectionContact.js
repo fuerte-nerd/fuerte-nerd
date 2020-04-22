@@ -22,17 +22,32 @@ const SectionContact = () => {
       <Container>
         <form action="" method="post">
           <Grid container>
-            <Grid item>
-              <TextField />
+            <Grid item xs={12} sm={6} md={4}>
+              <TextField name="name" id="name" label="Name" required />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <TextField
+                name="email"
+                id="email"
+                label="Email"
+                type="email"
+                required
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4}>
+              <TextField name="phone" id="phone" label="Phone (Optional)" />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                name="message"
+                id="message"
+                label="Message"
+                multiline
+                required
+              />
             </Grid>
             <Grid item>
-              <TextField />
-            </Grid>
-            <Grid item>
-              <TextField />
-            </Grid>
-            <Grid item>
-              <Button />
+              <Button>Send</Button>
             </Grid>
           </Grid>
         </form>
