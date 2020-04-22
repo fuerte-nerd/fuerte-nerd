@@ -6,6 +6,8 @@ import {
   Grid,
   Typography,
   Button,
+  Hidden,
+  Toolbar,
 } from "@material-ui/core"
 import { Send, Email, Phone, WhatsApp } from "@material-ui/icons"
 import { HeroImage } from "./image"
@@ -16,9 +18,13 @@ const SectionContact = () => {
       id="contact"
       minHeight="100vh"
       display="flex"
+      flexDirection="column"
       justifyContent="center"
       alignItems="center"
     >
+      <Hidden smUp>
+        <Toolbar />
+      </Hidden>
       <Container>
         <Box>
           <Typography variant="h2">Get in touch!</Typography>
