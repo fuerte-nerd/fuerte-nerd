@@ -4,10 +4,11 @@ import {
   Box,
   Container,
   Grid,
+  InputAdornment,
   Typography,
   Button,
 } from "@material-ui/core"
-import { DirectionsRun } from "@material-ui/icons"
+import { Send, Email } from "@material-ui/icons"
 import { HeroImage } from "./image"
 
 const SectionContact = () => {
@@ -38,6 +39,13 @@ const SectionContact = () => {
                 id="email"
                 label="Email"
                 type="email"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <Email />
+                    </InputAdornment>
+                  ),
+                }}
                 required
               />
             </Grid>
@@ -55,7 +63,9 @@ const SectionContact = () => {
               />
             </Grid>
             <Grid item xs={12} style={{ textAlign: "center" }}>
-              <Button variant="contained">Send</Button>
+              <Button endIcon={<Send />} variant="contained">
+                Send
+              </Button>
             </Grid>
           </Grid>
         </form>
