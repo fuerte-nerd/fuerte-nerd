@@ -5,7 +5,6 @@ import {
   Box,
   Card,
   CardMedia,
-  CardHeader,
   CardContent,
   CardActions,
   CardActionArea,
@@ -16,7 +15,6 @@ import {
   Button,
 } from "@material-ui/core"
 import { Language, Code } from "@material-ui/icons"
-import { HeroImage } from "./image"
 
 const SectionProjects = () => {
   const imgsQuery = useStaticQuery(graphql`
@@ -52,6 +50,7 @@ const SectionProjects = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
+      bgcolor="primary.dark"
     >
       <Container>
         <Box>
