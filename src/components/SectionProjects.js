@@ -51,11 +51,14 @@ const SectionProjects = () => {
       justifyContent="center"
       alignItems="center"
       bgcolor="primary.dark"
+      color="inherit"
     >
       <Container>
         <Box>
-          <Typography variant="h2">My Work</Typography>
-          <Typography variant="subtitle1">
+          <Typography color="inherit" variant="h2">
+            My Work
+          </Typography>
+          <Typography color="inherit" variant="subtitle1">
             Here you will find a selection of my work, ranging from SPAs (Single
             Page Applications) to websites (and more!)...
           </Typography>
