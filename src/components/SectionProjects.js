@@ -62,7 +62,7 @@ const SectionProjects = () => {
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
-            <Card>
+            <Card style={{ minHeight: "20rem" }}>
               <CardActionArea>
                 <CardMedia>
                   <Img fluid={imgsQuery.scoreboard.childImageSharp.fluid} />
