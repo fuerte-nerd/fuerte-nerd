@@ -12,7 +12,7 @@ import {
   Typography,
   Button,
 } from "@material-ui/core"
-import { DirectionsRun } from "@material-ui/icons"
+import { Instagram } from "@material-ui/icons"
 
 const SectionAbout = props => {
   const query = useStaticQuery(graphql`
@@ -64,8 +64,8 @@ const SectionAbout = props => {
                 </Typography>
               </Box>
               <Typography variant="body1" paragraph>
-                I am a developer originally from England, now residing in the
-                Canary Islands. I mainly work with React, Gatsby, vanilla
+                I am an app developer originally from England, now residing in
+                the Canary Islands. I mainly work with React, Gatsby, vanilla
                 JavaScript and Node, but I have experience of working with
                 numerous tech such as Django, Laravel, Material UI, Bootstrap,
                 PHP, Python (too many to mention them all without sending you to
@@ -77,6 +77,10 @@ const SectionAbout = props => {
                 beautiful island....although not necessarily at the same time!
                 :o)
               </Typography>
+              <Button variant="outlined" startIcon={<Instagram />}>
+                Check out my Instagram
+              </Button>
+              <Button></Button>
             </Box>
           </Grid>
           <Grid item xs={12} md={6} style={{ overflow: "hidden" }}>
