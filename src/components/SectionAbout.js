@@ -66,7 +66,7 @@ const SectionAbout = props => {
     >
       <Container>
         <Grid container justify="center" alignItems="center" spacing={4}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={7}>
             <Box>
               <Box mb={2}>
                 <Typography variant="h2">Who am I?</Typography>
@@ -95,26 +95,36 @@ const SectionAbout = props => {
                 :o)
               </Typography>
               <Divider />{" "}
-              <Box mt={3} className={classes.externalLinks}>
-                <Typography variant="subtitle2">
-                  If you want to have a sniff of my code....
-                </Typography>
+              <Grid container spacing={4}>
+                <Grid item xs={12} md={6}>
+                  <Box className={classes.externalLinks}>
+                    <Typography variant="subtitle2">
+                      If you want to have a sniff of my code....
+                    </Typography>
 
-                <Button variant="outlined" startIcon={<GitHub />}>
-                  Check out my GitHub
-                </Button>
-              </Box>
-              <Box mt={2} className={classes.externalLinks}>
-                <Typography variant="subtitle2">
-                  If you like pics of dogs....
-                </Typography>
-                <Button variant="outlined" startIcon={<Instagram />}>
-                  Check out my Instagram
-                </Button>
-              </Box>
+                    <Button fullWidth variant="outlined" startIcon={<GitHub />}>
+                      Check out my GitHub
+                    </Button>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <Box className={classes.externalLinks}>
+                    <Typography variant="subtitle2">
+                      If you like pics of dogs....
+                    </Typography>
+                    <Button
+                      fullWidth
+                      variant="outlined"
+                      startIcon={<Instagram />}
+                    >
+                      Check out my Instagram
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6} style={{ overflow: "hidden" }}>
+          <Grid item xs={12} md={5} style={{ overflow: "hidden" }}>
             <GridList
               cellHeight="auto"
               cols={2}
