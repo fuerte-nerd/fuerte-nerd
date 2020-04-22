@@ -49,12 +49,29 @@ const SectionAbout = props => {
       bgcolor="secondary.main"
     >
       <Container>
-        <Box>
-          <Typography variant="h2" align="center">
-            Who am I?
-          </Typography>
-        </Box>
-        <Grid container>
+        <Grid container justify="center" alignItems="center" spacing={2}>
+          <Grid item xs={12} md={6}>
+            <Box py={2}>
+              <Box py={3}>
+                <Typography variant="h2" align="center">
+                  Who am I?
+                </Typography>
+              </Box>
+              <Typography variant="body1" paragraph>
+                I am a developer originally from England, now residing in the
+                Canary Islands. I mainly work with React, Gatsby and Node, but I
+                have experience working with numerous tech such as Django,
+                Laravel, Material UI, Bootstrap, PHP, Python (too many to
+                mention them all!)
+              </Typography>
+              <Typography variant="body2">
+                When I am not working, I enjoy volunteering at the local dog
+                rescue, playing the piano and mountain-biking around this
+                beautiful island....although not necessarily at the same time!
+                :o)
+              </Typography>
+            </Box>
+          </Grid>
           <Grid item xs={12} md={6} style={{ overflow: "hidden" }}>
             <GridList
               cellHeight="auto"
@@ -75,23 +92,6 @@ const SectionAbout = props => {
                 <Img fluid={query.dave4.childImageSharp.fluid} />
               </GridListTile>
             </GridList>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Box py={2}>
-              <Typography variant="body1" paragraph>
-                I am a developer originally from England, now residing in the
-                Canary Islands. I mainly work with React, Gatsby and Node, but I
-                have experience working with numerous tech such as Django,
-                Laravel, Material UI, Bootstrap, PHP, Python (too many to
-                mention them all!)
-              </Typography>
-              <Typography variant="body2">
-                When I am not working, I enjoy volunteering at the local dog
-                rescue, playing the piano and mountain-biking around this
-                beautiful island....although not necessarily at the same time!
-                :o)
-              </Typography>
-            </Box>
           </Grid>
         </Grid>
       </Container>
