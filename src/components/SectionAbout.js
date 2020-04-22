@@ -11,16 +11,17 @@ import {
   Typography,
   Button,
 } from "@material-ui/core"
-import { makeStyles} from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
+const useStyles = makeStyles(theme => ({
+  externalLinks: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+    },
+  },
+}))
 
 const SectionAbout = props => {
-
-  const useStyles = makeStyles((theme)=>({
-    externalLinks: [theme.breakpoints.down('sm')]: {
-      textAlign: "center"
-    }
-  }))
   const classes = useStyles()
   const query = useStaticQuery(graphql`
     {
@@ -80,7 +81,7 @@ const SectionAbout = props => {
                 :o)
               </Typography>
               <Divider />{" "}
-              <Box mt={2} className={classes.externalLinks}>
+              <Box mt={3} className={classes.externalLinks}>
                 <Typography variant="subtitle2">
                   If you want to have a sniff of my code....
                 </Typography>
@@ -89,7 +90,7 @@ const SectionAbout = props => {
                   Check out my GitHub
                 </Button>
               </Box>
-              <Box pt={2}>
+              <Box mt={2} className={classes.externalLinks}>
                 <Typography variant="subtitle2">
                   If you like pics of dogs....
                 </Typography>
