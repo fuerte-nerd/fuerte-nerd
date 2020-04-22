@@ -53,8 +53,8 @@ const SectionProjects = () => {
             Page Applications) to websites (and more!)...
           </Typography>
         </Box>
-        <Grid container>
-          <Grid item>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} md={4}>
             <Card>
               <CardActionArea>
                 <CardMedia>
@@ -76,7 +76,7 @@ const SectionProjects = () => {
               </CardActions>
             </Card>
           </Grid>
-          <Grid item>
+          <Grid item xs={12} sm={6} md={4}>
             <Card>
               <CardActionArea>
                 <CardMedia>
