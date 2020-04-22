@@ -57,7 +57,7 @@ const SectionAbout = props => {
       <Container>
         <Grid container justify="center" alignItems="center" spacing={2}>
           <Grid item xs={12} md={6}>
-            <Bo>
+            <Box>
               <Box pb={3}>
                 <Typography variant="h2" align="center">
                   Who am I?
@@ -65,14 +65,15 @@ const SectionAbout = props => {
               </Box>
               <Typography variant="body1" paragraph>
                 I am a developer originally from England, now residing in the
-                Canary Islands. I mainly work with React, Gatsby and Node, but I
-                have experience working with numerous tech such as Django,
-                Laravel, Material UI, Bootstrap, PHP, Python (too many to
-                mention them all!)
+                Canary Islands. I mainly work with React, Gatsby, vanilla
+                JavaScript and Node, but I have experience of working with
+                numerous tech such as Django, Laravel, Material UI, Bootstrap,
+                PHP, Python (too many to mention them all without sending you to
+                sleep!)
               </Typography>
               <Typography variant="body2">
                 When I am not working, I enjoy volunteering at the local dog
-                rescue, playing the piano and mountain-biking around this
+                rescue center, playing the piano and mountain-biking around this
                 beautiful island....although not necessarily at the same time!
                 :o)
               </Typography>
