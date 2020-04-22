@@ -40,8 +40,8 @@ const SectionContact = () => {
                 label="Email"
                 type="email"
                 InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
+                  endAdornment: (
+                    <InputAdornment position="end">
                       <Email />
                     </InputAdornment>
                   ),
