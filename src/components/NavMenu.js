@@ -39,7 +39,7 @@ const NavMenu = props => {
           <NavMenuItem link="home" label="Home" />
           <NavMenuItem link="about" label="About" offset />
           <NavMenuItem link="projects" label="Projects" offset />
-          <NavMenuItem link="contact" label="Contact" />
+          <NavMenuItem link="contact" label="Contact" offset />
         </List>
       </Box>
       <Fab

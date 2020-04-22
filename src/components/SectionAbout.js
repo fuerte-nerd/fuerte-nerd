@@ -3,8 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
   Divider,
-  Toolbar,
-  Hidden,
   Box,
   Container,
   Grid,
@@ -44,7 +42,7 @@ const SectionAbout = props => {
   return (
     <Box
       id="about"
-      py={2}
+      py={3}
       minHeight="100vh"
       display="flex"
       justifyContent="center"
@@ -52,14 +50,11 @@ const SectionAbout = props => {
       bgcolor="secondary.main"
       flexDirection="column"
     >
-      <Hidden smUp>
-        <Toolbar />
-      </Hidden>
       <Container>
         <Grid container justify="center" alignItems="center" spacing={2}>
           <Grid item xs={12} md={6}>
             <Box>
-              <Box pb={3}>
+              <Box mb={2}>
                 <Typography variant="h2">Who am I?</Typography>
               </Box>
               <Typography variant="body1" paragraph>
