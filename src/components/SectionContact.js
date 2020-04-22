@@ -21,7 +21,7 @@ const SectionContact = () => {
     >
       <Container>
         <form action="" method="post">
-          <Grid container>
+          <Grid container spacing={3} alignContent="center">
             <Grid item xs={12} sm={6} md={4}>
               <TextField
                 fullWidth
@@ -55,9 +55,7 @@ const SectionContact = () => {
               />
             </Grid>
             <Grid item xs={12}>
-              <Button variant="contained" fullWidth>
-                Send
-              </Button>
+              <Button variant="contained">Send</Button>
             </Grid>
           </Grid>
         </form>
