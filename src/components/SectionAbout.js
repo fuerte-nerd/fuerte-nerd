@@ -95,21 +95,19 @@ const SectionAbout = props => {
                 :o)
               </Typography>
               <Divider />{" "}
-              <Grid container spacing={4}>
-                <Grid item xs={12} md={6}>
-                  <Box className={classes.externalLinks}>
-                    <Typography variant="subtitle2">
+              <Box mt={3} align="center">
+                <Grid container spacing={4}>
+                  <Grid item xs={12} md={6}>
+                    <Typography variant="body2">
                       If you want to have a sniff of my code....
                     </Typography>
 
                     <Button fullWidth variant="outlined" startIcon={<GitHub />}>
                       Check out my GitHub
                     </Button>
-                  </Box>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <Box className={classes.externalLinks}>
-                    <Typography variant="subtitle2">
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Typography variant="body2">
                       If you like pics of dogs....
                     </Typography>
                     <Button
@@ -119,9 +117,9 @@ const SectionAbout = props => {
                     >
                       Check out my Instagram
                     </Button>
-                  </Box>
+                  </Grid>
                 </Grid>
-              </Grid>
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={5} style={{ overflow: "hidden" }}>
