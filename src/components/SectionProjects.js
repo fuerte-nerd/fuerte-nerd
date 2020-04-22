@@ -1,4 +1,6 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import {
   Box,
   Card,
@@ -16,6 +18,17 @@ import { DirectionsRun } from "@material-ui/icons"
 import { HeroImage } from "./image"
 
 const SectionProjects = () => {
+  const imgsQuery = useStaticQuery(graphql`
+    {
+      todos: file(name: { eq: "apps_todos" }) {
+        childImageSharp {
+          fluid(maxWidth: 400) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <Box
       py={4}
@@ -37,7 +50,9 @@ const SectionProjects = () => {
           <Grid item>
             <Card>
               <CardActionArea>
-                <CardMedia></CardMedia>
+                <CardMedia>
+                  <Img fluid={imgsQuery.todos.childImageSharp.fluid} />
+                </CardMedia>
                 <CardContent>
                   <Typography variant="h5">Todos</Typography>
                   <Typography variant="body2">
