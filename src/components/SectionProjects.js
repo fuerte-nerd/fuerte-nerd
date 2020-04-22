@@ -62,12 +62,12 @@ const SectionProjects = () => {
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
-            <Card style={{ minHeight: "20rem" }}>
+            <Card>
               <CardActionArea>
                 <CardMedia>
                   <Img fluid={imgsQuery.scoreboard.childImageSharp.fluid} />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={{ height: "10rem" }}>
                   <Typography variant="h5">Scoreboard</Typography>
                   <Typography variant="body2">
                     A single page React application to help you keep score! I
@@ -88,7 +88,7 @@ const SectionProjects = () => {
                 <CardMedia>
                   <Img fluid={imgsQuery.todos.childImageSharp.fluid} />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={{ height: "10rem" }}>
                   <Typography variant="h5">Todos</Typography>
                   <Typography variant="body2">
                     A single page React application for keeping track of your
@@ -110,7 +110,7 @@ const SectionProjects = () => {
                 <CardMedia>
                   <Img fluid={imgsQuery.notes.childImageSharp.fluid} />
                 </CardMedia>
-                <CardContent>
+                <CardContent style={{ height: "10rem" }}>
                   <Typography variant="h5">Notes</Typography>
                   <Typography variant="body2">
                     A single page React application for writing notes to
