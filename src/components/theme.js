@@ -1,20 +1,9 @@
-import { teal } from "@material-ui/core/colors"
+import { teal, yellow } from "@material-ui/core/colors"
 import { createMuiTheme } from "@material-ui/core/styles"
 
 export default createMuiTheme({
   palette: {
-    primary: {
-      main: teal[500],
-    },
-    secondary: {
-      main: teal[200],
-    },
-    background: {
-      default: teal[50],
-      paper: teal[100],
-    },
-    text: {
-      primary: teal[900],
-    },
+    primary: teal,
+    secondary: yellow,
   },
 })
