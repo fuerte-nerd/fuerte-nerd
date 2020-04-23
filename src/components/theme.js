@@ -12,7 +12,7 @@ export default createMuiTheme({
     tonalOffset: 0.1,
   },
   typography: {
-    fontFamily: "Courier Prime",
+    fontFamily: "Fanwood Text",
     h1: {
       fontFamily: "Fanwood Text",
     },
