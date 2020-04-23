@@ -51,7 +51,7 @@ const SectionHome = () => {
               <Button
                 variant="contained"
                 size="large"
-                color="primary"
+                color="secondary"
                 startIcon={<DirectionsRun />}
               >
                 Come and see more!
