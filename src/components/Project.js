@@ -28,10 +28,14 @@ const Project = props => {
         </CardActionArea>
         <Divider />
         <CardActions>
-          <Button variant="outlined" color="primary" startIcon={<Language />}>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<Language />}
+          >
             Visit
           </Button>
-          <Button variant="outlined" color="primary" startIcon={<Code />}>
+          <Button variant="contained" color="secondary" startIcon={<Code />}>
             Code
           </Button>
         </CardActions>
