@@ -38,6 +38,9 @@ const NavMenu = props => {
         align="center"
       >
         <Box width="100%" mb={2}>
+          <Box align="center">
+            <Typography variant="overline">Internals</Typography>
+          </Box>
           <List style={{ flex: 1 }}>
             <NavMenuItem link="home" label="Home" />
             <NavMenuItem link="about" label="About" />
