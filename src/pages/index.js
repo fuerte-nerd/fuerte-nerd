@@ -18,11 +18,12 @@ const IndexPage = props => {
     timer2: 0,
   })
   useEffect(() => {
-    console.log("helloooo")
-    if (!props.isSmoothScrolling) {
-      console.log("triggered")
+    const onScroll = e => {
+      console.log(window.scrollY)
     }
-  }, [window.scrollY])
+    window.addEventListener("scroll", onScroll)
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
     <Layout>
