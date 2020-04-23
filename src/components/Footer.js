@@ -3,7 +3,13 @@ import { Box, Container, Typography } from "@material-ui/core"
 
 const Footer = () => {
   return (
-    <Box bgcolor="primary.main" boxShadow={3} py={4} align="center">
+    <Box
+      bgcolor="primary.main"
+      color="#fff"
+      boxShadow={3}
+      py={4}
+      align="center"
+    >
       <Container>
         <Typography variant="caption">
           All content &copy; 2020
