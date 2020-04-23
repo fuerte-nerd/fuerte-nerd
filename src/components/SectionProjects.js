@@ -61,6 +61,13 @@ const SectionProjects = () => {
         </Typography>
         <Box mt={3}>
           <Grid container spacing={3}>
+            <Project
+              title="Scoreboard"
+              img={imgsQuery.scoreboard.childImageSharp.fluid}
+              description="A single page React application to help you keep score! I
+                      built it using Redux for state management, LocalStorage
+              for data persistence and Material UI for styling."
+            />
             <Grid item xs={12} sm={6} md={4}>
               <Card>
                 <CardActionArea>
@@ -69,11 +76,7 @@ const SectionProjects = () => {
                   </CardMedia>
                   <CardContent style={{ height: "10rem" }}>
                     <Typography variant="h5">Scoreboard</Typography>
-                    <Typography variant="body2">
-                      A single page React application to help you keep score! I
-                      built it using Redux for state management, LocalStorage
-                      for data persistence and Material UI for styling.
-                    </Typography>
+                    <Typography variant="body2"></Typography>
                   </CardContent>
                 </CardActionArea>
                 <Divider />

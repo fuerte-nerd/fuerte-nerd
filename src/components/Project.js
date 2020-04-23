@@ -1,20 +1,28 @@
 import React from "react"
+import {
+  Grid,
+  Card,
+  CardActionArea,
+  CardMedia,
+  CardContent,
+  Typography,
+  Button,
+  Divider,
+} from "@material-ui/core"
+import { Language, Code } from "@material-ui/icons"
+import Img from "gatsby-image"
 
-const Project = () => {
+const Project = props => {
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card>
         <CardActionArea>
           <CardMedia>
-            <Img fluid={imgsQuery.scoreboard.childImageSharp.fluid} />
+            <Img fluid={props.img} />
           </CardMedia>
           <CardContent style={{ height: "10rem" }}>
-            <Typography variant="h5">Scoreboard</Typography>
-            <Typography variant="body2">
-              A single page React application to help you keep score! I built it
-              using Redux for state management, LocalStorage for data
-              persistence and Material UI for styling.
-            </Typography>
+            <Typography variant="h5">{props.title}</Typography>
+            <Typography variant="body2">{props.description}</Typography>
           </CardContent>
         </CardActionArea>
         <Divider />
