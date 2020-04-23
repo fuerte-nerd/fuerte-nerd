@@ -18,29 +18,10 @@ const IndexPage = props => {
     timer2: 0,
   })
   useEffect(() => {
-    document.addEventListener("scroll", () => {
-      if (compState.timer1) {
-        clearTimeout(compState.timer1)
-      }
-
-      setCompState({
-        timer1: setTimeout(() => {
-          if (window.scrollY > 0) {
-            if (compState.timer2) {
-              clearTimeout(compState.timer2)
-            }
-            props.dispatch(toggleBackToTop(true))
-            setCompState({
-              timer2: setTimeout(
-                () => props.dispatch(toggleBackToTop(false)),
-                3000
-              ),
-            })
-          }
-        }, 1000),
-      })
-    })
-  }, [])
+    if (!props.isSmoothScrolling) {
+      console.log("triggered")
+    }
+  }, [window.scrollY])
   return (
     <Layout>
       <SEO title="Home" />
@@ -57,5 +38,6 @@ const IndexPage = props => {
 
 const mapStateToProps = state => ({
   backToTopVisible: state.backToTopVisible,
+  isSmoothScrolling: state.isSmoothScrolling,
 })
 export default connect(mapStateToProps)(IndexPage)
