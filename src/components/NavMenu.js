@@ -10,11 +10,12 @@ import {
   List,
   Fab,
   Divider,
+  IconButton,
   Grid,
-  Container,
+  Typography,
 } from "@material-ui/core"
 
-import { Close } from "@material-ui/icons"
+import { Close, GitHub, Instagram } from "@material-ui/icons"
 
 const NavMenu = props => {
   const handleClick = e => {
@@ -45,6 +46,23 @@ const NavMenu = props => {
         </Box>
         <Box width="75%">
           <Divider variant="middle" />
+          <Box pt={2}>
+            <Typography align="center" variant="subtitle2">
+              Externals
+            </Typography>
+          </Box>
+          <Grid container justify="center" alignItems="center">
+            <Grid item xs={6}>
+              <IconButton>
+                <GitHub />
+              </IconButton>
+            </Grid>
+            <Grid item xs={6}>
+              <IconButton>
+                <Instagram />
+              </IconButton>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
 
