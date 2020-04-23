@@ -103,12 +103,12 @@ const SectionAbout = props => {
                 <Grid container spacing={4} alignItems="center">
                   <Grid item xs={12} md={6}>
                     <Typography variant="body2" paragraph>
-                      If you like code, check out....
+                      If you're into code, check out....
                     </Typography>
 
                     <Button
                       fullWidth
-                      maxWidth={350}
+                      style={{ maxWidth: 300 }}
                       variant="contained"
                       color="secondary"
                       startIcon={<GitHub />}
@@ -118,10 +118,11 @@ const SectionAbout = props => {
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <Typography variant="body2" paragraph>
-                      If you like dog photos, check out....
+                      If dogs are your thing, check out....
                     </Typography>
                     <Button
                       fullWidth
+                      style={{ maxWidth: 300 }}
                       variant="contained"
                       color="secondary"
                       startIcon={<Instagram />}
