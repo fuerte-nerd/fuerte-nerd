@@ -1,30 +1,28 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
 import {
   AppBar,
   Tooltip,
   Toolbar,
-  List,
-  ListItem,
-  ListItemText,
   IconButton,
   Typography,
   Hidden,
-  Grid,
-  Button,
 } from "@material-ui/core"
 
-import {
-  Menu,
-  Instagram,
-  GitHub,
-  Phone,
-  Email,
-  WhatsApp,
-} from "@material-ui/icons"
+import { Menu, Instagram, GitHub, Phone, Email } from "@material-ui/icons"
 
 const Navbar = props => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   const handleClick = e => {
     const f = e.currentTarget
     switch (f.id) {
@@ -47,7 +45,7 @@ const Navbar = props => {
           <Menu />
         </IconButton>
         <Typography variant="h6" style={{ flex: 1 }}>
-          d_andrews
+          {data.site.siteMetadata.title}
         </Typography>
         <Hidden smDown>
           <Tooltip title="Instagram">
