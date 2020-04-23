@@ -17,7 +17,7 @@ const NavMenuItem = props => {
           primaryTypographyProps={{
             variant: "button",
             align: "center",
-            style: { fontSize: "3rem" },
+            style: { fontSize: "1rem" },
           }}
         >
           {props.label}
