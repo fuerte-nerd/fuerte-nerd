@@ -17,10 +17,9 @@ const IndexPage = props => {
     timer: 0,
   })
   useEffect(() => {
-    const onScroll = e => {
+    const onScroll = () => {
       if (window.scrollY > 0 && !props.isSmoothScrolling) {
         props.dispatch(toggleBackToTop(true))
-        console.log(compState.timer)
         clearTimeout(compState.timer)
         setCompState({
           timer: setTimeout(() => props.dispatch(toggleBackToTop(false)), 2000),
