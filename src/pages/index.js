@@ -14,16 +14,22 @@ import BackToTop from "../components/BackToTop"
 
 const IndexPage = props => {
   const [compState, setCompState] = useState({
-    timer1: 0,
-    timer2: 0,
+    timer: 0,
   })
   useEffect(() => {
     const onScroll = e => {
-      console.log(window.scrollY)
+      if (window.scrollY > 0 && !props.isSmoothScrolling) {
+        console.log("herrrrre")
+        clearTimeout(compState.timer)
+        props.dispatch(toggleBackToTop(true))
+        setCompState({
+          timer: setTimeout(() => props.dispatch(toggleBackToTop(false)), 3000),
+        })
+      }
     }
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+  }, [props.isSmoothScrolling])
 
   return (
     <Layout>
