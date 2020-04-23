@@ -103,21 +103,22 @@ const SectionAbout = props => {
                 <Grid container spacing={4} alignItems="center">
                   <Grid item xs={12} md={6}>
                     <Typography variant="body2" paragraph>
-                      If you want to have a sniff of my code....
+                      If you like code, check out....
                     </Typography>
 
                     <Button
                       fullWidth
+                      maxWidth={350}
                       variant="contained"
                       color="secondary"
                       startIcon={<GitHub />}
                     >
-                      Check out my GitHub
+                      My GitHub
                     </Button>
                   </Grid>
                   <Grid item xs={12} md={6}>
                     <Typography variant="body2" paragraph>
-                      If you like pics of dogs....
+                      If you like dog photos, check out....
                     </Typography>
                     <Button
                       fullWidth
@@ -125,7 +126,7 @@ const SectionAbout = props => {
                       color="secondary"
                       startIcon={<Instagram />}
                     >
-                      Check out my Instagram
+                      My Instagram
                     </Button>
                   </Grid>
                 </Grid>
@@ -143,14 +144,14 @@ const SectionAbout = props => {
                 margin: "auto",
               }}
             >
+              <GridListTile cols={2}>
+                <Img fluid={query.dave4.childImageSharp.fluid} />
+              </GridListTile>
               <GridListTile>
                 <Img fluid={query.dave5.childImageSharp.fluid} />
               </GridListTile>
               <GridListTile>
                 <Img fluid={query.dave2.childImageSharp.fluid} />
-              </GridListTile>
-              <GridListTile cols={2}>
-                <Img fluid={query.dave4.childImageSharp.fluid} />
               </GridListTile>
             </GridList>
           </Grid>
