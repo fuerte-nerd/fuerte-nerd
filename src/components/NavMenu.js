@@ -35,6 +35,7 @@ const NavMenu = props => {
         alignItems="center"
         height="100vh"
         width="100vw"
+        align="center"
       >
         <Box width="100%" mb={2}>
           <List style={{ flex: 1 }}>
@@ -49,29 +50,31 @@ const NavMenu = props => {
           <Box pt={2} align="center">
             <Typography variant="overline">Externals</Typography>
           </Box>
-          <Grid container justify="center" alignItems="center">
-            <Grid item xs={4}>
-              <Box align="center">
-                <IconButton>
-                  <GitHub />
-                </IconButton>
-              </Box>
+          <Box width="50%">
+            <Grid container justify="center" alignItems="center">
+              <Grid item xs={4}>
+                <Box align="center">
+                  <IconButton color="primary">
+                    <GitHub />
+                  </IconButton>
+                </Box>
+              </Grid>
+              <Grid item xs={4}>
+                <Box align="center">
+                  <IconButton color="primary">
+                    <Twitter />
+                  </IconButton>
+                </Box>
+              </Grid>
+              <Grid item xs={4}>
+                <Box align="center">
+                  <IconButton color="primary">
+                    <Instagram />
+                  </IconButton>
+                </Box>
+              </Grid>
             </Grid>
-            <Grid item xs={4}>
-              <Box align="center">
-                <IconButton>
-                  <Twitter />
-                </IconButton>
-              </Box>
-            </Grid>
-            <Grid item xs={4}>
-              <Box align="center">
-                <IconButton>
-                  <Instagram />
-                </IconButton>
-              </Box>
-            </Grid>
-          </Grid>
+          </Box>
         </Box>
       </Box>
 
