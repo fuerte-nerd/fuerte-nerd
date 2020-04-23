@@ -140,7 +140,7 @@ const SectionAbout = props => {
                 width: "100%",
                 maxWidth: 650,
                 overflow: "hidden",
-                margin: "-2 auto",
+                margin: "auto",
               }}
             >
               <GridListTile>
