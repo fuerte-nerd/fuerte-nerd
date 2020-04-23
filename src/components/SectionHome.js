@@ -46,7 +46,7 @@ const SectionHome = () => {
             My name is David and I make apps, websites and coffee* with code.
           </Typography>
           <Box align="center">
-            <Link to="about" smooth={true} offset={-56}>
+            <Link to="about" smooth={true}>
               <Button
                 variant="contained"
                 size="large"
