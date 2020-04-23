@@ -1,18 +1,21 @@
 import React from "react"
-import { Fab } from "@material-ui/core"
+import { Fade, Fab } from "@material-ui/core"
 import { ArrowUpward } from "@material-ui/icons"
 import { Link } from "react-scroll"
 
 const BackToTop = () => {
   return (
-    <Link to="home" smooth={true}>
-      <Fab
-        color="primary"
-        style={{ position: "fixed", bottom: "2.5rem", right: "2.5rem" }}
-      >
-        <ArrowUpward />
-      </Fab>
-    </Link>
+    <Fade in>
+      <Link to="home" smooth={true}>
+        <Fab
+          color="primary"
+          size="small"
+          style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
+        >
+          <ArrowUpward />
+        </Fab>
+      </Link>
+    </Fade>
   )
 }
 
