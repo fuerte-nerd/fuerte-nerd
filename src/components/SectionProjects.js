@@ -45,8 +45,8 @@ const SectionProjects = () => {
       <Container>
         <Typography variant="h2">My Work</Typography>
         <Typography align="justify" color="inherit" variant="subtitle1">
-          Here you will find a selection of my work, ranging from SPAs (Single
-          Page Applications) to websites (and more!)...
+          Here you will find a selection of my work, including SPAs (Single Page
+          Applications), websites and more!
         </Typography>
         <Box mt={3}>
           <Grid container spacing={3}>

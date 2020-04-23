@@ -36,7 +36,7 @@ const SectionContact = () => {
           <Grid container spacing={1}>
             <Grid item xs={12} sm={4}>
               <Button
-                color="primary"
+                color="secondary"
                 variant="contained"
                 size="large"
                 startIcon={<Phone />}
@@ -47,7 +47,7 @@ const SectionContact = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Button
-                color="primary"
+                color="secondary"
                 variant="contained"
                 size="large"
                 startIcon={<Email />}
@@ -58,7 +58,7 @@ const SectionContact = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Button
-                color="primary"
+                color="secondary"
                 variant="contained"
                 size="large"
                 startIcon={<WhatsApp />}
@@ -111,7 +111,7 @@ const SectionContact = () => {
             </Grid>
             <Grid item xs={12} style={{ textAlign: "center" }}>
               <Button
-                color="primary"
+                color="secondary"
                 endIcon={<Send />}
                 variant="contained"
                 size="large"
