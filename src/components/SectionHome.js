@@ -25,7 +25,7 @@ const SectionHome = () => {
         alignItems="center"
         flexDirection="column"
         py={2}
-        elevation={4}
+        boxShadow={3}
       >
         <Hidden smUp>
           <Toolbar />

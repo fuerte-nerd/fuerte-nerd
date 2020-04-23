@@ -65,7 +65,7 @@ const SectionAbout = props => {
       alignItems="center"
       bgcolor="primary.light"
       flexDirection="column"
-      elevation={3}
+      boxShadow={2}
     >
       <Toolbar />
       <Container>

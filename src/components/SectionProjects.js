@@ -40,7 +40,7 @@ const SectionProjects = () => {
       alignItems="center"
       bgcolor="primary.dark"
       color="#fff"
-      elevation={2}
+      boxShadow={1}
     >
       <Toolbar />
       <Container>
