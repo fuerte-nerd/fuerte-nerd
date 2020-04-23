@@ -14,7 +14,11 @@ const NavMenuItem = props => {
         onClick={() => props.dispatch(toggleMenu(!props.isOpen))}
       >
         <ListItemText
-          primaryTypographyProps={{ variant: "button", align: "center" }}
+          primaryTypographyProps={{
+            variant: "button",
+            align: "center",
+            style: { fontSize: "3rem" },
+          }}
         >
           {props.label}
         </ListItemText>

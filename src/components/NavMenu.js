@@ -35,7 +35,7 @@ const NavMenu = props => {
         height="100vh"
         width="100vw"
       >
-        <List style={{ flex: 1 }}>
+        <List style={{ flex: 1, fontSize: "3rem" }}>
           <NavMenuItem link="home" label="Home" />
           <NavMenuItem link="about" label="About" offset />
           <NavMenuItem link="projects" label="Projects" offset />
