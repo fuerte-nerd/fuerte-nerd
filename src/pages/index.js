@@ -18,10 +18,12 @@ const IndexPage = props => {
     timer2: 0,
   })
   useEffect(() => {
+    console.log("helloooo")
     if (!props.isSmoothScrolling) {
       console.log("triggered")
     }
   }, [window.scrollY])
+
   return (
     <Layout>
       <SEO title="Home" />
