@@ -4,7 +4,15 @@ import { toggleMenu } from "../redux/actions"
 import NavMenuItem from "./NavMenuItem"
 import { Link } from "react-scroll"
 
-import { Dialog, Box, List, Fab } from "@material-ui/core"
+import {
+  Dialog,
+  Box,
+  List,
+  Fab,
+  Divider,
+  Grid,
+  Container,
+} from "@material-ui/core"
 
 import { Close } from "@material-ui/icons"
 
@@ -26,12 +34,17 @@ const NavMenu = props => {
         height="100vh"
         width="100vw"
       >
-        <List style={{ flex: 1 }}>
-          <NavMenuItem link="home" label="Home" />
-          <NavMenuItem link="about" label="About" offset />
-          <NavMenuItem link="projects" label="Projects" offset />
-          <NavMenuItem link="contact" label="Contact" offset />
-        </List>
+        <Box>
+          <List style={{ flex: 1 }}>
+            <NavMenuItem link="home" label="Home" />
+            <NavMenuItem link="about" label="About" offset />
+            <NavMenuItem link="projects" label="Projects" offset />
+            <NavMenuItem link="contact" label="Contact" offset />
+            <Box width="100%">
+              <Divider />
+            </Box>
+          </List>
+        </Box>
       </Box>
       <Fab
         color="primary"
