@@ -54,7 +54,7 @@ const SectionHome = () => {
                 color="secondary"
                 startIcon={<DirectionsRun />}
               >
-                Come and see more!
+                Come inside!
               </Button>
             </Link>
           </Box>
