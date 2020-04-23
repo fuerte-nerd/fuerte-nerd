@@ -10,6 +10,7 @@ import SectionHome from "../components/SectionHome"
 import SectionAbout from "../components/SectionAbout"
 import SectionProjects from "../components/SectionProjects"
 import SectionContact from "../components/SectionContact"
+import Footer from "../components/Footer"
 import BackToTop from "../components/BackToTop"
 
 const IndexPage = props => {
@@ -39,6 +40,7 @@ const IndexPage = props => {
       <SectionAbout />
       <SectionProjects />
       <SectionContact />
+      <Footer />
       <BackToTop />
     </Layout>
   )
