@@ -43,8 +43,7 @@ const SectionHome = () => {
             </Typography>
           </Box>
           <Typography variant="subtitle1" align="center" paragraph>
-            My name is David and I make apps, websites and cups of coffee* with
-            code.
+            My name is David and I make apps, websites and coffee* with code.
           </Typography>
           <Box align="center">
             <Link to="about" smooth={true} offset={-56}>

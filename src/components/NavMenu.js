@@ -82,7 +82,7 @@ const NavMenu = props => {
         color="primary"
         onClick={handleClick}
         id="close"
-        style={{ position: "fixed", top: "2.5rem", right: "2.5rem" }}
+        style={{ position: "fixed", top: "1.5rem", right: "1.5rem" }}
       >
         <Close />
       </Fab>
