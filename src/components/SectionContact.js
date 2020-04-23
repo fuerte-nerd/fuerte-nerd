@@ -21,6 +21,7 @@ const SectionContact = () => {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
+      boxShadow={2}
     >
       <Toolbar />
       <Container>
