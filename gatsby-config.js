@@ -23,8 +23,8 @@ module.exports = {
         name: `fuerte-nerd`,
         short_name: `fuerte-nerd`,
         start_url: `/`,
-        background_color: blueGrey.400,
-        theme_color: blueGrey.400,
+        background_color: blueGrey[400],
+        theme_color: blueGrey[400],
         display: `minimal-ui`,
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
