@@ -29,6 +29,7 @@ const NavMenu = props => {
     >
       <Box
         display="flex"
+        flexDirection="column"
         justifyContent="center"
         alignItems="center"
         height="100vh"
@@ -42,8 +43,11 @@ const NavMenu = props => {
             <NavMenuItem link="contact" label="Contact" offset />
           </List>
         </Box>
+        <Box width="75%">
+          <Divider variant="middle" />
+        </Box>
       </Box>
-      <Divider variant="middle" />
+
       <Fab
         color="primary"
         onClick={handleClick}
