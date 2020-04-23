@@ -33,21 +33,21 @@ const SectionAbout = props => {
     {
       dave2: file(name: { eq: "daveGrid2" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300, cropFocus: ATTENTION) {
+          fluid(maxWidth: 325, maxHeight: 325, cropFocus: ATTENTION) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       dave4: file(name: { eq: "daveGrid4" }) {
         childImageSharp {
-          fluid(maxWidth: 600) {
+          fluid(maxWidth: 650) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       dave5: file(name: { eq: "daveGrid5" }) {
         childImageSharp {
-          fluid(maxWidth: 300, maxHeight: 300, cropFocus: ATTENTION) {
+          fluid(maxWidth: 325, maxHeight: 325, cropFocus: ATTENTION) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -140,6 +140,7 @@ const SectionAbout = props => {
                 width: "100%",
                 maxWidth: 650,
                 overflow: "hidden",
+                margin: "-2 auto",
               }}
             >
               <GridListTile>
