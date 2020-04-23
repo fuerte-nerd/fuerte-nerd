@@ -106,7 +106,7 @@ const SectionAbout = props => {
                     <Button
                       fullWidth
                       variant="contained"
-                      color="primary"
+                      color="secondary"
                       startIcon={<GitHub />}
                     >
                       Check out my GitHub
@@ -119,7 +119,7 @@ const SectionAbout = props => {
                     <Button
                       fullWidth
                       variant="contained"
-                      color="primary"
+                      color="secondary"
                       startIcon={<Instagram />}
                     >
                       Check out my Instagram
