@@ -34,18 +34,16 @@ const NavMenu = props => {
         height="100vh"
         width="100vw"
       >
-        <Box>
+        <Box width="100%" mb={2}>
           <List style={{ flex: 1 }}>
             <NavMenuItem link="home" label="Home" />
             <NavMenuItem link="about" label="About" offset />
             <NavMenuItem link="projects" label="Projects" offset />
             <NavMenuItem link="contact" label="Contact" offset />
-            <Box width="100%">
-              <Divider />
-            </Box>
           </List>
         </Box>
       </Box>
+      <Divider variant="middle" />
       <Fab
         color="primary"
         onClick={handleClick}
