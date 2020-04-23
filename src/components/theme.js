@@ -1,4 +1,4 @@
-import { blueGrey, yellow } from "@material-ui/core/colors"
+import { blueGrey, yellow, amber } from "@material-ui/core/colors"
 import { createMuiTheme } from "@material-ui/core/styles"
 
 export default createMuiTheme({
@@ -7,7 +7,7 @@ export default createMuiTheme({
       ...blueGrey,
       contrastText: "#fff",
     },
-    secondary: yellow,
+    secondary: amber,
     contrastThreshold: 0.1,
     tonalOffset: 0.1,
   },

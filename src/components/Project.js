@@ -31,7 +31,7 @@ const Project = props => {
           <Button variant="outlined" color="primary" startIcon={<Language />}>
             Visit
           </Button>
-          <Button variant="outlined" color="secondary" startIcon={<Code />}>
+          <Button variant="outlined" color="primary" startIcon={<Code />}>
             Code
           </Button>
         </CardActions>

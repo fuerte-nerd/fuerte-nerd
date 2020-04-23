@@ -34,7 +34,8 @@ const SectionContact = () => {
           <Grid container spacing={1}>
             <Grid item xs={12} sm={4}>
               <Button
-                variant="outlined"
+                color="primary"
+                variant="contained"
                 size="large"
                 startIcon={<Phone />}
                 fullWidth
@@ -44,7 +45,8 @@ const SectionContact = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Button
-                variant="outlined"
+                color="primary"
+                variant="contained"
                 size="large"
                 startIcon={<Email />}
                 fullWidth
@@ -54,7 +56,8 @@ const SectionContact = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Button
-                variant="outlined"
+                color="primary"
+                variant="contained"
                 size="large"
                 startIcon={<WhatsApp />}
                 fullWidth
@@ -66,7 +69,7 @@ const SectionContact = () => {
         </Box>
         <Box>
           <Typography>
-            If you would rather, you can send me a message directly using the
+            If you would prefer, you can send me a message directly using the
             form below...
           </Typography>
         </Box>
@@ -105,7 +108,12 @@ const SectionContact = () => {
               />
             </Grid>
             <Grid item xs={12} style={{ textAlign: "center" }}>
-              <Button endIcon={<Send />} variant="outlined" size="large">
+              <Button
+                color="primary"
+                endIcon={<Send />}
+                variant="contained"
+                size="large"
+              >
                 Send
               </Button>
             </Grid>
