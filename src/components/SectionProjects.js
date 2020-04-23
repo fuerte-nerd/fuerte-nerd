@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Box, Container, Grid, Typography } from "@material-ui/core"
+import { Box, Container, Grid, Typography, Toolbar } from "@material-ui/core"
 import Project from "./Project"
 
 const SectionProjects = () => {
@@ -31,15 +31,17 @@ const SectionProjects = () => {
   `)
   return (
     <Box
-      py={4}
+      py={2}
       id="projects"
       minHeight="100vh"
       display="flex"
+      flexDirection="column"
       justifyContent="center"
       alignItems="center"
       bgcolor="primary.dark"
       color="#fff"
     >
+      <Toolbar />
       <Container>
         <Typography variant="h2">My Work</Typography>
         <Typography align="justify" color="inherit" variant="subtitle1">
@@ -72,6 +74,7 @@ const SectionProjects = () => {
           </Grid>
         </Box>
       </Container>
+      <Toolbar />
     </Box>
   )
 }

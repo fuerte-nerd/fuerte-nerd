@@ -40,9 +40,9 @@ const NavMenu = props => {
         <Box width="100%" mb={2}>
           <List style={{ flex: 1 }}>
             <NavMenuItem link="home" label="Home" />
-            <NavMenuItem link="about" label="About" offset />
-            <NavMenuItem link="projects" label="Projects" offset />
-            <NavMenuItem link="contact" label="Contact" offset />
+            <NavMenuItem link="about" label="About" />
+            <NavMenuItem link="projects" label="Projects" />
+            <NavMenuItem link="contact" label="Contact" />
           </List>
         </Box>
         <Box width="75%">

@@ -10,6 +10,7 @@ import {
   GridListTile,
   Typography,
   Button,
+  Toolbar,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
@@ -56,15 +57,17 @@ const SectionAbout = props => {
   return (
     <Box
       id="about"
-      py={4}
+      py={2}
       minHeight="100vh"
       display="flex"
+      flexDirection="column"
       justifyContent="center"
       alignItems="center"
       bgcolor="primary.light"
       flexDirection="column"
       elevation={3}
     >
+      <Toolbar />
       <Container>
         <Grid container justify="center" alignItems="center" spacing={4}>
           <Grid item xs={12} md={7}>
@@ -152,6 +155,7 @@ const SectionAbout = props => {
           </Grid>
         </Grid>
       </Container>
+      <Toolbar />
     </Box>
   )
 }
