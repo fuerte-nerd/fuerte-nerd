@@ -10,7 +10,7 @@ const BackToTop = props => {
       <Link to="home" smooth={true}>
         <Tooltip title="Back to top" placement="left">
           <Fab
-            color="secondary"
+            color="primary"
             size="small"
             style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
           >

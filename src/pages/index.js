@@ -23,7 +23,7 @@ const IndexPage = props => {
         console.log(compState.timer)
         clearTimeout(compState.timer)
         setCompState({
-          timer: setTimeout(() => props.dispatch(toggleBackToTop(false)), 3000),
+          timer: setTimeout(() => props.dispatch(toggleBackToTop(false)), 2000),
         })
       }
     }
