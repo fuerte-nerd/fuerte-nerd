@@ -12,6 +12,7 @@ import SectionHome from "../components/SectionHome"
 import SectionAbout from "../components/SectionAbout"
 import SectionProjects from "../components/SectionProjects"
 import SectionContact from "../components/SectionContact"
+import BackToTop from "../components/BackToTop"
 
 const IndexPage = () => (
   <Layout>
@@ -22,6 +23,7 @@ const IndexPage = () => (
     <SectionAbout />
     <SectionProjects />
     <SectionContact />
+    <BackToTop />
   </Layout>
 )
 
