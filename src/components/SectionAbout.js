@@ -63,6 +63,7 @@ const SectionAbout = props => {
       alignItems="center"
       bgcolor="primary.light"
       flexDirection="column"
+      elevation={3}
     >
       <Container>
         <Grid container justify="center" alignItems="center" spacing={4}>
@@ -76,13 +77,13 @@ const SectionAbout = props => {
                 className={classes.aboutText}
                 paragraph
               >
-                I am an app developer originally from England, now residing in
-                the Canary Islands. I mainly work with <strong>React</strong>,{" "}
-                <strong>Gatsby</strong>, vanilla <strong>JavaScript</strong> and{" "}
-                <strong>Node</strong>, but I have experience of working with
-                numerous tech such as Django, Laravel, Material UI, Bootstrap,
-                PHP, Python (too many to mention them all without sending you to
-                sleep!)
+                I am a developer (primarily of the web variety!) originally from
+                England, now residing in the Canary Islands. I mainly work with{" "}
+                <strong>React</strong>, <strong>Gatsby</strong>, vanilla{" "}
+                <strong>JavaScript</strong> and <strong>Node</strong>, but I
+                have experience of working with numerous tech such as Django,
+                Laravel, Material UI, Bootstrap, PHP, Python (too many to
+                mention them all without sending you to sleep!)
               </Typography>
               <Typography
                 variant="body2"
@@ -96,23 +97,29 @@ const SectionAbout = props => {
               </Typography>
               <Divider />{" "}
               <Box mt={3} align="center">
-                <Grid container spacing={4}>
+                <Grid container spacing={4} alignItems="center">
                   <Grid item xs={12} md={6}>
-                    <Typography variant="body2">
+                    <Typography variant="body2" paragraph>
                       If you want to have a sniff of my code....
                     </Typography>
 
-                    <Button fullWidth variant="outlined" startIcon={<GitHub />}>
+                    <Button
+                      fullWidth
+                      variant="contained"
+                      color="primary"
+                      startIcon={<GitHub />}
+                    >
                       Check out my GitHub
                     </Button>
                   </Grid>
                   <Grid item xs={12} md={6}>
-                    <Typography variant="body2">
+                    <Typography variant="body2" paragraph>
                       If you like pics of dogs....
                     </Typography>
                     <Button
                       fullWidth
-                      variant="outlined"
+                      variant="contained"
+                      color="primary"
                       startIcon={<Instagram />}
                     >
                       Check out my Instagram
