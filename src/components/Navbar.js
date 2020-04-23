@@ -3,8 +3,8 @@ import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
 import {
   AppBar,
+  Tooltip,
   Toolbar,
-  Drawer,
   List,
   ListItem,
   ListItemText,
@@ -50,21 +50,29 @@ const Navbar = props => {
           d_andrews
         </Typography>
         <Hidden smDown>
-          <IconButton color="inherit">
-            <Instagram />
-          </IconButton>
+          <Tooltip title="Instagram">
+            <IconButton color="inherit">
+              <Instagram />
+            </IconButton>
+          </Tooltip>
         </Hidden>
         <Hidden smDown>
-          <IconButton color="inherit">
-            <GitHub />
-          </IconButton>
+          <Tooltip title="GitHub">
+            <IconButton color="inherit">
+              <GitHub />
+            </IconButton>
+          </Tooltip>
         </Hidden>
-        <IconButton color="inherit">
-          <Phone />
-        </IconButton>
-        <IconButton edge="end" color="inherit">
-          <Email />
-        </IconButton>
+        <Tooltip title="Call me">
+          <IconButton color="inherit">
+            <Phone />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Message me">
+          <IconButton edge="end" color="inherit">
+            <Email />
+          </IconButton>
+        </Tooltip>
       </Toolbar>
     </AppBar>
   )
