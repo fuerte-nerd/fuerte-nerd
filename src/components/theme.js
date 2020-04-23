@@ -12,24 +12,6 @@ export default createMuiTheme({
     tonalOffset: 0.1,
   },
   typography: {
-    fontFamily: "Fanwood Text",
-    h1: {
-      fontFamily: "Fanwood Text",
-    },
-    h2: {
-      fontFamily: "Fanwood Text",
-    },
-    h3: {
-      fontFamily: "Fanwood Text",
-    },
-    h4: {
-      fontFamily: "Fanwood Text",
-    },
-    h5: {
-      fontFamily: "Fanwood Text",
-    },
-    h6: {
-      fontFamily: "Fanwood Text",
-    },
+    fontFamily: "Source Serif Pro",
   },
 })
