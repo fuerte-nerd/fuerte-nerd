@@ -1,20 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import {
-  Box,
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
-  CardActionArea,
-  Container,
-  Divider,
-  Grid,
-  Typography,
-  Button,
-} from "@material-ui/core"
-import { Language, Code } from "@material-ui/icons"
+import { Box, Container, Grid, Typography } from "@material-ui/core"
+import Project from "./Project"
 
 const SectionProjects = () => {
   const imgsQuery = useStaticQuery(graphql`
@@ -68,70 +55,20 @@ const SectionProjects = () => {
                       built it using Redux for state management, LocalStorage
               for data persistence and Material UI for styling."
             />
-            <Grid item xs={12} sm={6} md={4}>
-              <Card>
-                <CardActionArea>
-                  <CardMedia>
-                    <Img fluid={imgsQuery.scoreboard.childImageSharp.fluid} />
-                  </CardMedia>
-                  <CardContent style={{ height: "10rem" }}>
-                    <Typography variant="h5">Scoreboard</Typography>
-                    <Typography variant="body2"></Typography>
-                  </CardContent>
-                </CardActionArea>
-                <Divider />
-                <CardActions>
-                  <Button startIcon={<Language />}>Visit</Button>
-                  <Button startIcon={<Code />}>Code</Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card>
-                <CardActionArea>
-                  <CardMedia>
-                    <Img fluid={imgsQuery.todos.childImageSharp.fluid} />
-                  </CardMedia>
-                  <CardContent style={{ height: "10rem" }}>
-                    <Typography variant="h5">Todos</Typography>
-                    <Typography variant="body2">
-                      A single page React application for keeping track of your
-                      tasks. I built it using Redux for state management,
-                      LocalStorage for data persistence and Material UI for
-                      styling.
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <Divider />
-                <CardActions>
-                  <Button startIcon={<Language />}>Visit</Button>
-                  <Button startIcon={<Code />}>Code</Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card>
-                <CardActionArea>
-                  <CardMedia>
-                    <Img fluid={imgsQuery.notes.childImageSharp.fluid} />
-                  </CardMedia>
-                  <CardContent style={{ height: "10rem" }}>
-                    <Typography variant="h5">Notes</Typography>
-                    <Typography variant="body2">
-                      A single page React application for writing notes to
-                      yourself! I built it using Redux for state management,
-                      LocalStorage for data persistence and Material UI for
-                      styling.
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <Divider />
-                <CardActions>
-                  <Button startIcon={<Language />}>Visit</Button>
-                  <Button startIcon={<Code />}>Code</Button>
-                </CardActions>
-              </Card>
-            </Grid>
+            <Project
+              title="Todos"
+              img={imgsQuery.todos.childImageSharp.fluid}
+              description="A single page React application for keeping track of your tasks. I
+                      built it using Redux for state management, LocalStorage
+              for data persistence and Material UI for styling."
+            />
+            <Project
+              title="Notes"
+              img={imgsQuery.notes.childImageSharp.fluid}
+              description="A single page React application for writing notes to yourself! I
+                      built it using Redux for state management, LocalStorage
+              for data persistence and Material UI for styling."
+            />
           </Grid>
         </Box>
       </Container>

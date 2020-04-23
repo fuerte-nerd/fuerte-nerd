@@ -2,6 +2,7 @@ import React from "react"
 import {
   Grid,
   Card,
+  CardActions,
   CardActionArea,
   CardMedia,
   CardContent,
@@ -27,8 +28,12 @@ const Project = props => {
         </CardActionArea>
         <Divider />
         <CardActions>
-          <Button startIcon={<Language />}>Visit</Button>
-          <Button startIcon={<Code />}>Code</Button>
+          <Button variant="outlined" color="primary" startIcon={<Language />}>
+            Visit
+          </Button>
+          <Button variant="outlined" color="secondary" startIcon={<Code />}>
+            Code
+          </Button>
         </CardActions>
       </Card>
     </Grid>
