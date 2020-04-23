@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <link
-          href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+          href="https://fonts.googleapis.com/css?family=Fanwood+Text|Special+Elite&display=swap"
           rel="stylesheet"
         />
       </Helmet>
