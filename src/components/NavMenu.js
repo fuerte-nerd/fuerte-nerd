@@ -50,7 +50,7 @@ const NavMenu = props => {
           <Box pt={2} align="center">
             <Typography variant="overline">Externals</Typography>
           </Box>
-          <Box width="50%">
+          <Box maxWidth={500}>
             <Grid container justify="center" alignItems="center">
               <Grid item xs={4}>
                 <Box align="center">
