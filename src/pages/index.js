@@ -29,7 +29,7 @@ const IndexPage = props => {
     }
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
-  }, [props.isSmoothScrolling])
+  }, [props.isSmoothScrolling, compState.timer])
 
   return (
     <Layout>
