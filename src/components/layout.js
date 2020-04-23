@@ -37,6 +37,9 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap"
           rel="stylesheet"
         />
+        <title>
+          {data.site.siteMetadata.title} | professional web developer
+        </title>
       </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline>{children}</CssBaseline>
