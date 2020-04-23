@@ -1,11 +1,12 @@
 import React from "react"
+import { connect } from "react-redux"
 import { Fade, Fab } from "@material-ui/core"
 import { ArrowUpward } from "@material-ui/icons"
 import { Link } from "react-scroll"
 
-const BackToTop = () => {
+const BackToTop = props => {
   return (
-    <Fade in>
+    <Fade in={props.backToTopVisible}>
       <Link to="home" smooth={true}>
         <Fab
           color="primary"
@@ -19,4 +20,8 @@ const BackToTop = () => {
   )
 }
 
-export default BackToTop
+const mapStateToProps = state => ({
+  backToTopVisible: state.backToTopVisible,
+})
+
+export default connect(mapStateToProps)(BackToTop)

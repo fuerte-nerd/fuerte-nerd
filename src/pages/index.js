@@ -20,6 +20,7 @@ const IndexPage = props => {
     const onScroll = e => {
       if (window.scrollY > 0 && !props.isSmoothScrolling) {
         props.dispatch(toggleBackToTop(true))
+        console.log(compState.timer)
         clearTimeout(compState.timer)
         setCompState({
           timer: setTimeout(() => props.dispatch(toggleBackToTop(false)), 3000),
@@ -39,7 +40,7 @@ const IndexPage = props => {
       <SectionAbout />
       <SectionProjects />
       <SectionContact />
-      {props.backToTopVisible ? <BackToTop /> : null}
+      <BackToTop />
     </Layout>
   )
 }
