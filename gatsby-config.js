@@ -1,3 +1,4 @@
+const { blueGrey } = require("@material-ui/core/colors")
 module.exports = {
   siteMetadata: {
     title: `fuerte-nerd`,
@@ -22,8 +23,8 @@ module.exports = {
         name: `fuerte-nerd`,
         short_name: `fuerte-nerd`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: blueGrey.400,
+        theme_color: blueGrey.400,
         display: `minimal-ui`,
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
