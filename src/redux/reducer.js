@@ -1,8 +1,9 @@
-import { SET_MENU, SET_BACK_TO_TOP } from "./types"
+import { SET_MENU, SET_BACK_TO_TOP, SET_SMOOTH_SCROLLING } from "./types"
 
 const initialState = {
   navOpen: false,
   backToTopVisible: false,
+  isSmoothScrolling: false,
 }
 
 export default (state = initialState, action) => {
@@ -16,6 +17,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         backToTopVisible: action.payload,
+      }
+    case SET_SMOOTH_SCROLLING:
+      return {
+        ...state,
+        isSmoothScrolling: action.payload,
       }
     default:
       return state
