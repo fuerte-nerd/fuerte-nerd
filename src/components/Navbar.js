@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { toggleMenu } from "../redux/actions"
+import { Link } from "react-scroll"
 import {
   AppBar,
   Tooltip,
@@ -44,13 +45,12 @@ const Navbar = props => {
         >
           <Menu />
         </IconButton>
-        <Typography
-          variant="h6"
-          variantMapping={{ h6: "h1" }}
-          style={{ flex: 1 }}
-        >
-          {data.site.siteMetadata.title}
-        </Typography>
+        <Link to="home" smooth={true}>
+          <Typography variant="h6" variantMapping={{ h6: "h1" }}>
+            {data.site.siteMetadata.title}
+          </Typography>
+        </Link>
+        <span style={{ flex: 1 }} />
         <Hidden smDown>
           <Tooltip title="Instagram">
             <IconButton color="inherit">
