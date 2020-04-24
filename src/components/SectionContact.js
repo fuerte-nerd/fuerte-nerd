@@ -26,7 +26,7 @@ const SectionContact = () => {
       <Container>
         <Box>
           <Typography variant="h2">Get in touch!</Typography>
-          <Typography>
+          <Typography align="justify">
             If you would like to hire me or if you have any questions about my
             work, please feel free to contact me!
           </Typography>
@@ -70,7 +70,7 @@ const SectionContact = () => {
           </Grid>
         </Box>
         <Box>
-          <Typography>
+          <Typography align="justify">
             If you would prefer, you can send me a message directly using the
             form below...
           </Typography>
