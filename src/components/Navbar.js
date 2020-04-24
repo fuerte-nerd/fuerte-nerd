@@ -39,6 +39,10 @@ const Navbar = props => {
         return
     }
   }
+
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
   return (
     <>
       <AppBar position="fixed">
@@ -84,7 +88,11 @@ const Navbar = props => {
           </Tooltip>
         </Toolbar>
       </AppBar>
-      <MenuComponent anchorEl={anchorEl} open={Boolean(anchorEl)}>
+      <MenuComponent
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+      >
         <MenuItem>Call on phone</MenuItem>
         <MenuItem>Call on WhatsApp</MenuItem>
       </MenuComponent>
