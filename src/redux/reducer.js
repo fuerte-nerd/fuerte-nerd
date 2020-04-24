@@ -3,6 +3,7 @@ import {
   SET_BACK_TO_TOP,
   SET_SMOOTH_SCROLLING,
   SET_CALL_MENU_ANCHOR,
+  SET_TEXT_MENU_ANCHOR,
 } from "./types"
 
 const initialState = {
@@ -34,6 +35,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         callMenuAnchorEl: action.payload,
+      }
+    case SET_TEXT_MENU_ANCHOR:
+      return {
+        ...state,
+        textMenuAnchorEl: action.payload,
       }
     default:
       return state

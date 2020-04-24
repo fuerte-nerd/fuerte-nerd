@@ -1,7 +1,11 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
-import { toggleMenu, setCallMenuAnchor } from "../redux/actions"
+import {
+  toggleMenu,
+  setCallMenuAnchor,
+  setTextMenuAnchor,
+} from "../redux/actions"
 import { Link } from "react-scroll"
 import {
   AppBar,
@@ -18,9 +22,9 @@ import MenuComponent from "@material-ui/core/Menu"
 import { Menu, Instagram, GitHub, Phone, Email } from "@material-ui/icons"
 
 import CallMenu from "./CallMenu"
+import TextMenu from "./TextMenu"
 
 const Navbar = props => {
-  const [anchorEl, setAnchorEl] = useState(null)
   const data = useStaticQuery(graphql`
     {
       site {
@@ -37,6 +41,8 @@ const Navbar = props => {
         return props.dispatch(toggleMenu(!props.isOpen))
       case "phone":
         return props.dispatch(setCallMenuAnchor(f))
+      case "text":
+        return props.dispatch(setTextMenuAnchor(f))
       default:
         return
     }
@@ -56,7 +62,11 @@ const Navbar = props => {
             <Menu />
           </IconButton>
           <Link to="home" smooth={true}>
-            <Typography variant="h6" variantMapping={{ h6: "h1" }}>
+            <Typography
+              variant="h6"
+              variantMapping={{ h6: "h1" }}
+              style={{ cursor: "pointer" }}
+            >
               {data.site.siteMetadata.title}
             </Typography>
           </Link>
@@ -81,13 +91,19 @@ const Navbar = props => {
             </IconButton>
           </Tooltip>
           <Tooltip title="Message me">
-            <IconButton edge="end" color="inherit">
+            <IconButton
+              edge="end"
+              color="inherit"
+              onClick={handleClick}
+              id="text"
+            >
               <Email />
             </IconButton>
           </Tooltip>
         </Toolbar>
       </AppBar>
       <CallMenu />
+      <TextMenu />
     </>
   )
 }
