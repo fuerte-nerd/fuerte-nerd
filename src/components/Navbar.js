@@ -44,7 +44,11 @@ const Navbar = props => {
         >
           <Menu />
         </IconButton>
-        <Typography variant="h6" style={{ flex: 1 }}>
+        <Typography
+          variant="h6"
+          variantMapping={{ h6: "h1" }}
+          style={{ flex: 1 }}
+        >
           {data.site.siteMetadata.title}
         </Typography>
         <Hidden smDown>
