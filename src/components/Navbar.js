@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
-import { toggleMenu } from "../redux/actions"
+import { toggleMenu, setCallMenuAnchor } from "../redux/actions"
 import { Link } from "react-scroll"
 import {
   AppBar,
@@ -16,6 +16,8 @@ import {
 import MenuComponent from "@material-ui/core/Menu"
 
 import { Menu, Instagram, GitHub, Phone, Email } from "@material-ui/icons"
+
+import CallMenu from "./CallMenu"
 
 const Navbar = props => {
   const [anchorEl, setAnchorEl] = useState(null)
@@ -34,15 +36,12 @@ const Navbar = props => {
       case "menu":
         return props.dispatch(toggleMenu(!props.isOpen))
       case "phone":
-        return setAnchorEl(e.currentTarget)
+        return props.dispatch(setCallMenuAnchor(f))
       default:
         return
     }
   }
 
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
   return (
     <>
       <AppBar position="fixed">
@@ -88,14 +87,7 @@ const Navbar = props => {
           </Tooltip>
         </Toolbar>
       </AppBar>
-      <MenuComponent
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem>Call on phone</MenuItem>
-        <MenuItem>Call on WhatsApp</MenuItem>
-      </MenuComponent>
+      <CallMenu />
     </>
   )
 }
