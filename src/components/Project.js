@@ -23,7 +23,9 @@ const Project = props => {
           </CardMedia>
           <CardContent style={{ height: "10rem" }}>
             <Typography variant="h5">{props.title}</Typography>
-            <Typography variant="body2">{props.description}</Typography>
+            <Typography variant="body2" align="justify">
+              {props.description}
+            </Typography>
           </CardContent>
         </CardActionArea>
         <Divider />
