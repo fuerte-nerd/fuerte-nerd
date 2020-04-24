@@ -10,6 +10,7 @@ import {
   IconButton,
   Typography,
   Hidden,
+  Menu,
 } from "@material-ui/core"
 
 import { Menu, Instagram, GitHub, Phone, Email } from "@material-ui/icons"
