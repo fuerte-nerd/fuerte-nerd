@@ -24,12 +24,17 @@ const CallMenu = props => {
       onClose={() => props.dispatch(setCallMenuAnchor(null))}
     >
       <MenuItem>
-        Call on phone{"  "}
-        <Typography variant="overline">
+        Call on phone
+        <Typography variant="overline" style={{ marginLeft: 10 }}>
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
-      <MenuItem>Call on WhatsApp</MenuItem>
+      <MenuItem>
+        Call on WhatsApp
+        <Typography variant="overline" style={{ marginLeft: 10 }}>
+          ({data.site.siteMetadata.contact.phoneStr})
+        </Typography>
+      </MenuItem>
     </Menu>
   )
 }
