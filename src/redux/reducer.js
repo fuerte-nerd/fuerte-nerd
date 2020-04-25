@@ -5,6 +5,7 @@ import {
   SET_CALL_MENU_ANCHOR,
   SET_TEXT_MENU_ANCHOR,
   SET_PHONE_MENU_ANCHOR,
+  SET_PROJECT_MENU_ANCHOR,
   SET_WHATSAPP_MENU_ANCHOR,
   SET_BACK_TO_TOP_TIMER,
 } from "./types"
@@ -57,6 +58,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         whatsAppMenuAnchorEl: action.payload,
+      }
+    case SET_PROJECT_MENU_ANCHOR:
+      return {
+        ...state,
+        projectMenuAnchorEl: action.payload,
       }
     case SET_BACK_TO_TOP_TIMER:
       return {

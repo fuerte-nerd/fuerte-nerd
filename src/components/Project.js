@@ -1,4 +1,6 @@
 import React from "react"
+import { connect } from "react-redux"
+import { setProjectMenuAnchor } from "../redux/actions"
 import {
   Grid,
   Card,
@@ -14,10 +16,19 @@ import { Language, Code } from "@material-ui/icons"
 import Img from "gatsby-image"
 
 const Project = props => {
+  const handleClick = e => {
+    const f = e.currentTarget
+    switch (f.id) {
+      case "action-area":
+        return props.dispatch(setProjectMenuAnchor(e.currentTarget))
+      default:
+        return
+    }
+  }
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card>
-        <CardActionArea>
+        <CardActionArea id="action-area">
           <CardMedia>
             <Img fluid={props.img} />
           </CardMedia>
@@ -34,10 +45,18 @@ const Project = props => {
             variant="contained"
             color="secondary"
             startIcon={<Language />}
+            id="visit"
+            onClick={handleClick}
           >
             Visit
           </Button>
-          <Button variant="contained" color="secondary" startIcon={<Code />}>
+          <Button
+            variant="contained"
+            color="secondary"
+            startIcon={<Code />}
+            id="code"
+            onClick={handleClick}
+          >
             Code
           </Button>
         </CardActions>
@@ -46,4 +65,4 @@ const Project = props => {
   )
 }
 
-export default Project
+export default connect()(Project)
