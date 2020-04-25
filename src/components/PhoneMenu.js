@@ -10,8 +10,8 @@ const PhoneMenu = props => {
       open={Boolean(props.phoneMenuAnchorEl)}
       onClose={() => props.dispatch(setPhoneMenuAnchor(null))}
     >
-      <MenuItem>Call on phone</MenuItem>
-      <MenuItem>Call on WhatsApp</MenuItem>
+      <MenuItem>Phone me</MenuItem>
+      <MenuItem>Send me an SMS</MenuItem>
     </Menu>
   )
 }
