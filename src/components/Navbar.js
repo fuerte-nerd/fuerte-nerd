@@ -50,7 +50,9 @@ const Navbar = props => {
       case "text":
         return props.dispatch(setTextMenuAnchor(f))
       case "instagram":
-        return window.open(`https://instagram.com/${links.instagram}`)
+        return window.open(`https://instagram.com/${links.instagram}`, "_blank")
+      case "github":
+        return window.open(`https://github.com/${links.github}`, "_blank")
       default:
         return
     }
@@ -75,7 +77,7 @@ const Navbar = props => {
               variantMapping={{ h6: "h1" }}
               style={{ cursor: "pointer" }}
             >
-              {data.site.siteMetadata.title}
+              {title}
             </Typography>
           </Link>
           <span style={{ flex: 1 }} />
@@ -88,7 +90,7 @@ const Navbar = props => {
           </Hidden>
           <Hidden smDown>
             <Tooltip title="GitHub">
-              <IconButton color="inherit">
+              <IconButton color="inherit" onClick={handleClick} id="github">
                 <GitHub />
               </IconButton>
             </Tooltip>
