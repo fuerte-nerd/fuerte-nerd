@@ -51,9 +51,11 @@ const SectionProjects = () => {
     >
       <Toolbar />
       <Container>
-        <Typography variant="h2">Projects</Typography>
-        <Divider style={{ marginBottom: 10 }} />
-        <Typography variant="h5">The fruits of my labour!</Typography>
+        <Box mb={2}>
+          <Typography variant="h2">Projects</Typography>
+          <Divider style={{ marginBottom: 10 }} />
+          <Typography variant="h5">The fruits of my labour!</Typography>
+        </Box>
         <Typography align="justify" color="inherit" variant="subtitle1">
           Here you will find a selection of my work, including SPAs (Single Page
           Applications), websites and more!

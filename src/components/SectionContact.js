@@ -40,15 +40,15 @@ const SectionContact = props => {
     >
       <Toolbar />
       <Container>
-        <Box>
+        <Box mb={2}>
           <Typography variant="h2">Contact</Typography>
           <Divider style={{ marginBottom: 10 }} />
           <Typography variant="h5">Get in touch!</Typography>
-          <Typography align="justify">
-            If you would like to hire me or if you have any questions about my
-            work, please feel free to contact me!
-          </Typography>
         </Box>
+        <Typography align="justify">
+          If you would like to hire me or if you have any questions about my
+          work, please feel free to contact me!
+        </Typography>
 
         <Box py={3}>
           <Grid container spacing={1}>
