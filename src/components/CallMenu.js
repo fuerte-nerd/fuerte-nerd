@@ -17,13 +17,22 @@ const CallMenu = props => {
       }
     }
   `)
+
+  const handleClick = e => {
+    const f = e.currentTarget
+
+    switch (f.id) {
+      case "call_phone":
+        return window.open("tel:555555555")
+    }
+  }
   return (
     <Menu
       anchorEl={props.callMenuAnchorEl}
       open={Boolean(props.callMenuAnchorEl)}
       onClose={() => props.dispatch(setCallMenuAnchor(null))}
     >
-      <MenuItem>
+      <MenuItem onClick={handleClick} id="call_phone">
         Call on phone
         <Typography
           color="textSecondary"
