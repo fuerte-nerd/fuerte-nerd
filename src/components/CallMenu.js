@@ -1,9 +1,8 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { setCallMenuAnchor } from "../redux/actions"
-import { Menu, MenuItem, ListItemIcon } from "@material-ui/core"
-
-import { Phone, WhatsApp } from "@material-ui/icons"
+import { Menu, MenuItem, Typography } from "@material-ui/core"
 
 const CallMenu = props => {
   return (
@@ -12,7 +11,9 @@ const CallMenu = props => {
       open={Boolean(props.callMenuAnchorEl)}
       onClose={() => props.dispatch(setCallMenuAnchor(null))}
     >
-      <MenuItem>Call on phone</MenuItem>
+      <MenuItem>
+        Call on phone <Typography></Typography>
+      </MenuItem>
       <MenuItem>Call on WhatsApp</MenuItem>
     </Menu>
   )

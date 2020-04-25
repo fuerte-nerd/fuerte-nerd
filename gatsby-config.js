@@ -15,8 +15,8 @@ module.exports = {
       instagram: "dandroos",
     },
     contact: {
-      phoneStr: phone,
-      phone: phone.replace(" ", ""),
+      phoneStr: `+34 ${phone}`,
+      phone: `34${phone.replace(" ", "")}`,
       email: "fuertenerd@gmail.com",
     },
   },
