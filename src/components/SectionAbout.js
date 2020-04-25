@@ -71,67 +71,59 @@ const SectionAbout = props => {
       <Container>
         <Grid container justify="center" alignItems="center" spacing={4}>
           <Grid item xs={12} md={7}>
-            <Box>
+            <Box mb={2}>
               <Typography variant="h2">About</Typography>
               <Divider style={{ marginBottom: 10 }} />
               <Typography variant="h5">Who am I?</Typography>
-              <Typography
-                variant="body1"
-                className={classes.aboutText}
-                paragraph
-              >
-                I am a developer (primarily of the web variety!) originally from
-                England, now residing in the Canary Islands. I mainly work with{" "}
-                <strong>React</strong>, <strong>Gatsby</strong>, vanilla{" "}
-                <strong>JavaScript</strong> and <strong>Node</strong>, but I
-                have experience of working with numerous tech such as Django,
-                Laravel, Material UI, Bootstrap, PHP, Python (too many to
-                mention them all without sending you to sleep!)
-              </Typography>
-              <Typography
-                variant="body2"
-                className={classes.aboutText}
-                paragraph
-              >
-                I love my work but when I am not working, I enjoy volunteering
-                at the local dog rescue center, playing the piano and
-                mountain-biking around this beautiful island....although not
-                necessarily at the same time! :o)
-              </Typography>
-              <Divider />{" "}
-              <Box mt={3} align="center">
-                <Grid container spacing={4} alignItems="center">
-                  <Grid item xs={12} md={6}>
-                    <Typography variant="body2" paragraph>
-                      If you're into code, check out....
-                    </Typography>
+            </Box>{" "}
+            <Typography variant="body1" className={classes.aboutText} paragraph>
+              I am a developer (primarily of the web variety!) originally from
+              England, now residing in the Canary Islands. I mainly work with{" "}
+              <strong>React</strong>, <strong>Gatsby</strong>, vanilla{" "}
+              <strong>JavaScript</strong> and <strong>Node</strong>, but I have
+              experience of working with numerous tech such as Django, Laravel,
+              Material UI, Bootstrap, PHP, Python (too many to mention them all
+              without sending you to sleep!)
+            </Typography>
+            <Typography variant="body2" className={classes.aboutText} paragraph>
+              I love my work but when I am not working, I enjoy volunteering at
+              the local dog rescue center, playing the piano and mountain-biking
+              around this beautiful island....although not necessarily at the
+              same time! :o)
+            </Typography>
+            <Divider />{" "}
+            <Box mt={3} align="center">
+              <Grid container spacing={4} alignItems="center">
+                <Grid item xs={12} md={6}>
+                  <Typography variant="body2" paragraph>
+                    If you're into code, check out....
+                  </Typography>
 
-                    <Button
-                      fullWidth
-                      style={{ maxWidth: 300 }}
-                      variant="contained"
-                      color="secondary"
-                      startIcon={<GitHub />}
-                    >
-                      My GitHub
-                    </Button>
-                  </Grid>
-                  <Grid item xs={12} md={6}>
-                    <Typography variant="body2" paragraph>
-                      If dogs are your thing, check out....
-                    </Typography>
-                    <Button
-                      fullWidth
-                      style={{ maxWidth: 300 }}
-                      variant="contained"
-                      color="secondary"
-                      startIcon={<Instagram />}
-                    >
-                      My Instagram
-                    </Button>
-                  </Grid>
+                  <Button
+                    fullWidth
+                    style={{ maxWidth: 300 }}
+                    variant="contained"
+                    color="secondary"
+                    startIcon={<GitHub />}
+                  >
+                    My GitHub
+                  </Button>
                 </Grid>
-              </Box>
+                <Grid item xs={12} md={6}>
+                  <Typography variant="body2" paragraph>
+                    If dogs are your thing, check out....
+                  </Typography>
+                  <Button
+                    fullWidth
+                    style={{ maxWidth: 300 }}
+                    variant="contained"
+                    color="secondary"
+                    startIcon={<Instagram />}
+                  >
+                    My Instagram
+                  </Button>
+                </Grid>
+              </Grid>
             </Box>
           </Grid>
           <Grid item xs={12} md={5} style={{ overflow: "hidden" }}>
