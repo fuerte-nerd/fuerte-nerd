@@ -20,6 +20,7 @@ const Project = props => {
     const f = e.currentTarget
     switch (f.id) {
       case "action-area":
+        console.log("clicked")
         return props.dispatch(setProjectMenuAnchor(e.currentTarget))
       default:
         return
@@ -30,7 +31,7 @@ const Project = props => {
       {" "}
       <Grid item xs={12} sm={6} md={4}>
         <Card>
-          <CardActionArea id="action-area">
+          <CardActionArea onClick={handleClick} id="action-area">
             <CardMedia>
               <Img fluid={props.img} />
             </CardMedia>

@@ -7,6 +7,7 @@ import { Menu, MenuItem, Typography } from "@material-ui/core"
 const ProjectMenu = props => {
   return (
     <Menu
+      anchorOrigin={{ vertical: "center", horizontal: "center" }}
       anchorEl={props.projectMenuAnchorEl}
       open={Boolean(props.projectMenuAnchorEl)}
       onClose={() => props.dispatch(setProjectMenuAnchor(null))}
