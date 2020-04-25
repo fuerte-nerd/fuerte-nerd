@@ -25,13 +25,21 @@ const PhoneMenu = props => {
     >
       <MenuItem>
         Phone me
-        <Typography variant="caption" style={{ marginLeft: 10 }}>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+          style={{ marginLeft: 10 }}
+        >
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
       <MenuItem>
         Send me an SMS
-        <Typography variant="caption" style={{ marginLeft: 10 }}>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+          style={{ marginLeft: 10 }}
+        >
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>

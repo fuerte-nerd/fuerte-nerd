@@ -25,13 +25,21 @@ const WhatsAppMenu = props => {
     >
       <MenuItem>
         Call on WhatsApp
-        <Typography variant="caption" style={{ marginLeft: 10 }}>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+          style={{ marginLeft: 10 }}
+        >
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
       <MenuItem>
         Send WhatsApp
-        <Typography variant="caption" style={{ marginLeft: 10 }}>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+          style={{ marginLeft: 10 }}
+        >
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
