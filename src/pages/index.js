@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { connect } from "react-redux"
-import { toggleBackToTop } from "../redux/actions"
+import { toggleBackToTop, setBackToTopTimer } from "../redux/actions"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -14,22 +14,21 @@ import Footer from "../components/Footer"
 import BackToTop from "../components/BackToTop"
 
 const IndexPage = props => {
-  const [compState, setCompState] = useState({
-    timer: 0,
-  })
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 0 && !props.isSmoothScrolling) {
         props.dispatch(toggleBackToTop(true))
-        clearTimeout(compState.timer)
-        setCompState({
-          timer: setTimeout(() => props.dispatch(toggleBackToTop(false)), 2000),
-        })
+        clearTimeout(props.backToTopTimer)
+        props.dispatch(
+          setBackToTopTimer(
+            setTimeout(() => props.dispatch(toggleBackToTop(false)), 2000)
+          )
+        )
       }
     }
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
-  }, [props.isSmoothScrolling, compState.timer])
+  }, [props.isSmoothScrolling, props.backToTopTimer])
 
   return (
     <Layout>
