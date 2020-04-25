@@ -5,8 +5,14 @@ const siteName = "dandroos"
 module.exports = {
   siteMetadata: {
     title: siteName,
+    titleSuffix: "professional web developer",
     description: `A web developer specializing in React, Gatsby, vanilla JavaScript and Node.`,
     author: siteName,
+    links: {
+      github: "dandroos",
+      twitter: "dandroos",
+      instagram: "dandroos",
+    },
   },
   plugins: [
     `gatsby-plugin-material-ui`,

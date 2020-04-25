@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          titleSuffix
         }
       }
     }
@@ -38,7 +39,7 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         />
         <title>
-          {data.site.siteMetadata.title} | professional web developer
+          {data.site.siteMetadata.title} | {data.site.siteMetadata.titleSuffix}
         </title>
       </Helmet>
       <ThemeProvider theme={theme}>
