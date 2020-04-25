@@ -1,6 +1,7 @@
 const { blueGrey } = require("@material-ui/core/colors")
 
 const siteName = "dandroos"
+const phone = "658 353 232"
 
 module.exports = {
   siteMetadata: {
@@ -14,8 +15,8 @@ module.exports = {
       instagram: "dandroos",
     },
     contact: {
-      phoneStr: "658 353 323",
-      phone: phoneStr.replace(" ", ""),
+      phoneStr: phone,
+      phone: phone.replace(" ", ""),
       email: "fuertenerd@gmail.com",
     },
   },
