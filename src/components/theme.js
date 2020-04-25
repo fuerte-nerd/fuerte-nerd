@@ -7,6 +7,6 @@ export default createMuiTheme({
     secondary: pink,
   },
   typography: {
-    fontFamily: "Spectral",
+    fontFamily: "Mallanna",
   },
 })
