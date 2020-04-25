@@ -26,19 +26,31 @@ const TextMenu = props => {
     >
       <MenuItem>
         Send WhatsApp{" "}
-        <Typography variant="caption" style={{ marginLeft: 10 }}>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+          style={{ marginLeft: 10 }}
+        >
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
       <MenuItem>
         Send email
-        <Typography variant="caption" style={{ marginLeft: 10 }}>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+          style={{ marginLeft: 10 }}
+        >
           ({data.site.siteMetadata.contact.email})
         </Typography>
       </MenuItem>
       <MenuItem>
         Send SMS
-        <Typography variant="caption" style={{ marginLeft: 10 }}>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+          style={{ marginLeft: 10 }}
+        >
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
