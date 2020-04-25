@@ -1,6 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { setPhoneMenuAnchor, setWhatsAppMenuAnchor } from "../redux/actions"
+import PhoneMenu from "./PhoneMenu"
 import {
   TextField,
   Box,
@@ -24,6 +25,7 @@ const SectionContact = props => {
         return
     }
   }
+
   return (
     <Box
       py={2}
@@ -53,6 +55,8 @@ const SectionContact = props => {
                 size="large"
                 startIcon={<Phone />}
                 fullWidth
+                onClick={handleClick}
+                id="phone"
               >
                 Phone
               </Button>
@@ -64,6 +68,8 @@ const SectionContact = props => {
                 size="large"
                 startIcon={<Email />}
                 fullWidth
+                onClick={handleClick}
+                id="email"
               >
                 Email
               </Button>
@@ -75,6 +81,8 @@ const SectionContact = props => {
                 size="large"
                 startIcon={<WhatsApp />}
                 fullWidth
+                onClick={handleClick}
+                id="whatsapp"
               >
                 WhatsApp
               </Button>
@@ -134,6 +142,7 @@ const SectionContact = props => {
           </Grid>
         </form>
       </Container>
+      <PhoneMenu />
       <Toolbar />
     </Box>
   )
