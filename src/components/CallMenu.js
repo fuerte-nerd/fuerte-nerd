@@ -5,6 +5,19 @@ import { setCallMenuAnchor } from "../redux/actions"
 import { Menu, MenuItem, Typography } from "@material-ui/core"
 
 const CallMenu = props => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          contact {
+            phone
+            phoneStr
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Menu
       anchorEl={props.callMenuAnchorEl}
@@ -12,7 +25,10 @@ const CallMenu = props => {
       onClose={() => props.dispatch(setCallMenuAnchor(null))}
     >
       <MenuItem>
-        Call on phone <Typography></Typography>
+        Call on phone{" "}
+        <Typography variant="overline">
+          {data.site.siteMetadata.phoneStr}
+        </Typography>
       </MenuItem>
       <MenuItem>Call on WhatsApp</MenuItem>
     </Menu>
