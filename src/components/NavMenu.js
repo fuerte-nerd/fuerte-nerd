@@ -37,11 +37,9 @@ const NavMenu = props => {
         height="100vh"
         width="100vw"
         align="center"
+        onClick={handleClick}
       >
         <Box width="100%" mb={2}>
-          <Box align="center">
-            <Typography variant="overline">Internals</Typography>
-          </Box>
           <List style={{ flex: 1 }}>
             <NavMenuItem link="home" label="Home" />
             <NavMenuItem link="about" label="About" />
@@ -52,7 +50,7 @@ const NavMenu = props => {
         <Box width="75%">
           <Divider variant="middle" />
           <Box pt={2} align="center">
-            <Typography variant="overline">Externals</Typography>
+            <Typography variant="overline">External Links</Typography>
           </Box>
           <Box maxWidth={500}>
             <Grid container justify="center" alignItems="center">
