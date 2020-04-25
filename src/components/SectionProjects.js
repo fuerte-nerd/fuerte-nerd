@@ -9,6 +9,7 @@ import {
   Divider,
 } from "@material-ui/core"
 import Project from "./Project"
+import ProjectMenu from "./ProjectMenu"
 
 const SectionProjects = () => {
   const imgsQuery = useStaticQuery(graphql`
@@ -87,6 +88,7 @@ const SectionProjects = () => {
         </Box>
       </Container>
       <Toolbar />
+      <ProjectMenu />
     </Box>
   )
 }

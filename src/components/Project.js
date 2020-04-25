@@ -26,42 +26,45 @@ const Project = props => {
     }
   }
   return (
-    <Grid item xs={12} sm={6} md={4}>
-      <Card>
-        <CardActionArea id="action-area">
-          <CardMedia>
-            <Img fluid={props.img} />
-          </CardMedia>
-          <CardContent style={{ height: "10rem" }}>
-            <Typography variant="h5">{props.title}</Typography>
-            <Typography variant="body2" align="justify">
-              {props.description}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <Divider />
-        <CardActions>
-          <Button
-            variant="contained"
-            color="secondary"
-            startIcon={<Language />}
-            id="visit"
-            onClick={handleClick}
-          >
-            Visit
-          </Button>
-          <Button
-            variant="contained"
-            color="secondary"
-            startIcon={<Code />}
-            id="code"
-            onClick={handleClick}
-          >
-            Code
-          </Button>
-        </CardActions>
-      </Card>
-    </Grid>
+    <>
+      {" "}
+      <Grid item xs={12} sm={6} md={4}>
+        <Card>
+          <CardActionArea id="action-area">
+            <CardMedia>
+              <Img fluid={props.img} />
+            </CardMedia>
+            <CardContent style={{ height: "10rem" }}>
+              <Typography variant="h5">{props.title}</Typography>
+              <Typography variant="body2" align="justify">
+                {props.description}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <Divider />
+          <CardActions>
+            <Button
+              variant="contained"
+              color="secondary"
+              startIcon={<Language />}
+              id="visit"
+              onClick={handleClick}
+            >
+              Visit
+            </Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              startIcon={<Code />}
+              id="code"
+              onClick={handleClick}
+            >
+              Code
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+    </>
   )
 }
 
