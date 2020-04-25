@@ -16,7 +16,7 @@ module.exports = {
     },
     contact: {
       phoneStr: `+34 ${phone}`,
-      phone: `34${phone.replace(" ", "")}`,
+      phone: `34${phone.replace(/ /g, "")}`,
       email: "fuertenerd@gmail.com",
     },
   },
