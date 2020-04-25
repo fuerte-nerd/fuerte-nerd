@@ -44,7 +44,7 @@ const SectionProjects = () => {
     >
       <Toolbar />
       <Container>
-        <Typography variant="h2">My Work</Typography>
+        <Typography variant="h2">Projects</Typography>
         <Typography align="justify" color="inherit" variant="subtitle1">
           Here you will find a selection of my work, including SPAs (Single Page
           Applications), websites and more!

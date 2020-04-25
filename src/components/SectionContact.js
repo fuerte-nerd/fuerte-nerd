@@ -10,6 +10,7 @@ import {
   Typography,
   Button,
   Toolbar,
+  Divider,
 } from "@material-ui/core"
 import { Send, Email, Phone, WhatsApp } from "@material-ui/icons"
 
@@ -39,7 +40,9 @@ const SectionContact = props => {
       <Toolbar />
       <Container>
         <Box>
-          <Typography variant="h2">Get in touch!</Typography>
+          <Typography variant="h2">Contact</Typography>
+          <Divider style={{ marginBottom: 10 }} />
+          <Typography variant="h5">Get in touch!</Typography>
           <Typography align="justify">
             If you would like to hire me or if you have any questions about my
             work, please feel free to contact me!
