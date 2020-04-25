@@ -1,4 +1,6 @@
 import React from "react"
+import { connect } from "react-redux"
+import { setPhoneMenuAnchor, setWhatsAppMenuAnchor } from "../redux/actions"
 import {
   TextField,
   Box,
@@ -9,9 +11,19 @@ import {
   Toolbar,
 } from "@material-ui/core"
 import { Send, Email, Phone, WhatsApp } from "@material-ui/icons"
-import { HeroImage } from "./image"
 
-const SectionContact = () => {
+const SectionContact = props => {
+  const handleClick = e => {
+    const f = e.currentTarget
+    switch (f.id) {
+      case "phone":
+        return props.dispatch(setPhoneMenuAnchor(f))
+      case "whatsapp":
+        return props.dispatch(setWhatsAppMenuAnchor(f))
+      default:
+        return
+    }
+  }
   return (
     <Box
       py={2}
@@ -127,4 +139,4 @@ const SectionContact = () => {
   )
 }
 
-export default SectionContact
+export default connect()(SectionContact)
