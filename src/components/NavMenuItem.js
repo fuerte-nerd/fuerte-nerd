@@ -14,27 +14,28 @@ const NavMenuItem = props => {
     )
   }, [])
 
-  const handleClick = ()=>{
-    animateScroll.scrollTo({props.link})
+  const handleClick = () => {
+    animateScroll.scrollTo(props.link)
     props.dispatch(toggleMenu(!props.isOpen))
   }
 
   return (
-      <ListItem
-        button
-        alignItems="center"
-        id={`${props.link}Link`}
+    <ListItem
+      button
+      alignItems="center"
+      id={`${props.link}Link`}
+      onClick={handleClick}
+    >
+      <ListItemText
+        primaryTypographyProps={{
+          variant: "button",
+          align: "center",
+          style: { fontSize: "1rem" },
+        }}
       >
-        <ListItemText
-          primaryTypographyProps={{
-            variant: "button",
-            align: "center",
-            style: { fontSize: "1rem" },
-          }}
-        >
-          {props.label}
-        </ListItemText>
-      </ListItem>
+        {props.label}
+      </ListItemText>
+    </ListItem>
   )
 }
 
