@@ -4,6 +4,8 @@ import {
   SET_SMOOTH_SCROLLING,
   SET_CALL_MENU_ANCHOR,
   SET_TEXT_MENU_ANCHOR,
+  SET_PHONE_MENU_ANCHOR,
+  SET_WHATSAPP_MENU_ANCHOR,
   SET_BACK_TO_TOP_TIMER,
 } from "./types"
 
@@ -19,6 +21,16 @@ export const setCallMenuAnchor = element => ({
 
 export const setTextMenuAnchor = element => ({
   type: SET_TEXT_MENU_ANCHOR,
+  payload: element,
+})
+
+export const setPhoneMenuAnchor = element => ({
+  type: SET_PHONE_MENU_ANCHOR,
+  payload: element,
+})
+
+export const setWhatsAppMenuAnchor = element => ({
+  type: SET_WHATSAPP_MENU_ANCHOR,
   payload: element,
 })
 

@@ -4,6 +4,8 @@ import {
   SET_SMOOTH_SCROLLING,
   SET_CALL_MENU_ANCHOR,
   SET_TEXT_MENU_ANCHOR,
+  SET_PHONE_MENU_ANCHOR,
+  SET_WHATSAPP_MENU_ANCHOR,
   SET_BACK_TO_TOP_TIMER,
 } from "./types"
 
@@ -13,6 +15,8 @@ const initialState = {
   isSmoothScrolling: false,
   callMenuAnchorEl: null,
   textMenuAnchorEl: null,
+  phoneMenuAnchorEl: null,
+  whatsAppMenuAnchorEl: null,
   backToTopTimer: 0,
 }
 
@@ -42,6 +46,16 @@ export default (state = initialState, action) => {
       return {
         ...state,
         textMenuAnchorEl: action.payload,
+      }
+    case SET_PHONE_MENU_ANCHOR:
+      return {
+        ...state,
+        phoneMenuAnchorEl: action.payload,
+      }
+    case SET_WHATSAPP_MENU_ANCHOR:
+      return {
+        ...state,
+        whatsAppMenuAnchorEl: action.payload,
       }
     case SET_BACK_TO_TOP_TIMER:
       return {
