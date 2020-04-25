@@ -4,6 +4,7 @@ import {
   SET_SMOOTH_SCROLLING,
   SET_CALL_MENU_ANCHOR,
   SET_TEXT_MENU_ANCHOR,
+  SET_BACK_TO_TOP_TIMER,
 } from "./types"
 
 const initialState = {
@@ -41,6 +42,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         textMenuAnchorEl: action.payload,
+      }
+    case SET_BACK_TO_TOP_TIMER:
+      return {
+        ...state,
+        backToTopTimer: action.payload,
       }
     default:
       return state
