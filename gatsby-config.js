@@ -1,9 +1,12 @@
 const { blueGrey } = require("@material-ui/core/colors")
+
+const siteName = "dandroos"
+
 module.exports = {
   siteMetadata: {
-    title: `fuerte-nerd`,
-    description: `David Andrews (aka fuerte-nerd) is a web developer.`,
-    author: `fuerte-nerd`,
+    title: siteName,
+    description: `A web developer specializing in React, Gatsby, vanilla JavaScript and Node.`,
+    author: siteName,
   },
   plugins: [
     `gatsby-plugin-material-ui`,
@@ -20,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `fuerte-nerd`,
-        short_name: `fuerte-nerd`,
+        name: siteName,
+        short_name: siteName,
         start_url: `/`,
         background_color: blueGrey[400],
         theme_color: blueGrey[400],
