@@ -142,8 +142,8 @@ const SectionContact = props => {
           </Grid>
         </form>
       </Container>
-      <PhoneMenu />
       <Toolbar />
+      <PhoneMenu />
     </Box>
   )
 }
