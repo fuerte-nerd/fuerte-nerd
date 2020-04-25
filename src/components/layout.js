@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
           rel="stylesheet"
         />
         <title>

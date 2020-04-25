@@ -7,8 +7,8 @@ let theme = createMuiTheme({
     secondary: pink,
   },
   typography: {
-    fontFamily: "Pontano Sans",
-    htmlFontSize: 14,
+    fontFamily: "Crimson Text",
+    htmlFontSize: 16,
   },
 })
 
