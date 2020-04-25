@@ -72,11 +72,9 @@ const SectionAbout = props => {
         <Grid container justify="center" alignItems="center" spacing={4}>
           <Grid item xs={12} md={7}>
             <Box>
-              <Box mb={2}>
-                <Typography variant="h2">About</Typography>
-                <Divider style={{ marginBottom: 10 }} />
-                <Typography variant="h5">Who am I?</Typography>
-              </Box>
+              <Typography variant="h2">About</Typography>
+              <Divider style={{ marginBottom: 10 }} />
+              <Typography variant="h5">Who am I?</Typography>
               <Typography
                 variant="body1"
                 className={classes.aboutText}
