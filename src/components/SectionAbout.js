@@ -73,7 +73,7 @@ const SectionAbout = props => {
           <Grid item xs={12} md={7}>
             <Box>
               <Box mb={2}>
-                <Typography variant="h2">Who am I?</Typography>
+                <Typography variant="h2">About</Typography>
               </Box>
               <Typography
                 variant="body1"

@@ -44,7 +44,7 @@ const SectionHome = props => {
           </Box>
           <Box mt={2}>
             <Typography variant="h2" align="center">
-              Hello!
+              Hola!
             </Typography>
           </Box>
           <Typography variant="subtitle1" align="center" paragraph>
