@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { toggleMenu, setSmoothScroll } from "../redux/actions"
 import { ListItem, ListItemText } from "@material-ui/core"
-import { Link, Events } from "react-scroll"
+import { Link, Events, animateScroll } from "react-scroll"
 
 const NavMenuItem = props => {
   useEffect(() => {
@@ -14,13 +14,16 @@ const NavMenuItem = props => {
     )
   }, [])
 
+  const handleClick = ()=>{
+    animateScroll.scrollTo({props.link})
+    props.dispatch(toggleMenu(!props.isOpen))
+  }
+
   return (
-    <Link to={props.link} smooth={true} offset={props.offset ? -56 : 0}>
       <ListItem
         button
         alignItems="center"
         id={`${props.link}Link`}
-        onClick={() => props.dispatch(toggleMenu(!props.isOpen))}
       >
         <ListItemText
           primaryTypographyProps={{
@@ -32,7 +35,6 @@ const NavMenuItem = props => {
           {props.label}
         </ListItemText>
       </ListItem>
-    </Link>
   )
 }
 
