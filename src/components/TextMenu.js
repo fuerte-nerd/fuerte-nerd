@@ -1,7 +1,9 @@
 import React from "react"
 import { connect } from "react-redux"
 import { setTextMenuAnchor } from "../redux/actions"
-import { Menu, MenuItem } from "@material-ui/core"
+import { Menu, MenuItem, ListItemIcon } from "@material-ui/core"
+
+import { WhatsApp, Message, Email } from "@material-ui/icons"
 
 const TextMenu = props => {
   return (
@@ -10,9 +12,24 @@ const TextMenu = props => {
       open={Boolean(props.textMenuAnchorEl)}
       onClose={() => props.dispatch(setTextMenuAnchor(null))}
     >
-      <MenuItem>Send WhatsApp</MenuItem>
-      <MenuItem>Send Email</MenuItem>
-      <MenuItem>Send SMS</MenuItem>
+      <MenuItem>
+        <ListItemIcon>
+          <WhatsApp />
+        </ListItemIcon>
+        Send WhatsApp
+      </MenuItem>
+      <MenuItem>
+        <ListItemIcon>
+          <Email />
+        </ListItemIcon>
+        Send email
+      </MenuItem>
+      <MenuItem>
+        <ListItemIcon>
+          <Message />
+        </ListItemIcon>
+        Send SMS
+      </MenuItem>
     </Menu>
   )
 }
