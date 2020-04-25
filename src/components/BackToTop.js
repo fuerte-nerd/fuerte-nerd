@@ -15,12 +15,12 @@ const BackToTop = props => {
       props.dispatch(setSmoothScroll(false))
     )
   }, [])
-  const handleHover = () => {
+  const handleMouseEnter = () => {
     clearTimeout(props.backToTopTimer)
   }
   return (
     <Fade in={props.backToTopVisible}>
-      <Link to="home" smooth={true} onMouseOver={handleHover}>
+      <Link to="home" smooth={true} onMouseEnter={handleMouseEnter}>
         <Tooltip title="Back to top" placement="left">
           <Fab
             color="primary"

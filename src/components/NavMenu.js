@@ -13,6 +13,7 @@ import {
   IconButton,
   Grid,
   Typography,
+  Tooltip,
 } from "@material-ui/core"
 
 import { Close, GitHub, Instagram, Twitter } from "@material-ui/icons"
@@ -57,23 +58,29 @@ const NavMenu = props => {
             <Grid container justify="center" alignItems="center">
               <Grid item xs={4}>
                 <Box align="center">
-                  <IconButton color="primary">
-                    <GitHub />
-                  </IconButton>
+                  <Tooltip title="GitHub">
+                    <IconButton color="primary">
+                      <GitHub />
+                    </IconButton>
+                  </Tooltip>
                 </Box>
               </Grid>
               <Grid item xs={4}>
                 <Box align="center">
-                  <IconButton color="primary">
-                    <Twitter />
-                  </IconButton>
+                  <Tooltip title="Twitter">
+                    <IconButton color="primary">
+                      <Twitter />
+                    </IconButton>
+                  </Tooltip>
                 </Box>
               </Grid>
               <Grid item xs={4}>
                 <Box align="center">
-                  <IconButton color="primary">
-                    <Instagram />
-                  </IconButton>
+                  <Tooltip title="Instagram">
+                    <IconButton color="primary">
+                      <Instagram />
+                    </IconButton>
+                  </Tooltip>
                 </Box>
               </Grid>
             </Grid>
