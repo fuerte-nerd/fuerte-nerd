@@ -8,6 +8,7 @@ const ProjectMenu = props => {
   return (
     <Menu
       anchorOrigin={{ vertical: "center", horizontal: "center" }}
+      transformOrigin={{ vertical: "center", horizontal: "center" }}
       anchorEl={props.projectMenuAnchorEl}
       open={Boolean(props.projectMenuAnchorEl)}
       onClose={() => props.dispatch(setProjectMenuAnchor(null))}
