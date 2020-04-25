@@ -25,13 +25,13 @@ const CallMenu = props => {
     >
       <MenuItem>
         Call on phone
-        <Typography variant="overline" style={{ marginLeft: 10 }}>
+        <Typography variant="caption" style={{ marginLeft: 10 }}>
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
       <MenuItem>
         Call on WhatsApp
-        <Typography variant="overline" style={{ marginLeft: 10 }}>
+        <Typography variant="caption" style={{ marginLeft: 10 }}>
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
