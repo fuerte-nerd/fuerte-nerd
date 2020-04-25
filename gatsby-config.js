@@ -13,6 +13,11 @@ module.exports = {
       twitter: "dandroos",
       instagram: "dandroos",
     },
+    contact: {
+      phoneStr: "658 353 323",
+      phone: phoneStr.replace(" ", ""),
+      email: "fuertenerd@gmail.com",
+    },
   },
   plugins: [
     `gatsby-plugin-material-ui`,
