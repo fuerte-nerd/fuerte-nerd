@@ -12,6 +12,7 @@ const initialState = {
   isSmoothScrolling: false,
   callMenuAnchorEl: null,
   textMenuAnchorEl: null,
+  backToTopTimer: 0,
 }
 
 export default (state = initialState, action) => {

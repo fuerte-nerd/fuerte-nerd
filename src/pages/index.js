@@ -49,5 +49,6 @@ const IndexPage = props => {
 const mapStateToProps = state => ({
   backToTopVisible: state.backToTopVisible,
   isSmoothScrolling: state.isSmoothScrolling,
+  backToTopTimer: state.backToTopTimer,
 })
 export default connect(mapStateToProps)(IndexPage)

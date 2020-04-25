@@ -4,6 +4,7 @@ import {
   SET_SMOOTH_SCROLLING,
   SET_CALL_MENU_ANCHOR,
   SET_TEXT_MENU_ANCHOR,
+  SET_BACK_TO_TOP_TIMER,
 } from "./types"
 
 export const toggleMenu = menuState => ({
@@ -24,6 +25,11 @@ export const setTextMenuAnchor = element => ({
 export const toggleBackToTop = buttonState => ({
   type: SET_BACK_TO_TOP,
   payload: buttonState,
+})
+
+export const setBackToTopTimer = timerId => ({
+  type: SET_BACK_TO_TOP_TIMER,
+  payload: timerId,
 })
 
 export const setSmoothScroll = state => ({
