@@ -60,9 +60,6 @@ const NavMenu = props => {
                   <IconButton color="primary">
                     <GitHub />
                   </IconButton>
-                  <Typography display="block" variant="caption">
-                    GitHub
-                  </Typography>
                 </Box>
               </Grid>
               <Grid item xs={4}>
