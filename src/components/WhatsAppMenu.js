@@ -20,6 +20,8 @@ const WhatsAppMenu = props => {
   return (
     <Menu
       anchorEl={props.whatsAppMenuAnchorEl}
+      anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      transformOrigin={{ vertical: "top", horizontal: "center" }}
       open={Boolean(props.whatsAppMenuAnchorEl)}
       onClose={() => props.dispatch(setWhatsAppMenuAnchor(null))}
     >

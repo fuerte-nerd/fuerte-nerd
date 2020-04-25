@@ -20,7 +20,7 @@ const PhoneMenu = props => {
   return (
     <Menu
       anchorEl={props.phoneMenuAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       transformOrigin={{ vertical: "top", horizontal: "center" }}
       open={Boolean(props.phoneMenuAnchorEl)}
       onClose={() => props.dispatch(setPhoneMenuAnchor(null))}
