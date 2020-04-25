@@ -93,10 +93,10 @@ const SectionAbout = props => {
                 className={classes.aboutText}
                 paragraph
               >
-                When I am not working, I enjoy volunteering at the local dog
-                rescue center, playing the piano and mountain-biking around this
-                beautiful island....although not necessarily at the same time!
-                :o)
+                I love my work but when I am not working, I enjoy volunteering
+                at the local dog rescue center, playing the piano and
+                mountain-biking around this beautiful island....although not
+                necessarily at the same time! :o)
               </Typography>
               <Divider />{" "}
               <Box mt={3} align="center">
