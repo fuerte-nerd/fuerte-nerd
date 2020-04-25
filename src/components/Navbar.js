@@ -14,7 +14,6 @@ import {
   IconButton,
   Typography,
   Hidden,
-  MenuItem,
 } from "@material-ui/core"
 
 import MenuComponent from "@material-ui/core/Menu"
@@ -30,10 +29,17 @@ const Navbar = props => {
       site {
         siteMetadata {
           title
+          links {
+            github
+            instagram
+          }
         }
       }
     }
   `)
+
+  const { title, links } = data.site.siteMetadata
+
   const handleClick = e => {
     const f = e.currentTarget
     switch (f.id) {
@@ -43,6 +49,8 @@ const Navbar = props => {
         return props.dispatch(setCallMenuAnchor(f))
       case "text":
         return props.dispatch(setTextMenuAnchor(f))
+      case "instagram":
+        return window.open(`https://instagram.com/${links.instagram}`)
       default:
         return
     }
@@ -73,7 +81,7 @@ const Navbar = props => {
           <span style={{ flex: 1 }} />
           <Hidden smDown>
             <Tooltip title="Instagram">
-              <IconButton color="inherit">
+              <IconButton color="inherit" onClick={handleClick} id="instagram">
                 <Instagram />
               </IconButton>
             </Tooltip>

@@ -12,7 +12,7 @@ module.exports = {
     links: {
       github: "dandroos",
       twitter: "dandroos",
-      instagram: "dandroos",
+      instagram: "fuertenerd",
     },
     contact: {
       phoneStr: `+34 ${phone}`,
