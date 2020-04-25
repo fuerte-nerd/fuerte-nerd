@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
-import { setPhoneMenuAnchor } from "../redux/actions"
+import { setWhatsAppMenuAnchor } from "../redux/actions"
 import { Menu, MenuItem, Typography } from "@material-ui/core"
 
-const PhoneMenu = props => {
+const WhatsAppMenu = props => {
   const data = useStaticQuery(graphql`
     {
       site {
@@ -19,9 +19,9 @@ const PhoneMenu = props => {
   `)
   return (
     <Menu
-      anchorEl={props.phoneMenuAnchorEl}
-      open={Boolean(props.phoneMenuAnchorEl)}
-      onClose={() => props.dispatch(setPhoneMenuAnchor(null))}
+      anchorEl={props.whatsAppMenuAnchorEl}
+      open={Boolean(props.whatsAppMenuAnchorEl)}
+      onClose={() => props.dispatch(setWhatsAppMenuAnchor(null))}
     >
       <MenuItem>
         Phone me
@@ -40,7 +40,7 @@ const PhoneMenu = props => {
 }
 
 const mapStateToProps = state => ({
-  phoneMenuAnchorEl: state.phoneMenuAnchorEl,
+  whatsAppMenuAnchorEl: state.whatsAppMenuAnchorEl,
 })
 
-export default connect(mapStateToProps)(PhoneMenu)
+export default connect(mapStateToProps)(WhatsAppMenu)

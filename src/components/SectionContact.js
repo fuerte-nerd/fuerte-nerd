@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { setPhoneMenuAnchor, setWhatsAppMenuAnchor } from "../redux/actions"
 import PhoneMenu from "./PhoneMenu"
+import WhatsAppMenu from "./WhatsAppMenu"
 import {
   TextField,
   Box,
@@ -147,6 +148,7 @@ const SectionContact = props => {
       </Container>
       <Toolbar />
       <PhoneMenu />
+      <WhatsAppMenu />
     </Box>
   )
 }
