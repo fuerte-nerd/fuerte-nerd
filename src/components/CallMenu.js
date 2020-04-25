@@ -12,18 +12,8 @@ const CallMenu = props => {
       open={Boolean(props.callMenuAnchorEl)}
       onClose={() => props.dispatch(setCallMenuAnchor(null))}
     >
-      <MenuItem>
-        <ListItemIcon>
-          <Phone />
-        </ListItemIcon>
-        Call on phone
-      </MenuItem>
-      <MenuItem>
-        <ListItemIcon>
-          <WhatsApp />
-        </ListItemIcon>
-        Call on WhatsApp
-      </MenuItem>
+      <MenuItem>Call on phone</MenuItem>
+      <MenuItem>Call on WhatsApp</MenuItem>
     </Menu>
   )
 }
