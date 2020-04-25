@@ -24,13 +24,13 @@ const WhatsAppMenu = props => {
       onClose={() => props.dispatch(setWhatsAppMenuAnchor(null))}
     >
       <MenuItem>
-        Call me on WhatsApp
+        Call on WhatsApp
         <Typography variant="caption" style={{ marginLeft: 10 }}>
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
       <MenuItem>
-        Message me on WhatsApp
+        Send WhatsApp
         <Typography variant="caption" style={{ marginLeft: 10 }}>
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
