@@ -8,7 +8,7 @@ let theme = createMuiTheme({
   },
   typography: {
     fontFamily: "Crimson Text",
-    htmlFontSize: 16,
+    fontSize: 14,
   },
 })
 
