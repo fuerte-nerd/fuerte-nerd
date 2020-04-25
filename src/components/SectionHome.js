@@ -1,20 +1,28 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { connect } from "react-redux"
+import { setSmoothScroll } from "../redux/actions"
 import {
   Hidden,
   Toolbar,
   Box,
   Container,
-  Grid,
   Typography,
   Button,
 } from "@material-ui/core"
 
-import { makeStyles } from "@material-ui/core/styles"
 import { DirectionsRun } from "@material-ui/icons"
 import { HeroImage } from "./image"
-import { Link } from "react-scroll"
+import { Link, Events } from "react-scroll"
 
-const SectionHome = () => {
+const SectionHome = props => {
+  useEffect(() => {
+    Events.scrollEvent.register("begin", () =>
+      props.dispatch(setSmoothScroll(true))
+    )
+    Events.scrollEvent.register("end", () =>
+      props.dispatch(setSmoothScroll(false))
+    )
+  }, [])
   return (
     <>
       <Box
@@ -35,11 +43,7 @@ const SectionHome = () => {
             <HeroImage />
           </Box>
           <Box mt={2}>
-            <Typography
-              variant="h2"
-              variantMapping={{ h2: "h1" }}
-              align="center"
-            >
+            <Typography variant="h2" align="center">
               Hello!
             </Typography>
           </Box>
@@ -69,4 +73,4 @@ const SectionHome = () => {
   )
 }
 
-export default SectionHome
+export default connect()(SectionHome)
