@@ -17,6 +17,7 @@ const initialState = {
   textMenuAnchorEl: null,
   phoneMenuAnchorEl: null,
   whatsAppMenuAnchorEl: null,
+  projectMenuAnchorEl: null,
   backToTopTimer: 0,
 }
 
