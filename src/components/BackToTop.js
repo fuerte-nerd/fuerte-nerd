@@ -8,12 +8,12 @@ import { Link, Events } from "react-scroll"
 const BackToTop = props => {
   useEffect(() => {
     Events.scrollEvent.register("begin", () => {
-      props.dispatch(toggleBackToTop(false))
       props.dispatch(setSmoothScroll(true))
     })
-    Events.scrollEvent.register("end", () =>
+    Events.scrollEvent.register("end", () => {
+      props.dispatch(toggleBackToTop(false))
       props.dispatch(setSmoothScroll(false))
-    )
+    })
   }, [])
   const handleMouseEnter = () => {
     clearTimeout(props.backToTopTimer)
@@ -21,15 +21,13 @@ const BackToTop = props => {
   return (
     <Fade in={props.backToTopVisible}>
       <Link to="home" smooth={true} onMouseEnter={handleMouseEnter}>
-        <Tooltip title="Back to top" placement="left">
-          <Fab
-            color="primary"
-            size="small"
-            style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
-          >
-            <ArrowUpward />
-          </Fab>
-        </Tooltip>
+        <Fab
+          color="primary"
+          size="small"
+          style={{ position: "fixed", bottom: "1rem", right: "1rem" }}
+        >
+          <ArrowUpward />
+        </Fab>
       </Link>
     </Fade>
   )
