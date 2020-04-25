@@ -1,6 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Box, Container, Grid, Typography, Toolbar } from "@material-ui/core"
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Toolbar,
+  Divider,
+} from "@material-ui/core"
 import Project from "./Project"
 
 const SectionProjects = () => {
@@ -45,6 +52,8 @@ const SectionProjects = () => {
       <Toolbar />
       <Container>
         <Typography variant="h2">Projects</Typography>
+        <Divider style={{ marginBottom: 10 }} />
+        <Typography variant="h5">The fruits of my labour!</Typography>
         <Typography align="justify" color="inherit" variant="subtitle1">
           Here you will find a selection of my work, including SPAs (Single Page
           Applications), websites and more!

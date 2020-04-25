@@ -74,6 +74,8 @@ const SectionAbout = props => {
             <Box>
               <Box mb={2}>
                 <Typography variant="h2">About</Typography>
+                <Divider style={{ marginBottom: 10 }} />
+                <Typography variant="h5">Who am I?</Typography>
               </Box>
               <Typography
                 variant="body1"
