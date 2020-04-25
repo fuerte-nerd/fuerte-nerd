@@ -37,7 +37,6 @@ const NavMenu = props => {
         height="100vh"
         width="100vw"
         align="center"
-        onClick={handleClick}
       >
         <Box width="100%" mb={2}>
           <List style={{ flex: 1 }}>
