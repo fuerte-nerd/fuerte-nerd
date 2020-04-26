@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { setPhoneMenuAnchor, setConfirmDialog } from "../redux/actions"
-import { Menu, MenuItem, Typography } from "@material-ui/core"
+import { Menu, MenuItem, Typography, Hidden } from "@material-ui/core"
 
 const PhoneMenu = props => {
   const data = useStaticQuery(graphql`
@@ -22,16 +22,16 @@ const PhoneMenu = props => {
     const f = e.currentTarget
 
     switch (f.id) {
-      case "whatsapp":
+      case "call_phone":
         return props.dispatch(
           setConfirmDialog({
-            title: "Open WhatsApp?",
-            text: "Would you like to continue to WhatsApp?",
+            title: "Open Dialler?",
+            text: "Would you like to continue to your phone dialler app?",
             y: "Yes",
             n: "No",
             action: () =>
               window.open(
-                `https://wa.me/${data.site.siteMetadata.contact.phone}`,
+                `tel:${data.site.siteMetadata.contact.phone}`,
                 "_self"
               ),
             isOpen: true,
@@ -62,7 +62,7 @@ const PhoneMenu = props => {
       open={Boolean(props.phoneMenuAnchorEl)}
       onClose={() => props.dispatch(setPhoneMenuAnchor(null))}
     >
-      <MenuItem>
+      <MenuItem onClick={handleClick} id="call_phone">
         Phone me
         <Typography
           color="textSecondary"
@@ -72,16 +72,18 @@ const PhoneMenu = props => {
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
-      <MenuItem>
-        Send me an SMS
-        <Typography
-          color="textSecondary"
-          variant="caption"
-          style={{ marginLeft: 10 }}
-        >
-          ({data.site.siteMetadata.contact.phoneStr})
-        </Typography>
-      </MenuItem>
+      <Hidden smUp>
+        <MenuItem onClick={handleClick} id="sms">
+          Send me an SMS
+          <Typography
+            color="textSecondary"
+            variant="caption"
+            style={{ marginLeft: 10 }}
+          >
+            ({data.site.siteMetadata.contact.phoneStr})
+          </Typography>
+        </MenuItem>
+      </Hidden>
     </Menu>
   )
 }
