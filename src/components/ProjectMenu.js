@@ -31,8 +31,12 @@ const ProjectMenu = props => {
         )
       }
     >
-      <MenuItem>Visit Project</MenuItem>
-      <MenuItem>View Code</MenuItem>
+      <MenuItem onClick={handleClick} id="visit">
+        Visit Project
+      </MenuItem>
+      <MenuItem onClick={handleClick} id="code">
+        View Code
+      </MenuItem>
     </Menu>
   )
 }

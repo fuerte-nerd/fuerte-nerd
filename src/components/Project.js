@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { setProjectMenuAnchor } from "../redux/actions"
+import { setProjectMenu } from "../redux/actions"
 import {
   Grid,
   Card,
@@ -20,8 +20,13 @@ const Project = props => {
     const f = e.currentTarget
     switch (f.id) {
       case "action-area":
-        console.log("clicked")
-        return props.dispatch(setProjectMenuAnchor(e.currentTarget))
+        return props.dispatch(
+          setProjectMenu({
+            anchor: f,
+            viewLink: props.view,
+            codeLink: props.code,
+          })
+        )
       default:
         return
     }
