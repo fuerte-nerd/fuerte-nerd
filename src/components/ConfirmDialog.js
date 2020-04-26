@@ -11,7 +11,7 @@ import {
 
 const ConfirmDialog = props => {
   const handleClick = e => {
-    switch (e.currentTarget) {
+    switch (e.currentTarget.id) {
       case "no":
         return props.dispatch(
           setConfirmDialog({
