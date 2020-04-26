@@ -8,9 +8,11 @@ const ProjectMenu = props => {
     const f = e.currentTarget
     switch (f.id) {
       case "visit":
-        return window.open(props.projectMenu.viewLink, "_blank")
+        window.open(props.projectMenu.viewLink, "_blank")
+        return props.dispatch(setProjectMenu({ anchor: null }))
       case "code":
-        return window.open(props.projectMenu.codeLink, "_blank")
+        window.open(props.projectMenu.codeLink, "_blank")
+        return props.dispatch(setProjectMenu({ anchor: null }))
       default:
         return
     }
