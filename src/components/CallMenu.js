@@ -35,7 +35,6 @@ const CallMenu = props => {
               )
               return props.dispatch(
                 setConfirmDialog({
-                  ...props.confirmDialog,
                   isOpen: false,
                 })
               )
@@ -58,7 +57,6 @@ const CallMenu = props => {
               )
               return props.dispatch(
                 setConfirmDialog({
-                  ...props.confirmDialog,
                   isOpen: false,
                 })
               )

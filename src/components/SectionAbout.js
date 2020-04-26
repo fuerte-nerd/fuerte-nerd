@@ -81,7 +81,6 @@ const SectionAbout = props => {
               )
               props.dispatch(
                 setConfirmDialog({
-                  ...props.confirmDialog,
                   isOpen: false,
                 })
               )
@@ -103,7 +102,6 @@ const SectionAbout = props => {
               )
               props.dispatch(
                 setConfirmDialog({
-                  ...props.confirmDialog,
                   isOpen: false,
                 })
               )
