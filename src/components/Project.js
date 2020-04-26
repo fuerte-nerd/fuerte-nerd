@@ -28,28 +28,32 @@ const Project = props => {
           })
         )
       case "visit":
-        return setConfirmDialog({
-          title: `Visit ${props.title}?`,
-          text: `Would you like to continue to ${props.title}?`,
-          y: "Yes",
-          n: "No",
-          action: () => {
-            return window.open(props.view, "_blank")
-          },
-          isOpen: true,
-        })
+        return props.dispatch(
+          setConfirmDialog({
+            title: `Visit ${props.title}?`,
+            text: `Would you like to continue to ${props.title}?`,
+            y: "Yes",
+            n: "No",
+            action: () => {
+              return window.open(props.view, "_blank")
+            },
+            isOpen: true,
+          })
+        )
 
       case "code":
-        return setConfirmDialog({
-          title: `View ${props.title} on GitHub?`,
-          text: `Would you like to continue to ${props.title} on GitHub?`,
-          y: "Yes",
-          n: "No",
-          action: () => {
-            return window.open(props.view, "_blank")
-          },
-          isOpen: true,
-        })
+        return props.dispatch(
+          setConfirmDialog({
+            title: `View ${props.title} on GitHub?`,
+            text: `Would you like to continue to ${props.title} on GitHub?`,
+            y: "Yes",
+            n: "No",
+            action: () => {
+              return window.open(props.code, "_blank")
+            },
+            isOpen: true,
+          })
+        )
       default:
         return
     }
