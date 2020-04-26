@@ -56,12 +56,13 @@ const Project = props => {
             n: "No",
             action: () => {
               window.open(props.code, "_blank")
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   ...props.confirmDialog,
                   isOpen: false,
                 })
               )
+              props.dispatch(setProjectMenu({ isOpen: false }))
             },
             isOpen: true,
           })
