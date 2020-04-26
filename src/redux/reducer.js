@@ -5,7 +5,7 @@ import {
   SET_CALL_MENU_ANCHOR,
   SET_TEXT_MENU_ANCHOR,
   SET_PHONE_MENU_ANCHOR,
-  SET_PROJECT_MENU_ANCHOR,
+  SET_PROJECT_MENU,
   SET_WHATSAPP_MENU_ANCHOR,
   SET_BACK_TO_TOP_TIMER,
   SET_CONFIRM_DIALOG,
@@ -19,6 +19,11 @@ const initialState = {
   textMenuAnchorEl: null,
   phoneMenuAnchorEl: null,
   whatsAppMenuAnchorEl: null,
+  projectMenu: {
+    anchor: null,
+    viewLink: "",
+    codeLink: "",
+  },
   projectMenuAnchorEl: null,
   backToTopTimer: 0,
   confirmDialog: {
@@ -73,10 +78,10 @@ export default (state = initialState, action) => {
         ...state,
         whatsAppMenuAnchorEl: action.payload,
       }
-    case SET_PROJECT_MENU_ANCHOR:
+    case SET_PROJECT_MENU:
       return {
         ...state,
-        projectMenuAnchorEl: action.payload,
+        projectMenu: action.payload,
       }
     case SET_BACK_TO_TOP_TIMER:
       return {
