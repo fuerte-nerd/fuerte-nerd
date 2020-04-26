@@ -32,7 +32,11 @@ const CallMenu = props => {
               "You are about to leave the site and open WhatsApp. Would you like to continue?",
             y: "Yes",
             n: "No",
-            action: () => window.open("disney.com"),
+            action: () =>
+              window.open(
+                `https://wa.me/${data.site.siteMetadata.contact.phone}`,
+                "_self"
+              ),
             isOpen: true,
           })
         )
