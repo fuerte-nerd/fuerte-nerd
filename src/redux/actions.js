@@ -8,11 +8,17 @@ import {
   SET_WHATSAPP_MENU_ANCHOR,
   SET_PROJECT_MENU_ANCHOR,
   SET_BACK_TO_TOP_TIMER,
+  SET_CONFIRM_DIALOG,
 } from "./types"
 
 export const toggleMenu = menuState => ({
   type: SET_MENU,
   payload: menuState,
+})
+
+export const setConfirmDialog = data => ({
+  type: SET_CONFIRM_DIALOG,
+  payload: data,
 })
 
 export const setCallMenuAnchor = element => ({
