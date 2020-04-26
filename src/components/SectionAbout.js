@@ -75,8 +75,12 @@ const SectionAbout = props => {
             y: "Yes",
             n: "No",
             action: () => {
-              window.open(`https://github.com`)
+              window.open(
+                `https://github.com/${query.site.siteMetadata.links.github}`,
+                "_blank"
+              )
             },
+            isOpen: true,
           })
         )
     }
