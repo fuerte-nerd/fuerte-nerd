@@ -23,9 +23,23 @@ const CallMenu = props => {
 
     switch (f.id) {
       case "call_phone":
-        return window.open(`tel:${data.site.siteMetadata.contact.phone}`)
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Dialler?",
+            text:
+              "You are about to leave the site and open your phone dialler. Would you like to continue?",
+            y: "Yes",
+            n: "No",
+            action: () =>
+              window.open(
+                `tel:${data.site.siteMetadata.contact.phone}`,
+                "_self"
+              ),
+            isOpen: true,
+          })
+        )
       case "whatsapp":
-        props.dispatch(
+        return props.dispatch(
           setConfirmDialog({
             title: "Open WhatsApp?",
             text:
