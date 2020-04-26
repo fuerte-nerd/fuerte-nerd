@@ -20,7 +20,7 @@ import {
 import { Close, GitHub, Instagram, Twitter } from "@material-ui/icons"
 
 const NavMenu = props => {
-  const query = graphql`
+  const data = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
@@ -32,26 +32,28 @@ const NavMenu = props => {
         }
       }
     }
-  `
+  `)
   const handleClick = e => {
     const f = e.currentTarget
     switch (f.id) {
       case "github":
-        props.setConfirmDialog({
-          title: "Open GitHub?",
-          text: "Would you like to check out my GitHub profile?",
-          y: "Yes",
-          n: "No",
-          action: () => {
-            window.open(
-              `https://github.com/${query.site.siteMetadata.links.github}`,
-              "_blank"
-            )
-            props.dispatch(setConfirmDialog({ isOpen: false }))
-            return props.dispatch(toggleMenu(false))
-          },
-          isOpen: true,
-        })
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open GitHub?",
+            text: "Would you like to check out my GitHub profile?",
+            y: "Yes",
+            n: "No",
+            action: () => {
+              window.open(
+                `https://github.com/${data.site.siteMetadata.links.github}`,
+                "_blank"
+              )
+              props.dispatch(setConfirmDialog({ isOpen: false }))
+              return props.dispatch(toggleMenu(false))
+            },
+            isOpen: true,
+          })
+        )
     }
     return props.dispatch(toggleMenu(!props.isOpen))
   }
