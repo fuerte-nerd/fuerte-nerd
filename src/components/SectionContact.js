@@ -43,11 +43,18 @@ const SectionContact = props => {
             text: "Would you like to continue to WhatsApp?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `https://wa.me/${data.site.siteMetadata.contact.phone}`,
                 "_self"
-              ),
+              )
+
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )

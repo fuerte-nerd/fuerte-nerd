@@ -29,11 +29,17 @@ const TextMenu = props => {
             text: "Would you like to continue to WhatsApp?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `https://wa.me/${data.site.siteMetadata.contact.phone}`,
                 "_self"
-              ),
+              )
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )
@@ -44,11 +50,17 @@ const TextMenu = props => {
             text: "Would you like to continue to your SMS application?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `sms:${data.site.siteMetadata.contact.phone}`,
                 "_self"
-              ),
+              )
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )
@@ -59,11 +71,17 @@ const TextMenu = props => {
             text: "Would you like to continue to your email application?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `mailto:${data.site.siteMetadata.contact.email}`,
                 "_blank"
-              ),
+              )
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )

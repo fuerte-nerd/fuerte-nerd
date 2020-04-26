@@ -29,11 +29,17 @@ const PhoneMenu = props => {
             text: "Would you like to continue to your phone dialler app?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `tel:${data.site.siteMetadata.contact.phone}`,
                 "_self"
-              ),
+              )
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )
@@ -44,11 +50,17 @@ const PhoneMenu = props => {
             text: "Would you like to continue to your SMS application?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `sms:${data.site.siteMetadata.contact.phone}`,
                 "_self"
-              ),
+              )
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )

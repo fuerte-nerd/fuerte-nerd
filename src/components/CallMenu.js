@@ -100,7 +100,6 @@ const CallMenu = props => {
 
 const mapStateToProps = state => ({
   callMenuAnchorEl: state.callMenuAnchorEl,
-  confirmDialog: state.confirmDialog,
 })
 
 export default connect(mapStateToProps)(CallMenu)
