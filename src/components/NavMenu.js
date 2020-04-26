@@ -1,6 +1,7 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
-import { toggleMenu } from "../redux/actions"
+import { toggleMenu, setConfirmDialog } from "../redux/actions"
 import NavMenuItem from "./NavMenuItem"
 import { Link } from "react-scroll"
 
@@ -19,7 +20,39 @@ import {
 import { Close, GitHub, Instagram, Twitter } from "@material-ui/icons"
 
 const NavMenu = props => {
+  const query = graphql`
+    {
+      site {
+        siteMetadata {
+          links {
+            github
+            instagram
+            twitter
+          }
+        }
+      }
+    }
+  `
   const handleClick = e => {
+    const f = e.currentTarget
+    switch (f.id) {
+      case "github":
+        props.setConfirmDialog({
+          title: "Open GitHub?",
+          text: "Would you like to check out my GitHub profile?",
+          y: "Yes",
+          n: "No",
+          action: () => {
+            window.open(
+              `https://github.com/${query.site.siteMetadata.links.github}`,
+              "_blank"
+            )
+            props.dispatch(setConfirmDialog({ isOpen: false }))
+            return props.dispatch(toggleMenu(false))
+          },
+          isOpen: true,
+        })
+    }
     return props.dispatch(toggleMenu(!props.isOpen))
   }
 
@@ -56,7 +89,11 @@ const NavMenu = props => {
               <Grid item xs={4}>
                 <Box align="center">
                   <Tooltip title="GitHub">
-                    <IconButton color="primary">
+                    <IconButton
+                      color="primary"
+                      onClick={handleClick}
+                      id="github"
+                    >
                       <GitHub />
                     </IconButton>
                   </Tooltip>
@@ -65,7 +102,11 @@ const NavMenu = props => {
               <Grid item xs={4}>
                 <Box align="center">
                   <Tooltip title="Twitter">
-                    <IconButton color="primary">
+                    <IconButton
+                      color="primary"
+                      onClick={handleClick}
+                      id="twitter"
+                    >
                       <Twitter />
                     </IconButton>
                   </Tooltip>
@@ -74,7 +115,11 @@ const NavMenu = props => {
               <Grid item xs={4}>
                 <Box align="center">
                   <Tooltip title="Instagram">
-                    <IconButton color="primary">
+                    <IconButton
+                      color="primary"
+                      onClick={handleClick}
+                      id="instagram"
+                    >
                       <Instagram />
                     </IconButton>
                   </Tooltip>
