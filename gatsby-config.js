@@ -1,7 +1,7 @@
 const { blueGrey } = require("@material-ui/core/colors")
 
 const siteName = "dandroos"
-const phone = "658 353 232"
+const phone = "658 858 572"
 
 module.exports = {
   siteMetadata: {

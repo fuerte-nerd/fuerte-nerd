@@ -23,7 +23,7 @@ const CallMenu = props => {
 
     switch (f.id) {
       case "call_phone":
-        return window.open(`tel:${phone}`)
+        return window.open(`tel:${data.site.siteMetadata.contact.phone}`)
     }
   }
   return (
