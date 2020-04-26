@@ -27,14 +27,21 @@ const ConfirmDialog = props => {
     }
   }
   return (
-    <Dialog open={props.confirmDialog.isOpen}>
+    <Dialog
+      open={props.confirmDialog.isOpen}
+      onClose={() =>
+        props.dispatch(
+          setConfirmDialog({ ...props.confirmDialog, isOpen: false })
+        )
+      }
+    >
       <DialogTitle>{props.confirmDialog.title}</DialogTitle>
       <DialogContent>{props.confirmDialog.text}</DialogContent>
       <DialogActions>
-        <Button onClick={handleClick} id="no">
+        <Button onClick={handleClick} id="no" color="primary">
           {props.confirmDialog.n}
         </Button>
-        <Button onClick={handleClick} id="yes">
+        <Button onClick={handleClick} id="yes" color="secondary">
           {props.confirmDialog.y}
         </Button>
       </DialogActions>
