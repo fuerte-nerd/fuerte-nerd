@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
-import { setTextMenuAnchor } from "../redux/actions"
+import { setTextMenuAnchor, setConfirmDialog } from "../redux/actions"
 import { Menu, MenuItem, Typography } from "@material-ui/core"
 
 const TextMenu = props => {
@@ -18,14 +18,51 @@ const TextMenu = props => {
       }
     }
   `)
+
+  const handleClick = e => {
+    const f = e.currentTarget
+    switch (f.id) {
+      case "whatsapp":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open WhatsApp?",
+            text: "Would you like to continue to WhatsApp?",
+            y: "Yes",
+            n: "No",
+            action: () =>
+              window.open(
+                `https://wa.me/${data.site.siteMetadata.contact.phone}`,
+                "_self"
+              ),
+            isOpen: true,
+          })
+        )
+      case "email":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Email?",
+            text: "Would you like to continue to your email application?",
+            y: "Yes",
+            n: "No",
+            action: () =>
+              window.open(
+                `mailto:${data.site.siteMetadata.contact.email}`,
+                "_self"
+              ),
+            isOpen: true,
+          })
+        )
+    }
+  }
+
   return (
     <Menu
       anchorEl={props.textMenuAnchorEl}
       open={Boolean(props.textMenuAnchorEl)}
       onClose={() => props.dispatch(setTextMenuAnchor(null))}
     >
-      <MenuItem>
-        Send WhatsApp{" "}
+      <MenuItem onClick={handleClick} id="whatsapp">
+        Send WhatsApp
         <Typography
           color="textSecondary"
           variant="caption"
@@ -34,7 +71,7 @@ const TextMenu = props => {
           ({data.site.siteMetadata.contact.phoneStr})
         </Typography>
       </MenuItem>
-      <MenuItem>
+      <MenuItem onClick={handleClick} id="email">
         Send email
         <Typography
           color="textSecondary"
@@ -44,7 +81,7 @@ const TextMenu = props => {
           ({data.site.siteMetadata.contact.email})
         </Typography>
       </MenuItem>
-      <MenuItem>
+      <MenuItem onClick={handleClick} id="sms">
         Send SMS
         <Typography
           color="textSecondary"
