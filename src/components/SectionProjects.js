@@ -65,6 +65,8 @@ const SectionProjects = () => {
           <Grid container spacing={3}>
             <Project
               title="Scoreboard"
+              view="https://dandroos.github.io/scoreboard"
+              code="https://github.com/dandroos/scoreboard"
               img={imgsQuery.scoreboard.childImageSharp.fluid}
               description="A single page React application to help you keep score! I
                       built it using Redux for state management, LocalStorage
@@ -72,6 +74,8 @@ const SectionProjects = () => {
             />
             <Project
               title="Todos"
+              view="https://dandroos.github.io/todos"
+              code="https://github.com/dandroos/todos"
               img={imgsQuery.todos.childImageSharp.fluid}
               description="A single page React application for keeping track of your tasks. I
                       built it using Redux for state management, LocalStorage
@@ -79,6 +83,8 @@ const SectionProjects = () => {
             />
             <Project
               title="Notes"
+              view="https://dandroos.github.io/notes"
+              code="https://github.com/dandroos/notes"
               img={imgsQuery.notes.childImageSharp.fluid}
               description="A single page React application for writing notes to yourself! I
                       built it using Redux for state management, LocalStorage
