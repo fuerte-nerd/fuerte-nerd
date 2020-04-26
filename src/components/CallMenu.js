@@ -28,16 +28,18 @@ const CallMenu = props => {
             text: "Would you like to continue to your phone dialler app?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `tel:${data.site.siteMetadata.contact.phone}`,
                 "_self"
               )
-              return props.dispatch(setConfirmDialog({
-                ...props.confirmDialog,
-                isOpen: false
-              }))
-            ,
+              return props.dispatch(
+                setConfirmDialog({
+                  ...props.confirmDialog,
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )
@@ -49,14 +51,23 @@ const CallMenu = props => {
               "Would you like to continue to WhatsApp? (You will need to call me within the app)",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `https://wa.me/${data.site.siteMetadata.contact.phone}`,
-                "_self"
-              ),
+                "_blank"
+              )
+              return props.dispatch(
+                setConfirmDialog({
+                  ...props.confirmDialog,
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )
+      default:
+        return
     }
   }
   return (
@@ -91,7 +102,7 @@ const CallMenu = props => {
 
 const mapStateToProps = state => ({
   callMenuAnchorEl: state.callMenuAnchorEl,
-  confirmDialog: state.confirmDialog
+  confirmDialog: state.confirmDialog,
 })
 
 export default connect(mapStateToProps)(CallMenu)
