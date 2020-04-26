@@ -22,6 +22,7 @@ const SectionContact = props => {
       site {
         siteMetadata {
           contact {
+            email
             phone
             phoneStr
           }
@@ -46,6 +47,21 @@ const SectionContact = props => {
               window.open(
                 `https://wa.me/${data.site.siteMetadata.contact.phone}`,
                 "_self"
+              ),
+            isOpen: true,
+          })
+        )
+      case "email":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Email?",
+            text: "Would you like to continue to your email application?",
+            y: "Yes",
+            n: "No",
+            action: () =>
+              window.open(
+                `mailto:${data.site.siteMetadata.contact.email}`,
+                "_blank"
               ),
             isOpen: true,
           })

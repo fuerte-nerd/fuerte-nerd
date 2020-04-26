@@ -37,21 +37,6 @@ const TextMenu = props => {
             isOpen: true,
           })
         )
-      case "email":
-        return props.dispatch(
-          setConfirmDialog({
-            title: "Open Email?",
-            text: "Would you like to continue to your email application?",
-            y: "Yes",
-            n: "No",
-            action: () =>
-              window.open(
-                `mailto:${data.site.siteMetadata.contact.email}`,
-                "_blank"
-              ),
-            isOpen: true,
-          })
-        )
       case "sms":
         return props.dispatch(
           setConfirmDialog({
@@ -67,6 +52,23 @@ const TextMenu = props => {
             isOpen: true,
           })
         )
+      case "email":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Email?",
+            text: "Would you like to continue to your email application?",
+            y: "Yes",
+            n: "No",
+            action: () =>
+              window.open(
+                `mailto:${data.site.siteMetadata.contact.email}`,
+                "_blank"
+              ),
+            isOpen: true,
+          })
+        )
+      default:
+        return
     }
   }
 
