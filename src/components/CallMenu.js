@@ -20,7 +20,6 @@ const CallMenu = props => {
 
   const handleClick = e => {
     const f = e.currentTarget
-
     switch (f.id) {
       case "call_phone":
         return props.dispatch(
@@ -33,7 +32,12 @@ const CallMenu = props => {
               window.open(
                 `tel:${data.site.siteMetadata.contact.phone}`,
                 "_self"
-              ),
+              )
+              return props.dispatch(setConfirmDialog({
+                ...props.confirmDialog,
+                isOpen: false
+              }))
+            ,
             isOpen: true,
           })
         )
@@ -87,6 +91,7 @@ const CallMenu = props => {
 
 const mapStateToProps = state => ({
   callMenuAnchorEl: state.callMenuAnchorEl,
+  confirmDialog: state.confirmDialog
 })
 
 export default connect(mapStateToProps)(CallMenu)
