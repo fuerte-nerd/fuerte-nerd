@@ -41,9 +41,9 @@ export const setWhatsAppMenuAnchor = element => ({
   payload: element,
 })
 
-export const setProjectMenuAnchor = element => ({
-  type: SET_PROJECT_MENU_ANCHOR,
-  payload: element,
+export const setProjectMenu = data => ({
+  type: SET_PROJECT_MENU,
+  payload: data,
 })
 
 export const toggleBackToTop = buttonState => ({
