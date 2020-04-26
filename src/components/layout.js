@@ -14,6 +14,7 @@ import { CssBaseline } from "@material-ui/core"
 import { ThemeProvider } from "@material-ui/core/styles"
 
 import theme from "./theme"
+import OGTags from "./OGTags"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <OGTags />
       <Helmet>
         <meta
           name="viewport"
