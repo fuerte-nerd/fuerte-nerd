@@ -26,8 +26,7 @@ const CallMenu = props => {
         return props.dispatch(
           setConfirmDialog({
             title: "Open Dialler?",
-            text:
-              "You are about to leave the site and open your phone dialler. Would you like to continue?",
+            text: "Would you like to continue to your phone dialler app?",
             y: "Yes",
             n: "No",
             action: () =>
@@ -43,7 +42,7 @@ const CallMenu = props => {
           setConfirmDialog({
             title: "Open WhatsApp?",
             text:
-              "You are about to leave the site and open WhatsApp. Would you like to continue?",
+              "Would you like to continue to WhatsApp? (You will need to call me within the app)",
             y: "Yes",
             n: "No",
             action: () =>
