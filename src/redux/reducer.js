@@ -8,6 +8,7 @@ import {
   SET_PROJECT_MENU_ANCHOR,
   SET_WHATSAPP_MENU_ANCHOR,
   SET_BACK_TO_TOP_TIMER,
+  SET_CONFIRM_DIALOG,
 } from "./types"
 
 const initialState = {
@@ -20,6 +21,13 @@ const initialState = {
   whatsAppMenuAnchorEl: null,
   projectMenuAnchorEl: null,
   backToTopTimer: 0,
+  confirmDialog: {
+    title: "",
+    text: "",
+    y: "",
+    n: "",
+    action: null,
+  },
 }
 
 export default (state = initialState, action) => {
@@ -28,6 +36,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         navOpen: action.payload,
+      }
+    case SET_CONFIRM_DIALOG:
+      return {
+        ...state,
+        confirmDialog: action.payload,
       }
     case SET_BACK_TO_TOP:
       return {
