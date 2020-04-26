@@ -1,7 +1,20 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import Helmet from "react-helmet"
 
 const OGTags = () => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+          description
+          url
+          ogImage
+        }
+      }
+    }
+  `)
   return (
     <Helmet>
       <meta property="og:title" content={data.site.siteMetadata.title} />
