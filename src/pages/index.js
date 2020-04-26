@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { toggleBackToTop, setBackToTopTimer } from "../redux/actions"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 import Navbar from "../components/Navbar"
 import NavMenu from "../components/NavMenu"
@@ -12,6 +11,7 @@ import SectionProjects from "../components/SectionProjects"
 import SectionContact from "../components/SectionContact"
 import Footer from "../components/Footer"
 import BackToTop from "../components/BackToTop"
+import ConfirmDialog from "../components/ConfirmDialog"
 
 const IndexPage = props => {
   useEffect(() => {
@@ -41,6 +41,7 @@ const IndexPage = props => {
       <SectionContact />
       <Footer />
       <BackToTop />
+      <ConfirmDialog />
     </Layout>
   )
 }

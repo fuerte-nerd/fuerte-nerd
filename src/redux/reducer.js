@@ -27,6 +27,7 @@ const initialState = {
     y: "",
     n: "",
     action: null,
+    isOpen: false,
   },
 }
 
