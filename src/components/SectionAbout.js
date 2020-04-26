@@ -68,7 +68,7 @@ const SectionAbout = props => {
     const f = e.currentTarget
     switch (f.id) {
       case "github":
-        props.dispatch(
+        return props.dispatch(
           setConfirmDialog({
             title: "Open GitHub?",
             text: "Continue to my GitHub profile?",
@@ -77,6 +77,28 @@ const SectionAbout = props => {
             action: () => {
               window.open(
                 `https://github.com/${query.site.siteMetadata.links.github}`,
+                "_blank"
+              )
+              props.dispatch(
+                setConfirmDialog({
+                  ...props.confirmDialog,
+                  isOpen: false,
+                })
+              )
+            },
+            isOpen: true,
+          })
+        )
+      case "instagram":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Instagram?",
+            text: "Continue to my Instagram profile?",
+            y: "Yes",
+            n: "No",
+            action: () => {
+              window.open(
+                `https://instagram.com/${query.site.siteMetadata.links.instagram}`,
                 "_blank"
               )
               props.dispatch(
