@@ -79,6 +79,12 @@ const SectionAbout = props => {
                 `https://github.com/${query.site.siteMetadata.links.github}`,
                 "_blank"
               )
+              props.dispatch(
+                setConfirmDialog({
+                  ...props.confirmDialog,
+                  isOpen: false,
+                })
+              )
             },
             isOpen: true,
           })
