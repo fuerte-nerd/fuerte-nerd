@@ -56,11 +56,12 @@ const CallMenu = props => {
                 `https://wa.me/${data.site.siteMetadata.contact.phone}`,
                 "_blank"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              return props.dispatch(setCallMenuAnchor(null))
             },
             isOpen: true,
           })

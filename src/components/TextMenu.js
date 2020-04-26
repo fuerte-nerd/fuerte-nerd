@@ -34,11 +34,12 @@ const TextMenu = props => {
                 `https://wa.me/${data.site.siteMetadata.contact.phone}`,
                 "_self"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              return props.dispatch(setTextMenuAnchor(null))
             },
             isOpen: true,
           })
@@ -55,11 +56,12 @@ const TextMenu = props => {
                 `sms:${data.site.siteMetadata.contact.phone}`,
                 "_self"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              return props.dispatch(setTextMenuAnchor(null))
             },
             isOpen: true,
           })
@@ -76,11 +78,12 @@ const TextMenu = props => {
                 `mailto:${data.site.siteMetadata.contact.email}`,
                 "_blank"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              return props.dispatch(setTextMenuAnchor(null))
             },
             isOpen: true,
           })
