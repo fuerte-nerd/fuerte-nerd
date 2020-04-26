@@ -33,11 +33,12 @@ const CallMenu = props => {
                 `tel:${data.site.siteMetadata.contact.phone}`,
                 "_self"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              return props.dispatch(setCallMenuAnchor(null))
             },
             isOpen: true,
           })

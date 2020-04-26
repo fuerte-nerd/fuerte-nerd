@@ -69,11 +69,12 @@ const SectionContact = props => {
                 `mailto:${data.site.siteMetadata.contact.email}`,
                 "_blank"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              props.dispatch(setPhoneMenuAnchor(null))
             },
             isOpen: true,
           })

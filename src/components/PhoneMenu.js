@@ -34,11 +34,12 @@ const PhoneMenu = props => {
                 `tel:${data.site.siteMetadata.contact.phone}`,
                 "_self"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              return props.dispatch(setPhoneMenuAnchor(null))
             },
             isOpen: true,
           })
@@ -55,11 +56,12 @@ const PhoneMenu = props => {
                 `sms:${data.site.siteMetadata.contact.phone}`,
                 "_self"
               )
-              return props.dispatch(
+              props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
                 })
               )
+              return props.dispatch(setPhoneMenuAnchor(null))
             },
             isOpen: true,
           })
