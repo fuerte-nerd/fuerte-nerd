@@ -1,4 +1,6 @@
 import React, { useEffect } from "react"
+import { connect } from "react-redux"
+import { setConfirmDialog } from "../redux/actions"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import {
@@ -31,6 +33,14 @@ const SectionAbout = props => {
   const classes = useStyles()
   const query = useStaticQuery(graphql`
     {
+      site: site {
+        siteMetadata {
+          links {
+            github
+            instagram
+          }
+        }
+      }
       dave2: file(name: { eq: "daveGrid2" }) {
         childImageSharp {
           fluid(maxWidth: 325, maxHeight: 325, cropFocus: ATTENTION) {
@@ -54,6 +64,23 @@ const SectionAbout = props => {
       }
     }
   `)
+  const handleClick = e => {
+    const f = e.currentTarget
+    switch (f.id) {
+      case "github":
+        props.dispatch(
+          setConfirmDialog({
+            title: "Open GitHub?",
+            text: "Continue to my GitHub profile?",
+            y: "Yes",
+            n: "No",
+            action: () => {
+              window.open(`https://github.com`)
+            },
+          })
+        )
+    }
+  }
   return (
     <Box
       id="about"
@@ -159,4 +186,4 @@ const SectionAbout = props => {
   )
 }
 
-export default SectionAbout
+export default connect()(SectionAbout)
