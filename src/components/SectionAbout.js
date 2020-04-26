@@ -196,4 +196,8 @@ const SectionAbout = props => {
   )
 }
 
-export default connect()(SectionAbout)
+const mapStateToProps = state => ({
+  confirmDialog: state.confirmDialog,
+})
+
+export default connect(mapStateToProps)(SectionAbout)
