@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { setTextMenuAnchor, setConfirmDialog } from "../redux/actions"
-import { Menu, MenuItem, Typography } from "@material-ui/core"
+import { Hidden, Menu, MenuItem, Typography } from "@material-ui/core"
 
 const TextMenu = props => {
   const data = useStaticQuery(graphql`
@@ -52,6 +52,21 @@ const TextMenu = props => {
             isOpen: true,
           })
         )
+      case "sms":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open SMS app?",
+            text: "Would you like to continue to your SMS application?",
+            y: "Yes",
+            n: "No",
+            action: () =>
+              window.open(
+                `sms:${data.site.siteMetadata.contact.phone}`,
+                "_self"
+              ),
+            isOpen: true,
+          })
+        )
     }
   }
 
@@ -81,16 +96,18 @@ const TextMenu = props => {
           ({data.site.siteMetadata.contact.email})
         </Typography>
       </MenuItem>
-      <MenuItem onClick={handleClick} id="sms">
-        Send SMS
-        <Typography
-          color="textSecondary"
-          variant="caption"
-          style={{ marginLeft: 10 }}
-        >
-          ({data.site.siteMetadata.contact.phoneStr})
-        </Typography>
-      </MenuItem>
+      <Hidden smUp>
+        <MenuItem onClick={handleClick} id="sms">
+          Send SMS
+          <Typography
+            color="textSecondary"
+            variant="caption"
+            style={{ marginLeft: 10 }}
+          >
+            ({data.site.siteMetadata.contact.phoneStr})
+          </Typography>
+        </MenuItem>
+      </Hidden>
     </Menu>
   )
 }
