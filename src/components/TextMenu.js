@@ -47,7 +47,7 @@ const TextMenu = props => {
             action: () =>
               window.open(
                 `mailto:${data.site.siteMetadata.contact.email}`,
-                "_self"
+                "_blank"
               ),
             isOpen: true,
           })
