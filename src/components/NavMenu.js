@@ -72,6 +72,24 @@ const NavMenu = props => {
             isOpen: true,
           })
         )
+      case "instagram":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Instagram?",
+            text: "Would you like to check out my Instagram profile?",
+            y: "Yes",
+            n: "No",
+            action: () => {
+              window.open(
+                `https://instagram.com/${data.site.siteMetadata.links.instagram}`,
+                "_blank"
+              )
+              props.dispatch(setConfirmDialog({ isOpen: false }))
+              return props.dispatch(toggleMenu(false))
+            },
+            isOpen: true,
+          })
+        )
     }
     return props.dispatch(toggleMenu(!props.isOpen))
   }
