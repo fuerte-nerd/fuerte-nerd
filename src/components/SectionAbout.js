@@ -91,7 +91,7 @@ const SectionAbout = props => {
               around this beautiful island....although not necessarily at the
               same time! :o)
             </Typography>
-            <Divider />{" "}
+            <Divider />
             <Box mt={3} align="center">
               <Grid container spacing={4} alignItems="center">
                 <Grid item xs={12} md={6}>
@@ -105,6 +105,8 @@ const SectionAbout = props => {
                     variant="contained"
                     color="secondary"
                     startIcon={<GitHub />}
+                    onClick={handleClick}
+                    id="github"
                   >
                     My GitHub
                   </Button>
@@ -119,6 +121,8 @@ const SectionAbout = props => {
                     variant="contained"
                     color="secondary"
                     startIcon={<Instagram />}
+                    onClick={handleClick}
+                    id="instagram"
                   >
                     My Instagram
                   </Button>

@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { setProjectMenu } from "../redux/actions"
 import { Menu, MenuItem } from "@material-ui/core"
