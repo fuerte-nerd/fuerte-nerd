@@ -1,5 +1,4 @@
 const { blueGrey } = require("@material-ui/core/colors")
-const ogImage = require("./src/images/og.jpg")
 const siteName = "dandroos"
 const phone = "658 858 572"
 
@@ -10,7 +9,7 @@ module.exports = {
     description: `A web developer specializing in React, Gatsby, vanilla JavaScript and Node.`,
     author: "@dandroosdev",
     url: "https://dandroos.com",
-    ogImage: ogImage,
+    ogImage: "ogImage",
     links: {
       github: "dandroos",
       twitter: "dandroosdev",
