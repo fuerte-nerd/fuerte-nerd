@@ -48,7 +48,6 @@ const SectionContact = props => {
                 `https://wa.me/${data.site.siteMetadata.contact.phone}`,
                 "_self"
               )
-
               return props.dispatch(
                 setConfirmDialog({
                   isOpen: false,
@@ -65,11 +64,17 @@ const SectionContact = props => {
             text: "Would you like to continue to your email application?",
             y: "Yes",
             n: "No",
-            action: () =>
+            action: () => {
               window.open(
                 `mailto:${data.site.siteMetadata.contact.email}`,
                 "_blank"
-              ),
+              )
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
+            },
             isOpen: true,
           })
         )
