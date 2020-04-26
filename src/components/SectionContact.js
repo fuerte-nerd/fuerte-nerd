@@ -1,6 +1,7 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
-import { setPhoneMenuAnchor, setWhatsAppMenuAnchor } from "../redux/actions"
+import { setPhoneMenuAnchor, setConfirmDialog } from "../redux/actions"
 import PhoneMenu from "./PhoneMenu"
 import WhatsAppMenu from "./WhatsAppMenu"
 import {
@@ -16,13 +17,39 @@ import {
 import { Send, Email, Phone, WhatsApp } from "@material-ui/icons"
 
 const SectionContact = props => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          contact {
+            phone
+            phoneStr
+          }
+        }
+      }
+    }
+  `)
+
   const handleClick = e => {
     const f = e.currentTarget
     switch (f.id) {
       case "phone":
         return props.dispatch(setPhoneMenuAnchor(f))
       case "whatsapp":
-        return props.dispatch(setWhatsAppMenuAnchor(f))
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open WhatsApp?",
+            text: "Would you like to continue to WhatsApp?",
+            y: "Yes",
+            n: "No",
+            action: () =>
+              window.open(
+                `https://wa.me/${data.site.siteMetadata.contact.phone}`,
+                "_self"
+              ),
+            isOpen: true,
+          })
+        )
       default:
         return
     }
