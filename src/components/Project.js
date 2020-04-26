@@ -38,6 +38,7 @@ const Project = props => {
               window.open(props.view, "_blank")
               return props.dispatch(
                 setConfirmDialog({
+                  ...props.confirmDialog,
                   isOpen: false,
                 })
               )
@@ -57,6 +58,7 @@ const Project = props => {
               window.open(props.code, "_blank")
               return props.dispatch(
                 setConfirmDialog({
+                  ...props.confirmDialog,
                   isOpen: false,
                 })
               )
@@ -111,4 +113,8 @@ const Project = props => {
   )
 }
 
-export default connect()(Project)
+const mapStateToProps = state => ({
+  confirmDialog: state.confirmDialog,
+})
+
+export default connect(mapStateToProps)(Project)
