@@ -35,7 +35,12 @@ const Project = props => {
             y: "Yes",
             n: "No",
             action: () => {
-              return window.open(props.view, "_blank")
+              window.open(props.view, "_blank")
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
             },
             isOpen: true,
           })
@@ -49,7 +54,12 @@ const Project = props => {
             y: "Yes",
             n: "No",
             action: () => {
-              return window.open(props.code, "_blank")
+              window.open(props.code, "_blank")
+              return props.dispatch(
+                setConfirmDialog({
+                  isOpen: false,
+                })
+              )
             },
             isOpen: true,
           })
