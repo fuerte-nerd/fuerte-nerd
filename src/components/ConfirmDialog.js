@@ -1,5 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
+import { setConfirmDialog } from "../redux/actions"
 import {
   Dialog,
   DialogTitle,
@@ -10,7 +11,20 @@ import {
 
 const ConfirmDialog = props => {
   const handleClick = e => {
-    //do something
+    switch (e.currentTarget) {
+      case "no":
+        return props.dispatch(
+          setConfirmDialog({
+            ...props.confirmDialog,
+            isOpen: false,
+          })
+        )
+      case "yes":
+        props.confirmDialog.action()
+        return setConfirmDialog({ ...props.confirmDialog, isOpen: false })
+      default:
+        return
+    }
   }
   return (
     <Dialog open={props.confirmDialog.isOpen}>
