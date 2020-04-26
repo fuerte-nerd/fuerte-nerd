@@ -8,10 +8,10 @@ module.exports = {
     title: siteName,
     titleSuffix: "professional web developer",
     description: `A web developer specializing in React, Gatsby, vanilla JavaScript and Node.`,
-    author: siteName,
+    author: "@dandroosdev",
     links: {
       github: "dandroos",
-      twitter: "dandroos",
+      twitter: "dandroosdev",
       instagram: "fuertenerd",
     },
     contact: {

@@ -54,6 +54,24 @@ const NavMenu = props => {
             isOpen: true,
           })
         )
+      case "twitter":
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Twitter?",
+            text: "Would you like to check out my Twitter profile?",
+            y: "Yes",
+            n: "No",
+            action: () => {
+              window.open(
+                `https://twitter.com/${data.site.siteMetadata.links.twitter}`,
+                "_blank"
+              )
+              props.dispatch(setConfirmDialog({ isOpen: false }))
+              return props.dispatch(toggleMenu(false))
+            },
+            isOpen: true,
+          })
+        )
     }
     return props.dispatch(toggleMenu(!props.isOpen))
   }
