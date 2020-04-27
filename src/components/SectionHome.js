@@ -12,6 +12,7 @@ import {
 
 import { DirectionsRun } from "@material-ui/icons"
 import { HeroImage } from "./image"
+import { Fade } from "react-reveal"
 import { Link, Events } from "react-scroll"
 
 const SectionHome = props => {
@@ -39,9 +40,11 @@ const SectionHome = props => {
           <Toolbar />
         </Hidden>
         <Container>
-          <Box width="100%" align="center">
-            <HeroImage />
-          </Box>
+          <Fade>
+            <Box width="100%" align="center">
+              <HeroImage />
+            </Box>
+          </Fade>
           <Box mt={2}>
             <Typography variant="h2" align="center">
               Hola!
