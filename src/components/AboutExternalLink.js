@@ -1,22 +1,22 @@
 import React from "react"
+import { Typography, Button } from "@material-ui/core"
 
-const AboutExternalLink = () => {
+const AboutExternalLink = props => {
   return (
     <>
-      {" "}
       <Typography variant="body2" paragraph>
-        If you're into code, check out....
+        {props.intro}
       </Typography>
       <Button
         fullWidth
         style={{ maxWidth: 300 }}
         variant="contained"
         color="secondary"
-        startIcon={<GitHub />}
-        onClick={handleClick}
-        id="github"
+        startIcon={props.icon}
+        onClick={props.clickHandler}
+        id={props.id}
       >
-        My GitHub
+        {props.buttonText}
       </Button>
     </>
   )
