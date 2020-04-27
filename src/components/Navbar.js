@@ -20,6 +20,7 @@ import MenuComponent from "@material-ui/core/Menu"
 
 import { Menu, Instagram, GitHub, Phone, Email } from "@material-ui/icons"
 
+import NavbarIconButton from "./NavbarIconButton"
 import CallMenu from "./CallMenu"
 import TextMenu from "./TextMenu"
 
@@ -81,6 +82,13 @@ const Navbar = props => {
             </Typography>
           </Link>
           <span style={{ flex: 1 }} />
+          <NavbarIconButton
+            hidden={true}
+            clickHandler={handleClick}
+            tooltip="Instagram"
+            id="instagram"
+          />
+
           <Hidden smDown>
             <Tooltip title="Instagram">
               <IconButton color="inherit" onClick={handleClick} id="instagram">
