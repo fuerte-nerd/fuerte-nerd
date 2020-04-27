@@ -15,6 +15,7 @@ import {
 } from "@material-ui/core"
 import { Language, Code } from "@material-ui/icons"
 import Img from "gatsby-image"
+import { Fade } from "react-reveal"
 
 const Project = props => {
   const handleClick = e => {
@@ -73,9 +74,8 @@ const Project = props => {
     }
   }
   return (
-    <>
-      {" "}
-      <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4}>
+      <Fade>
         <Card>
           <CardActionArea onClick={handleClick} id="action-area">
             <CardMedia>
@@ -113,8 +113,8 @@ const Project = props => {
             </Button>
           </CardActions>
         </Card>
-      </Grid>
-    </>
+      </Fade>
+    </Grid>
   )
 }
 

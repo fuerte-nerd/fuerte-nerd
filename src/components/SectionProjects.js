@@ -8,6 +8,7 @@ import {
   Toolbar,
   Divider,
 } from "@material-ui/core"
+import { Fade } from "react-reveal"
 import SectionHeading from "./SectionHeading"
 import Project from "./Project"
 import ProjectMenu from "./ProjectMenu"
@@ -53,11 +54,18 @@ const SectionProjects = () => {
     >
       <Toolbar />
       <Container>
-        <SectionHeading title="Projects" subtitle="The fruits of my labour!" />
-        <Typography align="justify" color="inherit" variant="subtitle1">
-          Here you will find a selection of my work, including SPAs (Single Page
-          Applications), websites and more!
-        </Typography>
+        <Fade>
+          <SectionHeading
+            title="Projects"
+            subtitle="The fruits of my labour!"
+          />
+        </Fade>
+        <Fade left>
+          <Typography align="justify" color="inherit" variant="subtitle1">
+            Here you will find a selection of my work, including SPAs (Single
+            Page Applications), websites and more!
+          </Typography>
+        </Fade>
         <Box mt={3}>
           <Grid container spacing={3}>
             <Project
