@@ -8,29 +8,17 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import { CssBaseline } from "@material-ui/core"
 import { ThemeProvider } from "@material-ui/core/styles"
 
 import theme from "./theme"
-import OGTags from "./OGTags"
+import SEO from "./seo"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-          titleSuffix
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <OGTags />
+      <SEO />
       <Helmet>
         <meta
           name="viewport"
@@ -40,9 +28,6 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap"
           rel="stylesheet"
         />
-        <title>
-          {data.site.siteMetadata.title} | {data.site.siteMetadata.titleSuffix}
-        </title>
       </Helmet>
       <ThemeProvider theme={theme}>
         <CssBaseline>{children}</CssBaseline>
