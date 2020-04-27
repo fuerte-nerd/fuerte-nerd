@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Container, Typography } from "@material-ui/core"
-import { Fade } from "react-reveal"
+import Reveal from "./Reveal"
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
       align="center"
     >
       <Container>
-        <Fade>
+        <Reveal>
           <Typography variant="caption">
             All content &copy; 2020
             {new Date().getFullYear() === 2020
@@ -20,7 +20,7 @@ const Footer = () => {
               : `-${new Date().getFullYear()}`}
             {` `} David Andrews
           </Typography>
-        </Fade>
+        </Reveal>
       </Container>
     </Box>
   )

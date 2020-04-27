@@ -11,7 +11,7 @@ import { Link } from "react-scroll"
 import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core"
 
 import { Menu, Instagram, GitHub, Phone, Email } from "@material-ui/icons"
-import { Fade } from "react-reveal"
+import Reveal from "./Reveal"
 
 import NavbarIconButton from "./NavbarIconButton"
 import CallMenu from "./CallMenu"
@@ -80,7 +80,7 @@ const Navbar = props => {
   return (
     <>
       <AppBar position="fixed">
-        <Fade down>
+        <Reveal>
           <Toolbar>
             <IconButton
               edge="start"
@@ -134,7 +134,7 @@ const Navbar = props => {
               <Email />
             </NavbarIconButton>
           </Toolbar>
-        </Fade>
+        </Reveal>
       </AppBar>
       <CallMenu />
       <TextMenu />

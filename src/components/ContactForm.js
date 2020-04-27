@@ -1,21 +1,21 @@
 import React from "react"
 import { Box, Typography, Grid, TextField, Button } from "@material-ui/core"
 import { Send } from "@material-ui/icons"
-import { Fade } from "react-reveal"
+import Reveal from "./Reveal"
 
 const ContactForm = () => {
   return (
     <Box>
-      <Fade left>
+      <Reveal>
         <Typography align="justify">
           If you would prefer, you can send me a message directly using the form
           below...
         </Typography>
-      </Fade>
+      </Reveal>
       <form action="" method="post">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>
-            <Fade>
+            <Reveal>
               <TextField
                 fullWidth
                 name="name"
@@ -23,10 +23,10 @@ const ContactForm = () => {
                 label="Name"
                 required
               />
-            </Fade>
+            </Reveal>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <Fade>
+            <Reveal>
               <TextField
                 fullWidth
                 name="email"
@@ -35,15 +35,15 @@ const ContactForm = () => {
                 type="email"
                 required
               />
-            </Fade>
+            </Reveal>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-            <Fade>
+            <Reveal>
               <TextField fullWidth name="phone" id="phone" label="Phone" />
-            </Fade>
+            </Reveal>
           </Grid>
           <Grid item xs={12}>
-            <Fade>
+            <Reveal>
               <TextField
                 fullWidth
                 name="message"
@@ -52,10 +52,10 @@ const ContactForm = () => {
                 multiline
                 required
               />
-            </Fade>
+            </Reveal>
           </Grid>
           <Grid item xs={12} style={{ textAlign: "center" }}>
-            <Fade>
+            <Reveal>
               <Button
                 color="secondary"
                 endIcon={<Send />}
@@ -64,7 +64,7 @@ const ContactForm = () => {
               >
                 Send
               </Button>
-            </Fade>
+            </Reveal>
           </Grid>
         </Grid>
       </form>
