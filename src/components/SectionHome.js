@@ -44,33 +44,33 @@ const SectionHome = props => {
             <Box width="100%" align="center">
               <HeroImage />
             </Box>
+            <Box mt={2}>
+              <Typography variant="h2" align="center">
+                Hola!
+              </Typography>
+            </Box>
+            <Typography variant="subtitle1" align="center" paragraph>
+              My name is David and I make apps, websites and cups of coffee*
+              with code.
+            </Typography>
+            <Box align="center">
+              <Link to="about" smooth={true}>
+                <Button
+                  variant="contained"
+                  size="large"
+                  color="secondary"
+                  startIcon={<DirectionsRun />}
+                >
+                  Come inside!
+                </Button>
+              </Link>
+            </Box>
+            <Box mt={1} width="100%" display="block" textAlign="center">
+              <Typography variant="caption" align="center">
+                *work in progress
+              </Typography>
+            </Box>
           </Fade>
-          <Box mt={2}>
-            <Typography variant="h2" align="center">
-              Hola!
-            </Typography>
-          </Box>
-          <Typography variant="subtitle1" align="center" paragraph>
-            My name is David and I make apps, websites and cups of coffee* with
-            code.
-          </Typography>
-          <Box align="center">
-            <Link to="about" smooth={true}>
-              <Button
-                variant="contained"
-                size="large"
-                color="secondary"
-                startIcon={<DirectionsRun />}
-              >
-                Come inside!
-              </Button>
-            </Link>
-          </Box>
-          <Box mt={1} width="100%" display="block" textAlign="center">
-            <Typography variant="caption" align="center">
-              *work in progress
-            </Typography>
-          </Box>
         </Container>
       </Box>
     </>
