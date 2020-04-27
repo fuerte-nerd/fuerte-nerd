@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
+import AboutExternalLink from "./AboutExternalLink"
 import ImageGrid from "./ImageGrid"
 const useStyles = makeStyles(theme => ({
   aboutText: {
@@ -124,37 +125,20 @@ const SectionAbout = props => {
             <Box mt={3} align="center">
               <Grid container spacing={4} alignItems="center">
                 <Grid item xs={12} md={6}>
-                  <Typography variant="body2" paragraph>
-                    If you're into code, check out....
-                  </Typography>
-
-                  <Button
-                    fullWidth
-                    style={{ maxWidth: 300 }}
-                    variant="contained"
-                    color="secondary"
-                    startIcon={<GitHub />}
-                    onClick={handleClick}
+                  <AboutExternalLink
+                    intro="If you're into code, check out..."
+                    icon={<GitHub />}
                     id="github"
-                  >
-                    My GitHub
-                  </Button>
+                    buttonText="My GitHub"
+                  />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Typography variant="body2" paragraph>
-                    If dogs are your thing, check out....
-                  </Typography>
-                  <Button
-                    fullWidth
-                    style={{ maxWidth: 300 }}
-                    variant="contained"
-                    color="secondary"
-                    startIcon={<Instagram />}
-                    onClick={handleClick}
+                  <AboutExternalLink
+                    intro="If dogs are your thing, check out..."
+                    icon={<Instagram />}
                     id="instagram"
-                  >
-                    My Instagram
-                  </Button>
+                    buttonText="My Instagram"
+                  />
                 </Grid>
               </Grid>
             </Box>
