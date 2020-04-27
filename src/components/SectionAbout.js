@@ -2,34 +2,25 @@ import React from "react"
 import { connect } from "react-redux"
 import { setConfirmDialog } from "../redux/actions"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import {
   Divider,
   Box,
   Container,
   Grid,
-  GridList,
-  GridListTile,
   Typography,
   Button,
   Toolbar,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
+import ImageGrid from "./ImageGrid"
 const useStyles = makeStyles(theme => ({
   aboutText: {
     [theme.breakpoints.down("sm")]: {
       textAlign: "justify",
     },
   },
-  externalLinks: {
-    [theme.breakpoints.down("sm")]: {
-      textAlign: "center",
-    },
-  },
 }))
-
-import ImageGrid from "./ImageGrid"
 
 const SectionAbout = props => {
   const classes = useStyles()
@@ -40,27 +31,6 @@ const SectionAbout = props => {
           links {
             github
             instagram
-          }
-        }
-      }
-      dave2: file(name: { eq: "daveGrid2" }) {
-        childImageSharp {
-          fluid(maxWidth: 325, maxHeight: 325, cropFocus: ATTENTION) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      dave4: file(name: { eq: "daveGrid4" }) {
-        childImageSharp {
-          fluid(maxWidth: 650) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      dave5: file(name: { eq: "daveGrid5" }) {
-        childImageSharp {
-          fluid(maxWidth: 325, maxHeight: 325, cropFocus: ATTENTION) {
-            ...GatsbyImageSharpFluid
           }
         }
       }
