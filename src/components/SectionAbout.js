@@ -124,6 +124,7 @@ const SectionAbout = props => {
                   <AboutExternalLink
                     intro="If you're into code, check out..."
                     icon={<GitHub />}
+                    clickHandler={handleClick}
                     id="github"
                     buttonText="My GitHub"
                   />
@@ -132,6 +133,7 @@ const SectionAbout = props => {
                   <AboutExternalLink
                     intro="If dogs are your thing, check out..."
                     icon={<Instagram />}
+                    clickHandler={handleClick}
                     id="instagram"
                     buttonText="My Instagram"
                   />
