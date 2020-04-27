@@ -8,11 +8,11 @@ import {
   Container,
   Grid,
   Typography,
-  Button,
   Toolbar,
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
+import SectionHeading from "./SectionHeading"
 import AboutExternalLink from "./AboutExternalLink"
 import ImageGrid from "./ImageGrid"
 const useStyles = makeStyles(theme => ({
@@ -102,6 +102,7 @@ const SectionAbout = props => {
         <Grid container justify="center" alignItems="center" spacing={4}>
           <Grid item xs={12} md={7}>
             <Box mb={2}>
+              <SectionHeading title="About" subtitle="Who am I?" />{" "}
               <Typography variant="h2">About</Typography>
               <Divider style={{ marginBottom: 10 }} />
               <Typography variant="h5">Who am I?</Typography>
