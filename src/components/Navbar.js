@@ -43,21 +43,34 @@ const Navbar = props => {
       case "text":
         return props.dispatch(setTextMenuAnchor(f))
       case "instagram":
-        return setConfirmDialog({
-          title: "Open Instagram?",
-          text: "Would you like to continue to my Instagram profile?",
-          y: "Yes",
-          n: "No",
-          action: () => {
-            window.open(`https://instagram.com/${links.instagram}`, "_blank")
-            props.dispatch(setConfirmDialog({ isOpen: false }))
-          },
-          isOpen: true,
-        })
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open Instagram?",
+            text: "Would you like to continue to my Instagram profile?",
+            y: "Yes",
+            n: "No",
+            action: () => {
+              window.open(`https://instagram.com/${links.instagram}`, "_blank")
+              props.dispatch(setConfirmDialog({ isOpen: false }))
+            },
+            isOpen: true,
+          })
+        )
 
-        window.open(`https://instagram.com/${links.instagram}`, "_blank")
       case "github":
-        return window.open(`https://github.com/${links.github}`, "_blank")
+        return props.dispatch(
+          setConfirmDialog({
+            title: "Open GitHub?",
+            text: "Would you like to continue to my GitHub profile?",
+            y: "Yes",
+            n: "No",
+            action: () => {
+              window.open(`https://github.com/${links.github}`, "_blank")
+              props.dispatch(setConfirmDialog({ isOpen: false }))
+            },
+            isOpen: true,
+          })
+        )
       default:
         return
     }
