@@ -7,7 +7,7 @@ const ContactButton = props => {
       color="secondary"
       variant="contained"
       size="large"
-      startIcon={<Phone />}
+      startIcon={props.icon}
       fullWidth
       onClick={props.clickHandler}
       id={props.id}

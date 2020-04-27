@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { setPhoneMenuAnchor, setConfirmDialog } from "../redux/actions"
 import SectionHeading from "./SectionHeading"
+import ContactButton from "./ContactButton"
 import PhoneMenu from "./PhoneMenu"
 import WhatsAppMenu from "./WhatsAppMenu"
 import {
@@ -106,30 +107,20 @@ const SectionContact = props => {
         <Box py={3}>
           <Grid container spacing={1}>
             <Grid item xs={12} sm={4}>
-              <Button
-                color="secondary"
-                variant="contained"
-                size="large"
-                startIcon={<Phone />}
-                fullWidth
-                onClick={handleClick}
+              <ContactButton
                 id="phone"
-              >
-                Phone
-              </Button>
+                clickHandler={handleClick}
+                label="Phone"
+                icon={<Phone />}
+              />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Button
-                color="secondary"
-                variant="contained"
-                size="large"
-                startIcon={<Email />}
-                fullWidth
-                onClick={handleClick}
+              <ContactButton
                 id="email"
-              >
-                Email
-              </Button>
+                clickHandler={handleClick}
+                label="Email"
+                icon={<Email />}
+              />
             </Grid>
             <Grid item xs={12} sm={4}>
               <Button
