@@ -8,6 +8,7 @@ module.exports = {
     titleSuffix: "professional web developer",
     description: `A web developer specializing in React, Gatsby, vanilla JavaScript and Node.`,
     author: "@dandroosdev",
+
     url: "https://dandroos.com",
     ogImage: "ogImage",
     links: {
