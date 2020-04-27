@@ -1,10 +1,10 @@
 import React from "react"
 import { Button } from "@material-ui/core"
-import { Fade } from "react-reveal"
+import Reveal from "./Reveal"
 
 const ContactButton = props => {
   return (
-    <Fade>
+    <Reveal>
       <Button
         color="secondary"
         variant="contained"
@@ -16,7 +16,7 @@ const ContactButton = props => {
       >
         {props.label}
       </Button>
-    </Fade>
+    </Reveal>
   )
 }
 
