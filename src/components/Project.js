@@ -52,7 +52,7 @@ const Project = props => {
         return props.dispatch(
           setConfirmDialog({
             title: `View ${props.title} on GitHub?`,
-            text: `Would you like to continue to ${props.title} on GitHub?`,
+            text: `Would you like to view the code for ${props.title} on GitHub?`,
             y: "Yes",
             n: "No",
             action: () => {
