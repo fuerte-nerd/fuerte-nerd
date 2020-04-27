@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { connect } from "react-redux"
 import { setConfirmDialog } from "../redux/actions"
 import { useStaticQuery, graphql } from "gatsby"
@@ -28,6 +28,8 @@ const useStyles = makeStyles(theme => ({
     },
   },
 }))
+
+import ImageGrid from "./ImageGrid"
 
 const SectionAbout = props => {
   const classes = useStyles()
@@ -188,26 +190,7 @@ const SectionAbout = props => {
             </Box>
           </Grid>
           <Grid item xs={12} md={5} style={{ overflow: "hidden" }}>
-            <GridList
-              cellHeight="auto"
-              cols={2}
-              style={{
-                width: "100%",
-                maxWidth: 650,
-                overflow: "hidden",
-                margin: "auto",
-              }}
-            >
-              <GridListTile cols={2}>
-                <Img fluid={query.dave4.childImageSharp.fluid} />
-              </GridListTile>
-              <GridListTile>
-                <Img fluid={query.dave5.childImageSharp.fluid} />
-              </GridListTile>
-              <GridListTile>
-                <Img fluid={query.dave2.childImageSharp.fluid} />
-              </GridListTile>
-            </GridList>
+            <ImageGrid />
           </Grid>
         </Grid>
       </Container>
