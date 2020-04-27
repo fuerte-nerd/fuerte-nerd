@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import {
@@ -7,16 +7,7 @@ import {
   setTextMenuAnchor,
 } from "../redux/actions"
 import { Link } from "react-scroll"
-import {
-  AppBar,
-  Tooltip,
-  Toolbar,
-  IconButton,
-  Typography,
-  Hidden,
-} from "@material-ui/core"
-
-import MenuComponent from "@material-ui/core/Menu"
+import { AppBar, Toolbar, IconButton, Typography } from "@material-ui/core"
 
 import { Menu, Instagram, GitHub, Phone, Email } from "@material-ui/icons"
 
@@ -90,7 +81,6 @@ const Navbar = props => {
           >
             <Instagram />
           </NavbarIconButton>
-
           <NavbarIconButton
             hideOnSmallDevices={true}
             clickHandler={handleClick}
@@ -99,21 +89,22 @@ const Navbar = props => {
           >
             <GitHub />
           </NavbarIconButton>
-          <Tooltip title="Call me">
-            <IconButton color="inherit" onClick={handleClick} id="phone">
-              <Phone />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Message me">
-            <IconButton
-              edge="end"
-              color="inherit"
-              onClick={handleClick}
-              id="text"
-            >
-              <Email />
-            </IconButton>
-          </Tooltip>
+          <NavbarIconButton
+            hideOnSmallDevices={false}
+            clickHandler={handleClick}
+            tooltip="Call me"
+            id="phone"
+          >
+            <Phone />
+          </NavbarIconButton>
+          <NavbarIconButton
+            hideOnSmallDevices={false}
+            clickHandler={handleClick}
+            tooltip="Message me"
+            id="text"
+          >
+            <Email />
+          </NavbarIconButton>
         </Toolbar>
       </AppBar>
       <CallMenu />
