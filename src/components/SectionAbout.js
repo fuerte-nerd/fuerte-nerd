@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { GitHub, Instagram } from "@material-ui/icons"
-import { Fade } from "react-reveal"
+import Reveal from "./Reveal"
 import SectionHeading from "./SectionHeading"
 import AboutExternalLink from "./AboutExternalLink"
 import ImageGrid from "./ImageGrid"
@@ -102,10 +102,10 @@ const SectionAbout = props => {
       <Container>
         <Grid container justify="center" alignItems="center" spacing={4}>
           <Grid item xs={12} md={7}>
-            <Fade>
+            <Reveal>
               <SectionHeading title="About" subtitle="Who am I?" />
-            </Fade>
-            <Fade left>
+            </Reveal>
+            <Reveal>
               <Typography
                 variant="body1"
                 className={classes.aboutText}
@@ -119,8 +119,8 @@ const SectionAbout = props => {
                 Laravel, Material UI, Bootstrap, PHP, Python (too many to
                 mention them all without sending you to sleep!)
               </Typography>
-            </Fade>
-            <Fade left>
+            </Reveal>
+            <Reveal>
               <Typography
                 variant="body2"
                 className={classes.aboutText}
@@ -131,42 +131,38 @@ const SectionAbout = props => {
                 mountain-biking around this beautiful island....although not
                 necessarily at the same time! :o)
               </Typography>
-            </Fade>
-            <Fade left>
+            </Reveal>
+            <Reveal>
               <Divider />
-            </Fade>
+            </Reveal>
 
             <Box mt={3} align="center">
               <Grid container spacing={4} alignItems="center">
                 <Grid item xs={12} md={6}>
-                  <Fade>
-                    <AboutExternalLink
-                      intro="If you're into code, check out..."
-                      icon={<GitHub />}
-                      clickHandler={handleClick}
-                      id="github"
-                      buttonText="My GitHub"
-                    />
-                  </Fade>
+                  <AboutExternalLink
+                    intro="If you're into code, check out..."
+                    icon={<GitHub />}
+                    clickHandler={handleClick}
+                    id="github"
+                    buttonText="My GitHub"
+                  />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Fade>
-                    <AboutExternalLink
-                      intro="If dogs are your thing, check out..."
-                      icon={<Instagram />}
-                      clickHandler={handleClick}
-                      id="instagram"
-                      buttonText="My Instagram"
-                    />
-                  </Fade>
+                  <AboutExternalLink
+                    intro="If dogs are your thing, check out..."
+                    icon={<Instagram />}
+                    clickHandler={handleClick}
+                    id="instagram"
+                    buttonText="My Instagram"
+                  />
                 </Grid>
               </Grid>
             </Box>
           </Grid>
           <Grid item xs={12} md={5} style={{ overflow: "hidden" }}>
-            <Fade>
+            <Reveal>
               <ImageGrid />
-            </Fade>
+            </Reveal>
           </Grid>
         </Grid>
       </Container>

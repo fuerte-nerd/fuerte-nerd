@@ -1,9 +1,10 @@
 import React from "react"
 import { Typography, Button } from "@material-ui/core"
+import Reveal from "./Reveal"
 
 const AboutExternalLink = props => {
   return (
-    <>
+    <Reveal>
       <Typography variant="body2" paragraph>
         {props.intro}
       </Typography>
@@ -18,7 +19,7 @@ const AboutExternalLink = props => {
       >
         {props.buttonText}
       </Button>
-    </>
+    </Reveal>
   )
 }
 
