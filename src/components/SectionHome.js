@@ -12,8 +12,9 @@ import {
 
 import { DirectionsRun } from "@material-ui/icons"
 import { HeroImage } from "./image"
-import { Fade } from "react-reveal"
 import { Link, Events } from "react-scroll"
+
+import Reveal from "./Reveal"
 
 const SectionHome = props => {
   useEffect(() => {
@@ -40,7 +41,7 @@ const SectionHome = props => {
           <Toolbar />
         </Hidden>
         <Container>
-          <Fade>
+          <Reveal>
             <Box width="100%" align="center">
               <HeroImage />
             </Box>
@@ -70,7 +71,7 @@ const SectionHome = props => {
                 *work in progress
               </Typography>
             </Box>
-          </Fade>
+          </Reveal>
         </Container>
       </Box>
     </>
