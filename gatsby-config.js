@@ -10,7 +10,7 @@ module.exports = {
     author: "@dandroosdev",
 
     url: "https://dandroos.com",
-    ogImage: "ogImage",
+    ogImage: "og.jpg",
     links: {
       github: "dandroos",
       twitter: "dandroosdev",
