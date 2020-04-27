@@ -83,26 +83,22 @@ const Navbar = props => {
           </Link>
           <span style={{ flex: 1 }} />
           <NavbarIconButton
-            hidden={true}
+            hideOnSmallDevices={true}
             clickHandler={handleClick}
             tooltip="Instagram"
             id="instagram"
-          />
+          >
+            <Instagram />
+          </NavbarIconButton>
 
-          <Hidden smDown>
-            <Tooltip title="Instagram">
-              <IconButton color="inherit" onClick={handleClick} id="instagram">
-                <Instagram />
-              </IconButton>
-            </Tooltip>
-          </Hidden>
-          <Hidden smDown>
-            <Tooltip title="GitHub">
-              <IconButton color="inherit" onClick={handleClick} id="github">
-                <GitHub />
-              </IconButton>
-            </Tooltip>
-          </Hidden>
+          <NavbarIconButton
+            hideOnSmallDevices={true}
+            clickHandler={handleClick}
+            tooltip="GitHub"
+            id="github"
+          >
+            <GitHub />
+          </NavbarIconButton>
           <Tooltip title="Call me">
             <IconButton color="inherit" onClick={handleClick} id="phone">
               <Phone />

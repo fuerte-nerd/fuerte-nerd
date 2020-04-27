@@ -1,10 +1,11 @@
 import React from "react"
+import { Hidden, Tooltip, IconButton } from "@material-ui/core"
 
 const NavbarIconButton = props => {
   return (
     <Hidden smDown={props.hideOnSmallDevices}>
-      <Tooltip title={paper.tooltip}>
-        <IconButton color="inherit" onClick={handleClick} id={props.id}>
+      <Tooltip title={props.tooltip}>
+        <IconButton color="inherit" onClick={props.clickHandler} id={props.id}>
           {props.children}
         </IconButton>
       </Tooltip>
