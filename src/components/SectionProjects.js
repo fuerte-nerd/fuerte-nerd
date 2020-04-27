@@ -8,6 +8,7 @@ import {
   Toolbar,
   Divider,
 } from "@material-ui/core"
+import SectionHeading from "./SectionHeading"
 import Project from "./Project"
 import ProjectMenu from "./ProjectMenu"
 
@@ -52,11 +53,7 @@ const SectionProjects = () => {
     >
       <Toolbar />
       <Container>
-        <Box mb={2}>
-          <Typography variant="h2">Projects</Typography>
-          <Divider style={{ marginBottom: 10 }} />
-          <Typography variant="h5">The fruits of my labour!</Typography>
-        </Box>
+        <SectionHeading title="Projects" subtitle="The fruits of my labour!" />
         <Typography align="justify" color="inherit" variant="subtitle1">
           Here you will find a selection of my work, including SPAs (Single Page
           Applications), websites and more!

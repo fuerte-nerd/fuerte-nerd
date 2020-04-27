@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { setPhoneMenuAnchor, setConfirmDialog } from "../redux/actions"
+import SectionHeading from "./SectionHeading"
 import PhoneMenu from "./PhoneMenu"
 import WhatsAppMenu from "./WhatsAppMenu"
 import {
@@ -96,11 +97,7 @@ const SectionContact = props => {
     >
       <Toolbar />
       <Container>
-        <Box mb={2}>
-          <Typography variant="h2">Contact</Typography>
-          <Divider style={{ marginBottom: 10 }} />
-          <Typography variant="h5">Get in touch!</Typography>
-        </Box>
+        <SectionHeading title="Contact" subtitle="Get in touch!" />
         <Typography align="justify">
           If you would like to hire me or if you have any questions about my
           work, please feel free to contact me!

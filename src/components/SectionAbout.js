@@ -101,12 +101,7 @@ const SectionAbout = props => {
       <Container>
         <Grid container justify="center" alignItems="center" spacing={4}>
           <Grid item xs={12} md={7}>
-            <Box mb={2}>
-              <SectionHeading title="About" subtitle="Who am I?" />{" "}
-              <Typography variant="h2">About</Typography>
-              <Divider style={{ marginBottom: 10 }} />
-              <Typography variant="h5">Who am I?</Typography>
-            </Box>{" "}
+            <SectionHeading title="About" subtitle="Who am I?" />
             <Typography variant="body1" className={classes.aboutText} paragraph>
               I am a developer (primarily of the web variety!) originally from
               England, now residing in the Canary Islands. I mainly work with{" "}
