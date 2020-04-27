@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import {
+  setConfirmDialog,
   toggleMenu,
   setCallMenuAnchor,
   setTextMenuAnchor,
@@ -42,7 +43,19 @@ const Navbar = props => {
       case "text":
         return props.dispatch(setTextMenuAnchor(f))
       case "instagram":
-        return window.open(`https://instagram.com/${links.instagram}`, "_blank")
+        return setConfirmDialog({
+          title: "Open Instagram?",
+          text: "Would you like to continue to my Instagram profile?",
+          y: "Yes",
+          n: "No",
+          action: () => {
+            window.open(`https://instagram.com/${links.instagram}`, "_blank")
+            props.dispatch(setConfirmDialog({ isOpen: false }))
+          },
+          isOpen: true,
+        })
+
+        window.open(`https://instagram.com/${links.instagram}`, "_blank")
       case "github":
         return window.open(`https://github.com/${links.github}`, "_blank")
       default:
