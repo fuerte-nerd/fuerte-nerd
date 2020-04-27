@@ -9,6 +9,7 @@ import PhoneMenu from "./PhoneMenu"
 import WhatsAppMenu from "./WhatsAppMenu"
 import { Box, Container, Grid, Typography, Toolbar } from "@material-ui/core"
 import { Email, Phone, WhatsApp } from "@material-ui/icons"
+import { Fade } from "react-reveal"
 
 const SectionContact = props => {
   const data = useStaticQuery(graphql`
@@ -90,11 +91,15 @@ const SectionContact = props => {
     >
       <Toolbar />
       <Container>
-        <SectionHeading title="Contact" subtitle="Get in touch!" />
-        <Typography align="justify">
-          If you would like to hire me or if you have any questions about my
-          work, please feel free to contact me!
-        </Typography>
+        <Fade>
+          <SectionHeading title="Contact" subtitle="Get in touch!" />
+        </Fade>
+        <Fade left>
+          <Typography align="justify">
+            If you would like to hire me or if you have any questions about my
+            work, please feel free to contact me!
+          </Typography>
+        </Fade>
 
         <Box py={3}>
           <Grid container spacing={1}>
