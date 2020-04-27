@@ -79,8 +79,8 @@ const Navbar = props => {
 
   return (
     <>
-      <Fade down>
-        <AppBar position="fixed">
+      <AppBar position="fixed">
+        <Fade down>
           <Toolbar>
             <IconButton
               edge="start"
@@ -134,8 +134,8 @@ const Navbar = props => {
               <Email />
             </NavbarIconButton>
           </Toolbar>
-        </AppBar>
-      </Fade>
+        </Fade>
+      </AppBar>
       <CallMenu />
       <TextMenu />
     </>
