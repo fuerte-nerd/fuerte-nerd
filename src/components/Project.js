@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { setProjectMenu, setConfirmDialog } from "../redux/actions"
 import {
+  Box,
   Grid,
   Card,
   CardActions,
@@ -82,6 +83,9 @@ const Project = props => {
             </CardMedia>
             <CardContent style={{ height: "10rem" }}>
               <Typography variant="h5">{props.title}</Typography>
+              <Box my={1}>
+                <Divider />
+              </Box>
               <Typography variant="body2" align="justify">
                 {props.description}
               </Typography>
