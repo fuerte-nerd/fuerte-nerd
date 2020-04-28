@@ -22,6 +22,7 @@ const ProjectMenu = props => {
       anchorOrigin={{ vertical: "center", horizontal: "center" }}
       transformOrigin={{ vertical: "center", horizontal: "center" }}
       anchorEl={props.projectMenu.anchor}
+      getContentAnchorEl={null}
       open={Boolean(props.projectMenu.anchor)}
       onClose={() =>
         props.dispatch(

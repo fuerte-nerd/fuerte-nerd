@@ -7,31 +7,62 @@ import Project from "./Project"
 import ProjectMenu from "./ProjectMenu"
 
 const SectionProjects = () => {
-  const imgsQuery = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-      todos: file(name: { eq: "app_todos" }) {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+      images: allFile(
+        filter: {
+          sourceInstanceName: { eq: "projects" }
+          name: { eq: "image" }
+        }
+      ) {
+        edges {
+          node {
+            relativeDirectory
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
-      notes: file(name: { eq: "app_notes" }) {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
-          }
+      projects: allFile(
+        filter: {
+          sourceInstanceName: { eq: "projects" }
+          name: { eq: "project" }
         }
-      }
-      scoreboard: file(name: { eq: "app_scoreboard" }) {
-        childImageSharp {
-          fluid(maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+      ) {
+        edges {
+          node {
+            relativeDirectory
+            childMarkdownRemark {
+              frontmatter {
+                code_url
+                created(formatString: "MMMM YYYY")
+                name
+                view_url
+              }
+              rawMarkdownBody
+            }
           }
         }
       }
     }
   `)
+
+  const projects = data.projects.edges.map(i => {
+    return {
+      ...i.node.childMarkdownRemark.frontmatter,
+      description: i.node.childMarkdownRemark.rawMarkdownBody,
+      image: data.images.edges.reduce((acc, cv) => {
+        if (i.node.relativeDirectory === cv.node.relativeDirectory) {
+          return cv
+        }
+        return acc
+      }),
+    }
+  })
+
   return (
     <Box
       py={2}
@@ -61,33 +92,18 @@ const SectionProjects = () => {
         </Reveal>
         <Box mt={3}>
           <Grid container spacing={3}>
-            <Project
-              title="Scoreboard"
-              view="https://dandroos.github.io/scoreboard"
-              code="https://github.com/dandroos/scoreboard"
-              img={imgsQuery.scoreboard.childImageSharp.fluid}
-              description="A single page React application to help you keep score! I
-                      built it using Redux for state management, LocalStorage
-              for data persistence and Material UI for styling."
-            />
-            <Project
-              title="Todos"
-              view="https://dandroos.github.io/todos"
-              code="https://github.com/dandroos/todos"
-              img={imgsQuery.todos.childImageSharp.fluid}
-              description="A single page React application for keeping track of your tasks. I
-                      built it using Redux for state management, LocalStorage
-              for data persistence and Material UI for styling."
-            />
-            <Project
-              title="Notes"
-              view="https://dandroos.github.io/notes"
-              code="https://github.com/dandroos/notes"
-              img={imgsQuery.notes.childImageSharp.fluid}
-              description="A single page React application for writing notes to yourself! I
-                      built it using Redux for state management, LocalStorage
-              for data persistence and Material UI for styling."
-            />
+            {projects.map((i, ind) => {
+              return (
+                <Project
+                  key={ind}
+                  title={i.name}
+                  view={i.view_url}
+                  code={i.code_url}
+                  img={i.image.node.childImageSharp.fluid}
+                  description={i.description}
+                />
+              )
+            })}
           </Grid>
         </Box>
       </Container>

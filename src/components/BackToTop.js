@@ -19,9 +19,17 @@ const BackToTop = props => {
   const handleMouseEnter = () => {
     clearTimeout(props.backToTopTimer)
   }
+  const handleMouseLeave = () => {
+    props.dispatch(toggleBackToTop(false))
+  }
   return (
     <Fade in={props.backToTopVisible}>
-      <Link to="home" smooth={true} onMouseEnter={handleMouseEnter}>
+      <Link
+        to="home"
+        smooth={true}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <Fab
           color="primary"
           size="small"

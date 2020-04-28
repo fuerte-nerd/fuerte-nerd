@@ -130,6 +130,7 @@ const Navbar = props => {
               clickHandler={handleClick}
               tooltip="Message me"
               id="text"
+              isEnd={true}
             >
               <Email />
             </NavbarIconButton>

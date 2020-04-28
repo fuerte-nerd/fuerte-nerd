@@ -89,6 +89,8 @@ const NavMenu = props => {
             isOpen: true,
           })
         )
+      case "close":
+        return props.dispatch(toggleMenu(false))
       default:
         return
     }

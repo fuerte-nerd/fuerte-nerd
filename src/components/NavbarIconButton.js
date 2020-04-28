@@ -5,7 +5,12 @@ const NavbarIconButton = props => {
   return (
     <Hidden smDown={props.hideOnSmallDevices}>
       <Tooltip title={props.tooltip}>
-        <IconButton color="inherit" onClick={props.clickHandler} id={props.id}>
+        <IconButton
+          color="inherit"
+          edge={props.isEnd ? `end` : null}
+          onClick={props.clickHandler}
+          id={props.id}
+        >
           {props.children}
         </IconButton>
       </Tooltip>
