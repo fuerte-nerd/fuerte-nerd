@@ -66,6 +66,8 @@ const PhoneMenu = props => {
             isOpen: true,
           })
         )
+      default:
+        return
     }
   }
   return (

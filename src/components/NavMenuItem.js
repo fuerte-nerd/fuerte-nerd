@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { toggleMenu, setSmoothScroll } from "../redux/actions"
 import { ListItem, ListItemText } from "@material-ui/core"
-import { Link, Events, scroller } from "react-scroll"
+import { Events, scroller } from "react-scroll"
 
 const NavMenuItem = props => {
   useEffect(() => {
@@ -12,6 +12,7 @@ const NavMenuItem = props => {
     Events.scrollEvent.register("end", () =>
       props.dispatch(setSmoothScroll(false))
     )
+    // eslint-disable-next-line
   }, [])
 
   const handleClick = () => {

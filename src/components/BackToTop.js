@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { setSmoothScroll, toggleBackToTop } from "../redux/actions"
-import { Fade, Fab, Tooltip } from "@material-ui/core"
+import { Fade, Fab } from "@material-ui/core"
 import { ArrowUpward } from "@material-ui/icons"
 import { Link, Events } from "react-scroll"
 
@@ -14,6 +14,7 @@ const BackToTop = props => {
       props.dispatch(toggleBackToTop(false))
       props.dispatch(setSmoothScroll(false))
     })
+    // eslint-disable-next-line
   }, [])
   const handleMouseEnter = () => {
     clearTimeout(props.backToTopTimer)

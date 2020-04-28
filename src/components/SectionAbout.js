@@ -83,6 +83,8 @@ const SectionAbout = props => {
             isOpen: true,
           })
         )
+      default:
+        return
     }
   }
   return (
@@ -95,7 +97,6 @@ const SectionAbout = props => {
       justifyContent="center"
       alignItems="center"
       bgcolor="primary.light"
-      flexDirection="column"
       boxShadow={2}
     >
       <Toolbar />

@@ -24,6 +24,7 @@ const SectionHome = props => {
     Events.scrollEvent.register("end", () =>
       props.dispatch(setSmoothScroll(false))
     )
+    // eslint-disable-next-line
   }, [])
   return (
     <>

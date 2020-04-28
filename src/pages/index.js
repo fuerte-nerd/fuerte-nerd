@@ -28,6 +28,7 @@ const IndexPage = props => {
     }
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
+    // eslint-disable-next-line
   }, [props.isSmoothScrolling, props.backToTopTimer])
 
   return (

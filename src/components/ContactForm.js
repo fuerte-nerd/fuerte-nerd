@@ -12,9 +12,16 @@ const ContactForm = () => {
           below...
         </Typography>
       </Reveal>
-      <form action="" method="post">
+      <form
+        name="contact"
+        action="/success"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={4}>
             <Reveal>
               <TextField
                 fullWidth
@@ -25,7 +32,7 @@ const ContactForm = () => {
               />
             </Reveal>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={4}>
             <Reveal>
               <TextField
                 fullWidth
@@ -37,7 +44,7 @@ const ContactForm = () => {
               />
             </Reveal>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={4}>
             <Reveal>
               <TextField fullWidth name="phone" id="phone" label="Phone" />
             </Reveal>
@@ -57,6 +64,7 @@ const ContactForm = () => {
           <Grid item xs={12} style={{ textAlign: "center" }}>
             <Reveal>
               <Button
+                type="submit"
                 color="secondary"
                 endIcon={<Send />}
                 variant="contained"

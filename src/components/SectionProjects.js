@@ -1,13 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Toolbar,
-  Divider,
-} from "@material-ui/core"
+import { Box, Container, Grid, Typography, Toolbar } from "@material-ui/core"
 import Reveal from "./Reveal"
 import SectionHeading from "./SectionHeading"
 import Project from "./Project"

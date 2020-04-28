@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import { connect } from "react-redux"
 import { toggleMenu, setConfirmDialog } from "../redux/actions"
 import NavMenuItem from "./NavMenuItem"
-import { Link } from "react-scroll"
 
 import {
   Dialog,
@@ -90,8 +89,9 @@ const NavMenu = props => {
             isOpen: true,
           })
         )
+      default:
+        return
     }
-    return props.dispatch(toggleMenu(!props.isOpen))
   }
 
   return (
